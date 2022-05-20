@@ -1,0 +1,6 @@
+FHIR Validation tool Version 5.5.4 (Git# 6aaf495c85ae). Built 2021-09-29T17:51:47.529Z (184 days old)
+  Java:   11.0.2 from d:\jdk-11.0.2 on amd64 (64bit). 4042MB available
+  Paths:  Current = D:\PROJ\UTKO\ePrescription\root\eMunicipalCheckupIG_specific\samples, Package Cache = C:\Users\MASAHIKOKIMURA\.fhir\packages
+  Params: -version 4.0.1 -ig package.tgz -profile http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup
+Loading
+  Load FHIR v4.0 from hl7.fhir.r4.core#4.0.1

@@ -1,0 +1,59 @@
+{
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507195600000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査骨量値"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 95,
+          "code": "{%YAM}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "%YAM"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80,
+              "code": "{%YAM}",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%YAM"
+            },
+            "high": {
+              "value": 100,
+              "code": "{%YAM}",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%YAM"
+            }
+          }
+        ]
+      }

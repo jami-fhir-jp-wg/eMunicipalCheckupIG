@@ -1,0 +1,1949 @@
+{
+  "resourceType": "Bundle",
+  "id": "example25",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_581",
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:f7f6e2fd-33b6-c757-e77b-ab989f9dbe5c"
+  },
+  "timestamp": "2021-10-21T12:12:21+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-1",
+        "language": "ja",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+        },
+        "identifier": {
+          "system": "urn:oid:1.2.392.100495.100.1.11311234567",
+          "value": "12345"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "xx",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "display": "自治体検診結果報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "58",
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
+                "display": "歯周疾患検診"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+        },
+        "date": "2021-10-21T12:12:21+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa"
+          }
+        ],
+        "title": "歯周疾患検診結果のお知らせ",
+        "confidentiality": "N",
+        "custodian": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "1",
+                    "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code",
+                    "display": "一次検診"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2021-10-01",
+              "end": "2021-10-01"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "検査結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01910",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>歯周疾患検診の判定区分 異常認めず</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+              },
+              {
+                "reference": "urn:uuid:6b04bdb5-2748-71c6-18f8-d9c5387c15c9"
+              }
+            ]
+          },
+          {
+            "title": "問診結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01920",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>歯周疾患検診の問診：糖尿病罹患の有無 なし</li><li>歯周疾患検診の問診：関節リウマチ罹患の有無 なし</li><li>歯周疾患検診の問診：狭心症・心筋梗塞・脳梗塞罹患の有無 なし</li><li>歯周疾患検診の問診：内蔵脂肪型肥満の有無 なし</li><li>歯周疾患検診の問診：その他全身の状態 特記なし</li><li>歯周疾患検診の健全歯数 22 本</li><li>歯周疾患検診の未処置歯数 0 本</li><li>歯周疾患検診の処置歯数 5 本</li><li>歯周疾患検診の喪失歯数 1 本</li><li>歯周疾患検診の要補綴歯数 0 本</li><li>歯周疾患検診の欠損補綴歯数 1 本</li><li>歯周疾患検診の現在歯数 27 本</li><li>歯周疾患検診の歯肉出血ＢＯＰ（１７または１６）健全</li><li>歯周疾患検診の歯肉出血ＢＯＰ（１１）健全</li><li>歯周疾患検診の歯肉出血ＢＯＰ（２６または２７）出血あり</li><li>歯周疾患検診の歯肉出血ＢＯＰ（４７または４６）健全</li><li>歯周疾患検診の歯肉出血ＢＯＰ（３１）健全</li><li>歯周疾患検診の歯肉出血ＢＯＰ（３６または３７）健全</li><li>歯周疾患検診の歯肉出血ＢＯＰ（最大値）出血あり</li><li>歯周疾患検診の歯周ポケットＰＤ（１７または１６）健全</li><li>歯周疾患検診の歯周ポケットＰＤ（１１） 健全</li><li>歯周疾患検診の歯周ポケットＰＤ（２６または２７）浅いポケット</li><li>歯周疾患検診の歯周ポケットＰＤ（４７または４６）健全</li><li>歯周疾患検診の歯周ポケットＰＤ（３１）健全</li><li>歯周疾患検診の歯周ポケットＰＤ（３６または３７）健全</li><li>歯周疾患検診の歯周ポケットＰＤ（最大値）浅いポケット</li><li>歯周疾患検診の歯石の付着 軽度（点状）あり</li><li>歯周疾患検診の口腔清掃状態 普通</li><li>歯周疾患検診の歯列咬合所見 所見なし</li><li>歯周疾患検診の顎関節所見 所見なし</li><li>歯周疾患検診の粘膜所見 所見なし</li><li>歯周疾患検診のその他所見 所見なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:06f42e47-770e-8262-8475-aab10adcb456"
+              },
+              {
+                "reference": "urn:uuid:6228d56a-6329-ef95-d179-0d4d94be334b"
+              },
+              {
+                "reference": "urn:uuid:b9875e81-7328-1816-521c-c107e2581352"
+              },
+              {
+                "reference": "urn:uuid:da89754c-2829-597d-f9df-97e3b2ac9db7"
+              },
+              {
+                "reference": "urn:uuid:eec7ef31-029f-9240-ff01-ff21a1adbd45"
+              },
+              {
+                "reference": "urn:uuid:6c3c9e67-257f-6f2f-772e-089189770b40"
+              },
+              {
+                "reference": "urn:uuid:295bda32-cb6c-9326-3650-ed7e72b0f159"
+              },
+              {
+                "reference": "urn:uuid:449083ef-3075-065d-97fa-ffe0a45ea06e"
+              },
+              {
+                "reference": "urn:uuid:6e9bfa56-30c6-8e8e-81aa-b7e532163d52"
+              },
+              {
+                "reference": "urn:uuid:a31bf2ea-cd2e-7405-531e-31b1dde82b2c"
+              },
+              {
+                "reference": "urn:uuid:85308dc7-3dee-4740-fb7c-9fe84ee34a05"
+              },
+              {
+                "reference": "urn:uuid:ce498758-d7a1-49db-73bc-89e5829e8c76"
+              },
+              {
+                "reference": "urn:uuid:232c7cb3-9591-b922-08a5-7f58898cb72e"
+              },
+              {
+                "reference": "urn:uuid:11d062e2-583c-41a5-a031-999b77054521"
+              },
+              {
+                "reference": "urn:uuid:caf02b00-60a6-44a2-edd0-647671412f5b"
+              },
+              {
+                "reference": "urn:uuid:7897b239-2d95-3b76-801c-f42533ba682d"
+              },
+              {
+                "reference": "urn:uuid:23c5cad3-24c7-55b2-5d57-34a72993855f"
+              },
+              {
+                "reference": "urn:uuid:d49bc27d-b610-b6ec-19c3-0410d68d0456"
+              },
+              {
+                "reference": "urn:uuid:7fff5db4-5bf3-be91-2efe-315a68edb8d4"
+              },
+              {
+                "reference": "urn:uuid:7c2e5579-e0fa-d515-7112-26bfd618343b"
+              },
+              {
+                "reference": "urn:uuid:2e0c45b0-bfcb-f3ba-241b-1702d77d8c3a"
+              },
+              {
+                "reference": "urn:uuid:0a78bc53-0c48-7816-45d7-696e9705ecd7"
+              },
+              {
+                "reference": "urn:uuid:e24e09dc-0123-febf-93f7-3d4c93a69b43"
+              },
+              {
+                "reference": "urn:uuid:72a68694-9a9f-02ea-7b20-7f0ff0f26a9e"
+              },
+              {
+                "reference": "urn:uuid:793f0cea-cb4f-5ccd-6192-75d44cfbf417"
+              },
+              {
+                "reference": "urn:uuid:9bdc338a-d3e9-d623-4db0-2e6e081a97c3"
+              },
+              {
+                "reference": "urn:uuid:56de6abf-5890-0696-ad8a-db06035a97c3"
+              },
+              {
+                "reference": "urn:uuid:f6f4f4d9-d541-eb03-f903-4cf597011e41"
+              },
+              {
+                "reference": "urn:uuid:f7ec8f0f-cff6-cffd-d6cb-e2494453cda8"
+              },
+              {
+                "reference": "urn:uuid:7d24ffb6-3d3d-8809-3b3b-936e691e961d"
+              },
+              {
+                "reference": "urn:uuid:8cc2ca9e-7741-9009-6a74-aaa9838797a3"
+              },
+              {
+                "reference": "urn:uuid:1d7ffe88-c8b4-1e1e-6d60-7c5beb669993"
+              },
+              {
+                "reference": "urn:uuid:4c9ebb85-219c-de84-16bb-eba076af35cc"
+              },
+              {
+                "reference": "urn:uuid:d104058e-b326-3dc0-5f14-5907a287df84"
+              },
+              {
+                "reference": "urn:uuid:e1953557-e5de-d2da-3eda-e9ab4badeb23"
+              },
+              {
+                "reference": "urn:uuid:141cf860-2aee-83bb-000f-815ff64b7d12"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-2",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event",
+            "extension": [
+              {
+                "url": "age",
+                "valueAge": {
+                  "value": 66,
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "unit": "歳"
+                }
+              },
+              {
+                "url": "event",
+                "valueReference": {
+                  "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+                }
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">健診太郎（ケンシンタロウ） 1955年5月4日 男性</div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102.11234567890",
+            "value": "34567"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "健診　太郎",
+            "family": "健診",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "ケンシン　タロウ",
+            "family": "ケンシン",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-1111-2222",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1955-05-04",
+        "address": [
+          {
+            "text": "神奈川県横浜市港区１－２－３",
+            "postalCode": "123-4567",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-3",
+        "practitioner": {
+          "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+        },
+        "organization": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-4",
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "text": "東京　太郎",
+            "family": "東京",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "text": "トウキョウ　タロウ",
+            "family": "トウキョウ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-5",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102",
+            "value": "1311234567"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "prov",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "厚生労働省第一病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0123-456-7890"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都千代田区千代田９－９－９",
+            "postalCode": "100-0001",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-6",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup",
+            "valueDate": "2021"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status",
+            "valueString": "本人負担はありません。"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>歯周疾患検診</p><p>2021年10月1日</p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "code": "checkup",
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "display": "健診"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type",
+              "display": "個別受診"
+            }
+          ]
+        },
+        "period": {
+          "start": "2021-10-01",
+          "end": "2021-10-01"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-7",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "１２３４５"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "６７８９０"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>保険者番号：06123456</li><li>被保険者証記号・番号：１２３４５・６７８９０</li><li>枝番：01</li><li>患者区分：本人</li><li>有効期限：2020年3月31日</li></ul></div>"
+        },
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.61"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "dependent": "01",
+        "relationship": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.62",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "period": {
+          "start": "2018-04-01",
+          "end": "2022-03-31"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-8",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.61",
+            "value": "06123456"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "ins",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6b04bdb5-2748-71c6-18f8-d9c5387c15c9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P690000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の判定区分"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2840",
+              "display": "異常認めず"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:06f42e47-770e-8262-8475-aab10adcb456",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P650000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：１日での歯をみがく頻度"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2800",
+              "display": "３回以上"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6228d56a-6329-ef95-d179-0d4d94be334b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-11",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P651000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：歯間ブラシやフロスの使用頻度"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "3",
+              "system": "urn:oid:1.2.392.100495.100.2801",
+              "display": "月１～３回"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b9875e81-7328-1816-521c-c107e2581352",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-12",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P652000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：過去１年間の歯科検診の受診の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2053",
+              "display": "いいえ"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:da89754c-2829-597d-f9df-97e3b2ac9db7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-13",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P653000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：喫煙歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2802",
+              "display": "吸ったことがない"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eec7ef31-029f-9240-ff01-ff21a1adbd45",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-14",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P657000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：糖尿病罹患の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2051",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c3c9e67-257f-6f2f-772e-089189770b40",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-15",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P658000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：関節リウマチ罹患の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2051",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:295bda32-cb6c-9326-3650-ed7e72b0f159",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-16",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P659000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：狭心症・心筋梗塞・脳梗塞罹患の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2051",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:449083ef-3075-065d-97fa-ffe0a45ea06e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-17",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P660000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：内蔵脂肪型肥満の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2051",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6e9bfa56-30c6-8e8e-81aa-b7e532163d52",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-18",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P662160800000049",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の問診：その他全身の状態"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記なし"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a31bf2ea-cd2e-7405-531e-31b1dde82b2c",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-19",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P663000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の健全歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 22,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:85308dc7-3dee-4740-fb7c-9fe84ee34a05",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-20",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P664000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の未処置歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 0,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce498758-d7a1-49db-73bc-89e5829e8c76",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-21",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P665000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の処置歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 5,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:232c7cb3-9591-b922-08a5-7f58898cb72e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-22",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P666000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の喪失歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 1,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:11d062e2-583c-41a5-a031-999b77054521",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-23",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P667000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の要補綴歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 0,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:caf02b00-60a6-44a2-edd0-647671412f5b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-24",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P668000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の欠損補綴歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 1,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7897b239-2d95-3b76-801c-f42533ba682d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-25",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P669000000000001",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の現在歯数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 27,
+          "code": "{hon}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "本"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23c5cad3-24c7-55b2-5d57-34a72993855f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-26",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P670000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（１７または１６）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d49bc27d-b610-b6ec-19c3-0410d68d0456",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-27",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P671000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（１１）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7fff5db4-5bf3-be91-2efe-315a68edb8d4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-28",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P672000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（２６または２７）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "出血あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c2e5579-e0fa-d515-7112-26bfd618343b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-29",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P673000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（４７または４６）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2e0c45b0-bfcb-f3ba-241b-1702d77d8c3a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-30",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P674000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（３１）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:0a78bc53-0c48-7816-45d7-696e9705ecd7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-31",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P675000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（３６または３７）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e24e09dc-0123-febf-93f7-3d4c93a69b43",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-32",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P676000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯肉出血ＢＯＰ（最大値）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2803",
+              "display": "出血あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:72a68694-9a9f-02ea-7b20-7f0ff0f26a9e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-33",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P677000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（１７または１６）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:793f0cea-cb4f-5ccd-6192-75d44cfbf417",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-34",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P678000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（１１）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9bdc338a-d3e9-d623-4db0-2e6e081a97c3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-35",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P679000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（２６または２７）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "浅いポケット"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:56de6abf-5890-0696-ad8a-db06035a97c3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-36",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P680000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（４７または４６）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f6f4f4d9-d541-eb03-f903-4cf597011e41",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-37",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P681000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（３１）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f7ec8f0f-cff6-cffd-d6cb-e2494453cda8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-38",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P682000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（３６または３７）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "0",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "健全"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7d24ffb6-3d3d-8809-3b3b-936e691e961d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-39",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P683000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯周ポケットＰＤ（最大値）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2804",
+              "display": "浅いポケット"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:8cc2ca9e-7741-9009-6a74-aaa9838797a3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-40",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P684000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯石の付着"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2805",
+              "display": "軽度（点状）あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1d7ffe88-c8b4-1e1e-6d60-7c5beb669993",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-41",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P685000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の口腔清掃状態"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2806",
+              "display": "普通"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c9ebb85-219c-de84-16bb-eba076af35cc",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-42",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P686000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の歯列咬合所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2050",
+              "display": "所見なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d104058e-b326-3dc0-5f14-5907a287df84",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-43",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P687000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の顎関節所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2050",
+              "display": "所見なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e1953557-e5de-d2da-3eda-e9ab4badeb23",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-44",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P688000000000011",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診の粘膜所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2050",
+              "display": "所見なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:141cf860-2aee-83bb-000f-815ff64b7d12",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-29-45",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P689160800000049",
+              "system": $jlac10_cs,
+              "display": "歯周疾患検診のその他所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記事項なし"
+      }
+    }
+  ]
+}

@@ -1,0 +1,869 @@
+{
+  "resourceType": "Bundle",
+  "id": "example19",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_523",
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:e17e387d-354a-b06d-e1e4-33dec90b72a5"
+  },
+  "timestamp": "2021-09-23T12:12:21+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-1",
+        "language": "ja",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+        },
+        "identifier": {
+          "system": "urn:oid:1.2.392.100495.100.1.11311234567",
+          "value": "12345"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "xx",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "display": "自治体検診結果報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "52",
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
+                "display": "乳がん検診"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+        },
+        "date": "2021-10-21T12:12:21+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa"
+          }
+        ],
+        "title": "乳がん検診結果のお知らせ",
+        "confidentiality": "N",
+        "custodian": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "3",
+                    "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code",
+                    "display": "一次検診と精密検査"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2021-09-10",
+              "end": "2021-09-10"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "検査結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01910",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>乳がん検診のマンモグラフィー検査判定 カテゴリー３（良性、しかし悪性を否定できず）</li><li>乳がん検診の精密検査対象有無 要精密検査（乳がん疑い）</li><li>乳がん検診のその他所見 特記事項無し</li><li>乳がん検診による偶発症の有無 なし</li><li>乳がん検診の精密検査結果 乳がんの疑いのある者又は未確定</li><li>乳がん検診の精密検査その他所見 乳がんの疑いのある者</li><li>乳がん検診の精密検査による偶発症の有無 なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+              },
+              {
+                "reference": "urn:uuid:d7d7e3a9-db77-0ca9-369b-ad5e37cbc861"
+              },
+              {
+                "reference": "urn:uuid:94e04fcb-e457-529c-51b9-23c2548ddd38"
+              },
+              {
+                "reference": "urn:uuid:1af219c4-f184-77b2-0030-85c272712ab8"
+              },
+              {
+                "reference": "urn:uuid:c4f067d2-5bc8-17d6-be2e-968f43cc0676"
+              },
+              {
+                "reference": "urn:uuid:44f915b9-086e-61e8-daf7-719e55f8ef09"
+              },
+              {
+                "reference": "urn:uuid:1e00b27f-4d71-d2a6-a902-8386ce9e177f"
+              },
+              {
+                "reference": "urn:uuid:18af516e-8c23-89cf-8e68-be9df9045c4f"
+              },
+              {
+                "reference": "urn:uuid:cf2073cd-7554-2e23-78a0-d946cb84217a"
+              },
+              {
+                "reference": "urn:uuid:a00ef5d8-78c7-05a6-b8b7-67f005eaf812"
+              }
+            ]
+          },
+          {
+            "title": "問診結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01920",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>乳がん検診の過去の受診歴 前々年度受けた</li><li>乳がん検診時の乳がんに係る症状の有無 いいえ</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:13bdd957-5eda-6faf-b0f6-f77dca3ba877"
+              },
+              {
+                "reference": "urn:uuid:f77ba419-2ab3-82ca-20e4-bca9c9d88e72"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-2",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event",
+            "extension": [
+              {
+                "url": "age",
+                "valueAge": {
+                  "value": 46,
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "unit": "歳"
+                }
+              },
+              {
+                "url": "event",
+                "valueReference": {
+                  "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+                }
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">健診花子（ケンシンハナコ） 1975年8月7日 女性</div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102.11234567890",
+            "value": "45678"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "健診　花子",
+            "family": "健診",
+            "given": [
+              "花子"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "ケイシン　ハナコ",
+            "family": "ケンシン",
+            "given": [
+              "ハナコ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-2222-3333",
+            "use": "home"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1975-08-07",
+        "address": [
+          {
+            "text": "神奈川県横浜市港区１－２－３",
+            "postalCode": "123-4567",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-3",
+        "practitioner": {
+          "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+        },
+        "organization": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-4",
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "text": "東京　太郎",
+            "family": "東京",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "text": "トウキョウ　タロウ",
+            "family": "トウキョウ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-5",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102",
+            "value": "1311234567"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "prov",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "厚生労働省第一病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0123-456-7890"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都千代田区千代田９－９－９",
+            "postalCode": "100-0001",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-6",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup",
+            "valueDate": "2021"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status",
+            "valueString": "本人負担はありません。"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>乳がん健診</p><p>2021年9月10日</p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "code": "checkup",
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "display": "健診"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type",
+              "display": "個別受診"
+            }
+          ]
+        },
+        "period": {
+          "start": "2021-09-10",
+          "end": "2021-09-10"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-7",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "１２３４５"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "７８９０１"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>保険者番号：06123456</li><li>被保険者証記号・番号：１２３４５・６７８９０</li><li>枝番：01</li><li>患者区分：本人</li><li>有効期限：2020年3月31日</li></ul></div>"
+        },
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.61"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "dependent": "01",
+        "relationship": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.62",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "period": {
+          "start": "2018-04-01",
+          "end": "2022-03-31"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-8",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.61",
+            "value": "06123456"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "ins",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d7d7e3a9-db77-0ca9-369b-ad5e37cbc861",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9N281",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "display": "マンモグラフィー検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "hasMember": [
+          {
+            "reference": "urn:uuid:94e04fcb-e457-529c-51b9-23c2548ddd38"
+          },
+          {
+            "reference": "urn:uuid:1af219c4-f184-77b2-0030-85c272712ab8"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:94e04fcb-e457-529c-51b9-23c2548ddd38",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9N281000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診のマンモグラフィー検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "3",
+              "system": "urn:oid:1.2.392.100495.100.2200",
+              "display": "カテゴリー３（良性、しかし悪性を否定できず）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1af219c4-f184-77b2-0030-85c272712ab8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-11",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9N281160800000049",
+              "system": $jlac10_cs,
+              "display": "乳がん検診のマンモグラフィー検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "要精密検査"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c4f067d2-5bc8-17d6-be2e-968f43cc0676",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-12",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P522000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診の精密検査対象有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2240",
+              "display": "要精密検査（乳がん疑い）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44f915b9-086e-61e8-daf7-719e55f8ef09",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-13",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P523160800000049",
+              "system": $jlac10_cs,
+              "display": "乳がん検診のその他所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記事項無し"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1e00b27f-4d71-d2a6-a902-8386ce9e177f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-14",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P524000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診による偶発症の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2010",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:18af516e-8c23-89cf-8e68-be9df9045c4f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-15",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P525000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診の精密検査結果"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "5",
+              "system": "urn:oid:1.2.392.100495.100.2250",
+              "display": "乳がんの疑いのある者又は未確定"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cf2073cd-7554-2e23-78a0-d946cb84217a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-16",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P526160800000049",
+              "system": $jlac10_cs,
+              "display": "乳がん検診の精密検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "乳がんの疑いのある者"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a00ef5d8-78c7-05a6-b8b7-67f005eaf812",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-17",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P527000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診の精密検査による偶発症の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2011",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:13bdd957-5eda-6faf-b0f6-f77dca3ba877",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-18",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P520000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診の過去の受診歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2000",
+              "display": "前々年度に受けた"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f77ba419-2ab3-82ca-20e4-bca9c9d88e72",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-23-19",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P521000000000011",
+              "system": $jlac10_cs,
+              "display": "乳がん検診時の乳がんに係る症状の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

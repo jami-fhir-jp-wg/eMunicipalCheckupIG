@@ -1,0 +1,50 @@
+{
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-12",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P602000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：広範な外科的処置歴の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "display": "あり"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "9P603160800000049",
+                  "system": $jlac10_cs,
+                  "display": "肝炎ウイルス検診時の問診：広範な外科的処置時期"
+                }
+              ]
+            },
+            "valueDateTime": "2015"
+          }
+        ]
+      }

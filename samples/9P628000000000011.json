@@ -1,0 +1,36 @@
+{
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-27",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P628000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：関節リウマチ罹患"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.20511",
+              "display": "なし"
+            }
+          ]
+        }
+      }

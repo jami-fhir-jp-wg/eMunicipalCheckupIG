@@ -1,0 +1,1 @@
+d:\jdk-11.0.2\bin\java -jar validator_cli.jar %1.json -version 4.0.1 -ig package.tgz -profile http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_%1

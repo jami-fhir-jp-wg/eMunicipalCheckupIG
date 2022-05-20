@@ -1,0 +1,838 @@
+{
+  "resourceType": "Bundle",
+  "id": "example23",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_561",
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:1b622966-77be-0bf2-352d-0f902dbdeac7"
+  },
+  "timestamp": "2021-10-21T12:12:21+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-1",
+        "language": "ja",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+        },
+        "identifier": {
+          "system": "urn:oid:1.2.392.100495.100.1.11311234567",
+          "value": "12345"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "xx",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "display": "自治体検診結果報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "56",
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
+                "display": "肝炎検診"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+        },
+        "date": "2021-10-21T12:12:21+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa"
+          }
+        ],
+        "title": "肝炎検診結果のお知らせ",
+        "confidentiality": "N",
+        "custodian": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "1",
+                    "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code",
+                    "display": "一次検診"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2021-10-01",
+              "end": "2021-10-01"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "検査結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01910",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>肝炎ウイルス検診のB型肝炎ウイルス検査判定 陰性</li><li>肝炎ウイルス検診のC型肝炎ウイルス検査判定 現在、Ｃ型肝炎ウイルスに感染している可能性が低い</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+              },
+              {
+                "reference": "urn:uuid:6da14ba7-1190-bb39-3e39-2e1ae631a2f0"
+              },
+              {
+                "reference": "urn:uuid:17de2f36-894e-2f26-ca67-89de375986f5"
+              }
+            ]
+          },
+          {
+            "title": "問診結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01920",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>肝炎ウイルス検診時の問診：肝臓病歴、肝機能が悪いと言われた経験の有無 あり</li><li>肝炎ウイルス検診時の問診：肝臓病歴、肝機能が悪いと言われた時期 2018年</li><li>肝炎ウイルス検診時の問診：広範な外科的処置歴の有無 あり</li><li>肝炎ウイルス検診時の問診：広範な外科的処置時期 2015年</li><li>肝炎ウイルス検診時の問診：定期的な肝機能検査受診の有無 あり</li><li>肝炎ウイルス検診時の問診：B型肝炎ウイルス検査の受診歴の有無 なし</li><li>肝炎ウイルス検診時の問診：B型肝炎治療歴の有無 なし</li><li>肝炎ウイルス検診時の問診：C型肝炎ウイルス検査の受診歴の有無 なし</li><li>肝炎ウイルス検診時の問診：C型肝炎治療歴の有無 なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:f5994dbc-8168-e302-62b4-c1732b3bdcf7"
+              },
+              {
+                "reference": "urn:uuid:4c948d82-8e00-d147-0f7e-91c237b9577d"
+              },
+              {
+                "reference": "urn:uuid:246f468c-880f-e550-1a45-32f5e34371c5"
+              },
+              {
+                "reference": "urn:uuid:d0348bc0-8dd3-f868-8ccd-2ed4c4de188f"
+              },
+              {
+                "reference": "urn:uuid:15dd8304-b4dd-9720-d660-bd9134ab811f"
+              },
+              {
+                "reference": "urn:uuid:4eb2092c-ee28-59f9-a814-74e060e0752e"
+              },
+              {
+                "reference": "urn:uuid:b045f629-a519-1070-d28c-52c97211ce41"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-2",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event",
+            "extension": [
+              {
+                "url": "age",
+                "valueAge": {
+                  "value": 66,
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "unit": "歳"
+                }
+              },
+              {
+                "url": "event",
+                "valueReference": {
+                  "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+                }
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">健診太郎（ケンシンタロウ） 1955年5月4日 男性</div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102.11234567890",
+            "value": "34567"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "健診　太郎",
+            "family": "健診",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "ケンシン　タロウ",
+            "family": "ケンシン",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-1111-2222",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1955-05-04",
+        "address": [
+          {
+            "text": "神奈川県横浜市港区１－２－３",
+            "postalCode": "123-4567",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-3",
+        "practitioner": {
+          "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+        },
+        "organization": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-4",
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "text": "東京　太郎",
+            "family": "東京",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "text": "トウキョウ　タロウ",
+            "family": "トウキョウ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-5",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102",
+            "value": "1311234567"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "prov",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "厚生労働省第一病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0123-456-7890"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都千代田区千代田９－９－９",
+            "postalCode": "100-0001",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-6",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup",
+            "valueDate": "2021"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status",
+            "valueString": "本人負担はありません。"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>肝炎検診</p><p>2021年10月1日</p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "code": "checkup",
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "display": "健診"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type",
+              "display": "個別受診"
+            }
+          ]
+        },
+        "period": {
+          "start": "2021-10-01",
+          "end": "2021-10-01"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-7",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "１２３４５"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "６７８９０"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>保険者番号：06123456</li><li>被保険者証記号・番号：１２３４５・６７８９０</li><li>枝番：01</li><li>患者区分：本人</li><li>有効期限：2020年3月31日</li></ul></div>"
+        },
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.61"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "dependent": "01",
+        "relationship": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.62",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "period": {
+          "start": "2018-04-01",
+          "end": "2022-03-31"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-8",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.61",
+            "value": "06123456"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "ins",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6da14ba7-1190-bb39-3e39-2e1ae631a2f0",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P615000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診のB型肝炎ウイルス検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2640",
+              "display": "陰性"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:17de2f36-894e-2f26-ca67-89de375986f5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "laboratory",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9N401000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診のC型肝炎ウイルス検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2641",
+              "display": "現在、Ｃ型肝炎ウイルスに感染している可能性が低い"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f5994dbc-8168-e302-62b4-c1732b3bdcf7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-11",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P600000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：肝臓病歴、肝機能が悪いと言われた経験の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "display": "あり"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "9P601160800000049",
+                  "system": $jlac10_cs,
+                  "display": "肝炎ウイルス検診時の問診：肝臓病歴、肝機能が悪いと言われた時期"
+                }
+              ]
+            },
+            "valueDateTime": "2018"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4c948d82-8e00-d147-0f7e-91c237b9577d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-12",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P602000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：広範な外科的処置歴の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2054",
+              "display": "あり"
+            }
+          ]
+        },
+        "component": [
+          {
+            "code": {
+              "coding": [
+                {
+                  "code": "9P603160800000049",
+                  "system": $jlac10_cs,
+                  "display": "肝炎ウイルス検診時の問診：広範な外科的処置時期"
+                }
+              ]
+            },
+            "valueDateTime": "2015"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:246f468c-880f-e550-1a45-32f5e34371c5",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-13",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P606000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：定期的な肝機能検査受診の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2054",
+              "display": "あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d0348bc0-8dd3-f868-8ccd-2ed4c4de188f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-14",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P607000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：B型肝炎ウイルス検査の受診歴の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2054",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:15dd8304-b4dd-9720-d660-bd9134ab811f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-15",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P609000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：B型肝炎治療歴の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2054",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4eb2092c-ee28-59f9-a814-74e060e0752e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-16",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P611000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：C型肝炎ウイルス検査の受診歴の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2054",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b045f629-a519-1070-d28c-52c97211ce41",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-27-17",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P613000000000011",
+              "system": $jlac10_cs,
+              "display": "肝炎ウイルス検診時の問診：C型肝炎治療歴の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2054",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

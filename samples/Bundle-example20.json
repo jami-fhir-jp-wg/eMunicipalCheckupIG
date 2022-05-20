@@ -1,0 +1,874 @@
+{
+  "resourceType": "Bundle",
+  "id": "example20",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_533",
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:b52864d0-05d9-5914-7dfd-bb03a6d3d811"
+  },
+  "timestamp": "2021-10-21T12:12:21+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-1",
+        "meta": {
+          "profile": [
+            "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_533"
+          ]
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "xx",
+              "display": "自治体検診結果報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
+                "code": "53",
+                "display": "胃がん検診"
+              }
+            ]
+          }
+        ],
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code",
+                    "code": "3",
+                    "display": "一次検診と精密検査"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2021-10-01",
+              "end": "2021-10-01"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+        },
+        "language": "ja",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "identifier": {
+          "system": "urn:oid:1.2.392.100495.100.1.11311234567",
+          "value": "12345"
+        },
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+        },
+        "date": "2021-10-21T12:12:21+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa"
+          }
+        ],
+        "title": "胃がん検診結果のお知らせ",
+        "confidentiality": "N",
+        "custodian": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        },
+        "section": [
+          {
+            "title": "検査結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01910",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>胃がん検診の胃部エックス線検査検査判定 所見あり</li><li>胃がん検診の胃部エックス線検査所見 要精密検査</li><li>胃がん検診の精密検査の対象有無 要精密検査（胃がん疑い）</li><li>胃がん検診のその他所見 特記事項無し</li><li>胃がん検診による偶発症の有無 なし</li><li>胃がん検診の精密検査結果 「３：胃がんのうち早期がん」のうち粘膜内がん</li><li>胃がん検診の精密検査その他所見 胃がんの疑いのある者</li><li>胃がん検診の精密検査による偶発症の有無 なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+              },
+              {
+                "reference": "urn:uuid:560d5a3c-aaa7-2233-64fe-2dfa23718fe4"
+              },
+              {
+                "reference": "urn:uuid:ac18d004-260f-6588-f16d-58ba6ca97768"
+              },
+              {
+                "reference": "urn:uuid:19ef10b0-9a3c-4249-0ad3-3618f6511286"
+              },
+              {
+                "reference": "urn:uuid:6f7f05cb-0982-bb4d-9ea2-7b52edf4255f"
+              },
+              {
+                "reference": "urn:uuid:1ccadb81-827b-3dd9-3e35-b5246a753ddd"
+              },
+              {
+                "reference": "urn:uuid:3422e2a5-709e-e201-bac7-3bf632e676e6"
+              },
+              {
+                "reference": "urn:uuid:bedf8cc2-9619-5351-5e6c-54d2dd4741ec"
+              },
+              {
+                "reference": "urn:uuid:e13635ba-2c39-3fc0-b155-7a8e7b604ea4"
+              },
+              {
+                "reference": "urn:uuid:23a92849-3fb2-92e8-2629-1e7d9a67e71d"
+              }
+            ]
+          },
+          {
+            "title": "問診結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01920",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>胃がん検診の過去の受診歴 前年度に受けた</li><li>胃がん検診時の胃がんに係る症状の有無 なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:095e8ff3-0251-8d7f-eb64-42d71805b067"
+              },
+              {
+                "reference": "urn:uuid:961d6edd-c19b-9b29-e8c1-eed30a19f3ae"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-2",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event",
+            "extension": [
+              {
+                "url": "age",
+                "valueAge": {
+                  "value": 66,
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "unit": "歳"
+                }
+              },
+              {
+                "url": "event",
+                "valueReference": {
+                  "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+                }
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">健診太郎（ケンシンタロウ） 1955年5月4日 男性</div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102.11234567890",
+            "value": "34567"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "健診　太郎",
+            "family": "健診",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "ケンシン　タロウ",
+            "family": "ケンシン",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-1111-2222",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1955-05-04",
+        "address": [
+          {
+            "text": "神奈川県横浜市港区１－２－３",
+            "postalCode": "123-4567",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-3",
+        "practitioner": {
+          "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+        },
+        "organization": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-4",
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "text": "東京　太郎",
+            "family": "東京",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "text": "トウキョウ　タロウ",
+            "family": "トウキョウ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-5",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102",
+            "value": "1311234567"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "prov",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "厚生労働省第一病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0123-456-7890"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都千代田区千代田９－９－９",
+            "postalCode": "100-0001",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-6",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup",
+            "valueDate": "2021"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status",
+            "valueString": "本人負担はありません。"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>胃がん検診</p><p>2021年10月1日</p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "code": "checkup",
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "display": "健診"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type",
+              "display": "個別受診"
+            }
+          ]
+        },
+        "period": {
+          "start": "2021-10-01",
+          "end": "2021-10-01"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-7",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "１２３４５"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "６７８９０"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>保険者番号：06123456</li><li>被保険者証記号・番号：１２３４５・６７８９０</li><li>枝番：01</li><li>患者区分：本人</li><li>有効期限：2020年3月31日</li></ul></div>"
+        },
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.61"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "dependent": "01",
+        "relationship": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.62",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "period": {
+          "start": "2018-04-01",
+          "end": "2022-03-31"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-8",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.61",
+            "value": "06123456"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "ins",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:560d5a3c-aaa7-2233-64fe-2dfa23718fe4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P542",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "display": "胃エックス線検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "hasMember": [
+          {
+            "reference": "urn:uuid:ac18d004-260f-6588-f16d-58ba6ca97768"
+          },
+          {
+            "reference": "urn:uuid:19ef10b0-9a3c-4249-0ad3-3618f6511286"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ac18d004-260f-6588-f16d-58ba6ca97768",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P542160700000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の胃部エックス線検査検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2050",
+              "display": "所見あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:19ef10b0-9a3c-4249-0ad3-3618f6511286",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-11",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P543160800000049",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の胃部エックス線検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "要精密検査"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f7f05cb-0982-bb4d-9ea2-7b52edf4255f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-12",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P546000000000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の精密検査の対象有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2340",
+              "display": "要精密検査（胃がん疑い）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1ccadb81-827b-3dd9-3e35-b5246a753ddd",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-13",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P547160800000049",
+              "system": $jlac10_cs,
+              "display": "胃がん検診のその他所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記事項無し"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3422e2a5-709e-e201-bac7-3bf632e676e6",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-14",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P548000000000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診による偶発症の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2010",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bedf8cc2-9619-5351-5e6c-54d2dd4741ec",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-15",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P549000000000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の精密検査結果"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "4",
+              "system": "urn:oid:1.2.392.100495.100.2350",
+              "display": "「３：胃がんのうち早期がん」のうち粘膜内がん"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e13635ba-2c39-3fc0-b155-7a8e7b604ea4",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-16",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P550160800000049",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の精密検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "胃がんの疑いのある者"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:23a92849-3fb2-92e8-2629-1e7d9a67e71d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-17",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P551000000000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の精密検査による偶発症の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2011",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:095e8ff3-0251-8d7f-eb64-42d71805b067",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-18",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P540000000000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診の過去の受診歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2000",
+              "display": "前年度に受けた"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:961d6edd-c19b-9b29-e8c1-eed30a19f3ae",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-24-19",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P541000000000011",
+              "system": $jlac10_cs,
+              "display": "胃がん検診時の胃がんに係る症状の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,1163 @@
+{
+  "resourceType": "Bundle",
+  "id": "example17",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
+    ]
+  },
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:f3b74ffe-4df6-6abd-9d40-f6870fd165bf"
+  },
+  "type": "document",
+  "timestamp": "2021-10-21T12:12:21+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-1",
+        "language": "ja",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "identifier": {
+          "system": "urn:oid:1.2.392.100495.100.1.11311234567",
+          "value": "12345"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "code": "xx",
+              "display": "自治体検診結果報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
+                "code": "51",
+                "display": "肺がん検診"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+        },
+        "date": "2021-10-21T12:12:21+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa"
+          }
+        ],
+        "title": "肺がん検診結果のお知らせ",
+        "confidentiality": "N",
+        "custodian": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code",
+                    "code": "3",
+                    "display": "一次検診と精密検査"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2021-10-01",
+              "end": "2021-10-01"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "検査結果",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "code": "01910",
+                  "display": "検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>肺がん検診の胸部エックス線検査判定 Ｅ（肺癌の疑い）</li><li>肺がん検診の胸部エックス線検査所見 要精密検査</li><li>肺がん検診の喀痰検査受診日 2020-10-01</li><li>肺がん検診の喀痰検査判定 Ｄ（高度（境界）異型扁平上皮細胞または悪性腫瘍が疑われる細胞を認める）</li><li>肺がん検診の精密検査対象有無 要精密検査（肺がん疑い）</li><li>肺がん検診のその他所見 特記事項無し</li><li>肺がん検診による偶発症の有無 なし</li><li>肺がん検診の精密検査結果 肺がんの疑いのある者又は未確定</li><li>肺がん検診の精密検査その他所見 肺がんの疑いのある者</li><li>肺がん検診の精密検査による偶発症の有無 なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+              },
+              {
+                "reference": "urn:uuid:b41c8c97-f3ad-450a-1738-5f2b4c40c68a"
+              },
+              {
+                "reference": "urn:uuid:cde1fec2-f8af-a793-7fe0-c2c417c9c000"
+              },
+              {
+                "reference": "urn:uuid:51424f15-c213-00bf-5d31-4770244b4f32"
+              },
+              {
+                "reference": "urn:uuid:628244db-68cf-abb6-bc9d-2d89bbc2b3ea"
+              },
+              {
+                "reference": "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641"
+              },
+              {
+                "reference": "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f"
+              },
+              {
+                "reference": "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e"
+              },
+              {
+                "reference": "urn:uuid:13e56540-0e37-96f8-c774-31d66fb3efa8"
+              },
+              {
+                "reference": "urn:uuid:881e7ffa-4b36-01de-f954-9eff7a7eba24"
+              },
+              {
+                "reference": "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc"
+              },
+              {
+                "reference": "urn:uuid:42b66f41-aafe-1452-1f3d-8fc25dfa1ce3"
+              },
+              {
+                "reference": "urn:uuid:54eabf03-1de5-d080-aed6-6b6a2e4da269"
+              },
+              {
+                "reference": "urn:uuid:029b7c8b-a683-6189-4b28-69eac44785df"
+              }
+            ]
+          },
+          {
+            "title": "問診結果",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "code": "01920",
+                  "display": "問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>肺がん検診の過去の受診歴 前年度受けた</li><li>肺がん検診時の肺がんに係る症状の有無 なし</li><li>肺がん検診時の喫煙指数 150</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:ddd1124f-f22d-73d9-0205-f23d19ff9d5b"
+              },
+              {
+                "reference": "urn:uuid:58da6db5-8b94-885e-d69d-2c1d61bcf5fc"
+              },
+              {
+                "reference": "urn:uuid:c129aa0a-0324-f741-b3b6-2ede35eef2de"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-2",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">健診太郎（ケンシンタロウ） 1955年5月4日 男性</div>"
+        },
+        "extension": [
+          {
+            "extension": [
+              {
+                "url": "age",
+                "valueAge": {
+                  "value": 66,
+                  "unit": "歳",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "a"
+                }
+              },
+              {
+                "url": "event",
+                "valueReference": {
+                  "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+                }
+              }
+            ],
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event"
+          }
+        ],
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102.11234567890",
+            "value": "34567"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "健診　太郎",
+            "family": "健診",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "ケイシン　タロウ",
+            "family": "ケンシン",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-1111-2222",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1955-05-04",
+        "address": [
+          {
+            "text": "神奈川県横浜市港区１－２－３",
+            "postalCode": "123-4567",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-3",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-3\" </p></div><p><b>practitioner</b>: <a href=\"#Practitioner_Inline-Instance-for-GOFSH-GENERATED-ID-21-4\">See above (urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)</a></p><p><b>organization</b>: <a href=\"#Organization_Inline-Instance-for-GOFSH-GENERATED-ID-21-5\">See above (urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)</a></p></div>"
+        },
+        "practitioner": {
+          "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+        },
+        "organization": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-4",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-4\" </p></div><p><b>name</b>: 東京　太郎, トウキョウ　タロウ</p></div>"
+        },
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "text": "東京　太郎",
+            "family": "東京",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "text": "トウキョウ　タロウ",
+            "family": "トウキョウ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-5",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-5\" </p></div><p><b>identifier</b>: id: 1311234567</p><p><b>type</b>: Healthcare Provider <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-organization-type.html\">Organization type</a>#prov)</span></p><p><b>name</b>: 厚生労働省第一病院</p><p><b>telecom</b>: ph: 0123-456-7890</p><p><b>address</b>: 東京都千代田区千代田９－９－９</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102",
+            "value": "1311234567"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "prov"
+              }
+            ]
+          }
+        ],
+        "name": "厚生労働省第一病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0123-456-7890"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都千代田区千代田９－９－９",
+            "postalCode": "100-0001",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-6",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>肺がん検診</p><p>2021年10月1日</p></div>"
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup",
+            "valueDate": "2021"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status",
+            "valueString": "本人負担はありません。"
+          }
+        ],
+        "status": "finished",
+        "class": {
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "code": "checkup",
+          "display": "健診"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type",
+              "code": "1",
+              "display": "個別受診"
+            }
+          ]
+        },
+        "period": {
+          "start": "2021-10-01",
+          "end": "2021-10-01"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-7",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>保険者番号：06123456</li><li>被保険者証記号・番号：１２３４５・６７８９０</li><li>枝番：01</li><li>患者区分：本人</li><li>有効期限：2020年3月31日</li></ul></div>"
+        },
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "１２３４５"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "６７８９０"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSubNumber",
+            "valueString": "01"
+          }
+        ],
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.20.2.61",
+              "code": "1"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "dependent": "01",
+        "relationship": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.20.2.62",
+              "code": "1",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "period": {
+          "start": "2018-04-01",
+          "end": "2022-03-31"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-8",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-8\" </p></div><p><b>identifier</b>: id: 06123456</p><p><b>type</b>: Insurance Company <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-organization-type.html\">Organization type</a>#ins)</span></p><p><b>name</b>: サンプル健康保険組合</p></div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.61",
+            "value": "06123456"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                "code": "ins"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b41c8c97-f3ad-450a-1738-5f2b4c40c68a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-9",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-9\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Imaging <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#imaging)</span></p><p><b>code</b>: 胸部エックス線検査 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-observationGroup.html\">MunicipalCheckup_codeSystem_observationGroup</a>#9P500)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>hasMember</b>: </p><ul><li><a href=\"#Observation_Inline-Instance-for-GOFSH-GENERATED-ID-21-10\">See above (urn:uuid:cde1fec2-f8af-a793-7fe0-c2c417c9c000)</a></li><li><a href=\"#Observation_Inline-Instance-for-GOFSH-GENERATED-ID-21-11\">See above (urn:uuid:51424f15-c213-00bf-5d31-4770244b4f32)</a></li></ul></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "code": "9P500",
+              "display": "胸部エックス線検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "hasMember": [
+          {
+            "reference": "urn:uuid:cde1fec2-f8af-a793-7fe0-c2c417c9c000"
+          },
+          {
+            "reference": "urn:uuid:51424f15-c213-00bf-5d31-4770244b4f32"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cde1fec2-f8af-a793-7fe0-c2c417c9c000",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-10",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-10\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Imaging <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#imaging)</span></p><p><b>code</b>: 肺がん検診の胸部エックス線検査判定 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P502000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: Ｅ（肺癌の疑い） <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2100.html\">MunicipalCheckup_codeSystem_result_2100</a>#4)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P502000000000011",
+              "display": "肺がん検診の胸部エックス線検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2100",
+              "code": "4",
+              "display": "Ｅ（肺癌の疑い）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51424f15-c213-00bf-5d31-4770244b4f32",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-11",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-11\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Imaging <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#imaging)</span></p><p><b>code</b>: 肺がん検診の胸部エックス線検査所見 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P503160800000049)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 要精密検査</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "imaging"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P503160800000049",
+              "display": "肺がん検診の胸部エックス線検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "要精密検査"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:628244db-68cf-abb6-bc9d-2d89bbc2b3ea",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-12",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-12\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: 喀痰検査 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-observationGroup.html\">MunicipalCheckup_codeSystem_observationGroup</a>#7A030)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>specimen</b>: <a href=\"#Specimen_Inline-Instance-for-GOFSH-GENERATED-ID-21-25\">See above (urn:uuid:3a33a26e-3532-06a6-90a9-e0566342cd49)</a></p><p><b>hasMember</b>: </p><ul><li><a href=\"#Observation_Inline-Instance-for-GOFSH-GENERATED-ID-21-13\">See above (urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641)</a></li><li><a href=\"#Observation_Inline-Instance-for-GOFSH-GENERATED-ID-21-14\">See above (urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f)</a></li><li><a href=\"#Observation_Inline-Instance-for-GOFSH-GENERATED-ID-21-15\">See above (urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e)</a></li></ul></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "code": "7A030",
+              "display": "喀痰検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "specimen": {
+          "reference": "urn:uuid:3a33a26e-3532-06a6-90a9-e0566342cd49"
+        },
+        "hasMember": [
+          {
+            "reference": "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641"
+          },
+          {
+            "reference": "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f"
+          },
+          {
+            "reference": "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ff4472f4-9e44-6aa3-bcd6-abb0662e4641",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-13",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-13\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: 肺がん検診の喀痰検査受診日 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#7A030161506144349)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 2021-10-01</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "7A030161506144349",
+              "display": "肺がん検診の喀痰検査受診日"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueDateTime": "2021-10-01"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:38cbf2cf-61b7-6738-9d8c-a7b29016c48f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-14",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-14\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: 肺がん検診の喀痰検査判定 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#7A030000006144311)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: Ｄ（高度（境界）異型扁平上皮細胞または悪性腫瘍が疑われる細胞を認める） <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2101.html\">MunicipalCheckup_codeSystem_result_2101</a>#3)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "7A030000006144311",
+              "display": "肺がん検診の喀痰検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2101",
+              "code": "3",
+              "display": "Ｄ（高度（境界）異型扁平上皮細胞または悪性腫瘍が疑われる細胞を認める）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:01b972fc-5183-8fa4-0954-10a7c5f5a36e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-15",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-15\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Laboratory <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#laboratory)</span></p><p><b>code</b>: 肺がん検診の喀痰検査所見 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#7A030160806144349)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 悪性腫瘍が疑われる細胞を認める</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "7A030160806144349",
+              "display": "肺がん検診の喀痰検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "悪性腫瘍が疑われる細胞を認める"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:13e56540-0e37-96f8-c774-31d66fb3efa8",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-16",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-16\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診の精密検査対象有無 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P504000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 要精密検査（肺がん疑い） <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2140.html\">MunicipalCheckup_codeSystem_result_2140</a>#2)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P504000000000011",
+              "display": "肺がん検診の精密検査対象有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2140",
+              "code": "2",
+              "display": "要精密検査（肺がん疑い）"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:881e7ffa-4b36-01de-f954-9eff7a7eba24",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-17",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-17\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診のその他所見 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P505160800000049)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 特記事項無し</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P505160800000049",
+              "display": "肺がん検診のその他所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記事項無し"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:55cb9c64-af3d-9763-a3f5-8d14954c36cc",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-18",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-18\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診による偶発症の有無 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P506000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: なし <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2010.html\">MunicipalCheckup_codeSystem_result_2010</a>#1)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P506000000000011",
+              "display": "肺がん検診による偶発症の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2011",
+              "code": "1",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:42b66f41-aafe-1452-1f3d-8fc25dfa1ce3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-19",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-19\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診の精密検査結果 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P507000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 肺がんの疑いのある者又は未確定 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2150.html\">MunicipalCheckup_codeSystem_result_2150</a>#4)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P507000000000011",
+              "display": "肺がん検診の精密検査結果"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2150",
+              "code": "4",
+              "display": "肺がんの疑いのある者又は未確定"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:54eabf03-1de5-d080-aed6-6b6a2e4da269",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-20",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-20\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診の精密検査その他所見 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P508160800000049)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 肺がんの疑いのある者</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P508160800000049",
+              "display": "肺がん検診の精密検査その他所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "肺がんの疑いのある者"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:029b7c8b-a683-6189-4b28-69eac44785df",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-21",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-21\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診の精密検査による偶発症の有無 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P509000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: なし <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2011.html\">MunicipalCheckup_codeSystem_result_2011</a>#1)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P509000000000011",
+              "display": "肺がん検診の精密検査による偶発症の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2011",
+              "code": "1",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ddd1124f-f22d-73d9-0205-f23d19ff9d5b",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-22",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-22\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診の過去の受診歴 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P500000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 前年度に受けた <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-2000.html\">MunicipalCheckup_codeSystem_2000</a>#1)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P500000000000011",
+              "display": "肺がん検診の過去の受診歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2000",
+              "code": "1",
+              "display": "前年度に受けた"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:58da6db5-8b94-885e-d69d-2c1d61bcf5fc",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-23",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-23\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Exam <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#exam)</span></p><p><b>code</b>: 肺がん検診時の肺がんに係る症状の有無 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9P501000000000011)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: なし <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-result-2052.html\">MunicipalCheckup_codeSystem_result_2052</a>#2)</span></p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "exam"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9P501000000000011",
+              "display": "肺がん検診時の肺がんに係る症状の有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "code": "2",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c129aa0a-0324-f741-b3b6-2ede35eef2de",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-24",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-24\" </p></div><p><b>status</b>: final</p><p><b>category</b>: Social History <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-observation-category.html\">Observation Category Codes</a>#social-history)</span></p><p><b>code</b>: 肺がん検診時の喫煙指数 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10.html\">MunicipalCheckup_codeSystem_jlac10</a>#9N737000000000012)</span></p><p><b>subject</b>: <a href=\"#Patient_Inline-Instance-for-GOFSH-GENERATED-ID-21-2\">See above (urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)</a></p><p><b>value</b>: 150</p></div>"
+        },
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "social-history"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10",
+              "code": "9N737000000000012",
+              "display": "肺がん検診時の喫煙指数"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueInteger": 150
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3a33a26e-3532-06a6-90a9-e0566342cd49",
+      "resource": {
+        "resourceType": "Specimen",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-21-25",
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"Inline-Instance-for-GOFSH-GENERATED-ID-21-25\" </p></div><p><b>type</b>: 喀痰 <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-MunicipalCheckup-codeSystem-jlac10SpecimenCode.html\">MunicipalCheckup_codeSystem_jlac10SpecimenCode</a>#061)</span></p></div>"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10-specimen-codes",
+              "code": "061",
+              "display": "喀痰"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

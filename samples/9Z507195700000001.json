@@ -1,0 +1,33 @@
+{
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-11",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507195700000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査骨密度"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 0.991,
+          "code": "g/cm2",
+          "system": "http://unitsofmeasure.org",
+          "unit": "g/cm2"
+        }
+      }

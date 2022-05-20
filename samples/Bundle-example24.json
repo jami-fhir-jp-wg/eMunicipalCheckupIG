@@ -1,0 +1,1330 @@
+{
+  "resourceType": "Bundle",
+  "id": "example24",
+  "meta": {
+    "profile": [
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_571",
+      "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
+    ]
+  },
+  "type": "document",
+  "identifier": {
+    "system": "urn:ietf:rfc:3986",
+    "value": "urn:uuid:dbfdc034-9401-0432-b79f-e64ecb6ce4a9"
+  },
+  "timestamp": "2021-10-21T12:12:21+09:00",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:fd13ba04-3b58-ac07-fad6-464cec87691d",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-1",
+        "language": "ja",
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber",
+            "valueString": "1.0"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"ja\" xml:lang=\"ja\"><p>自治体検診結果報告書</p></div>"
+        },
+        "identifier": {
+          "system": "urn:oid:1.2.392.100495.100.1.11311234567",
+          "value": "12345"
+        },
+        "status": "final",
+        "type": {
+          "coding": [
+            {
+              "code": "xx",
+              "system": "http://jpfhir.jp/fhir/Common/CodeSystem/doc-typecodes",
+              "display": "自治体検診結果報告書"
+            }
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "57",
+                "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-report-category",
+                "display": "骨粗鬆症検診"
+              }
+            ]
+          }
+        ],
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "encounter": {
+          "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+        },
+        "date": "2021-10-21T12:12:21+09:00",
+        "author": [
+          {
+            "reference": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa"
+          }
+        ],
+        "title": "骨粗鬆症検診結果のお知らせ",
+        "confidentiality": "N",
+        "custodian": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        },
+        "event": [
+          {
+            "code": [
+              {
+                "coding": [
+                  {
+                    "code": "1",
+                    "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-type-code",
+                    "display": "一次検診"
+                  }
+                ]
+              }
+            ],
+            "period": {
+              "start": "2021-10-01",
+              "end": "2021-10-01"
+            },
+            "detail": [
+              {
+                "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+              }
+            ]
+          }
+        ],
+        "section": [
+          {
+            "title": "検査結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01910",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "検査結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>骨粗鬆症検診のDXA検査骨量値 80.4 %YAM</li><li>骨粗鬆症検診のDXA検査骨密度 0.991 g/cm2</li><li>骨粗鬆症検診のDXA検査測定部位 大腿骨</li><li>骨粗鬆症検診のDXA検査に使用した機器 Ａ社製 骨密度測定機</li><li>骨粗鬆症検診のDXA検査判定 異状を認めず</li><li>骨粗鬆症検診のDXA検査所見 所見なし</li><li>骨粗鬆症検診の判定 異状認めず</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc"
+              },
+              {
+                "reference": "urn:uuid:cc4dace4-ed9d-14af-d6cf-e71c63fe9b83"
+              },
+              {
+                "reference": "urn:uuid:c82c230d-4ecb-b05f-fac6-6a4bcfdb46e3"
+              },
+              {
+                "reference": "urn:uuid:2fe72106-770d-c3e5-b73e-d6efd8617660"
+              },
+              {
+                "reference": "urn:uuid:c00c7364-c440-4399-c4a8-49593795df7e"
+              },
+              {
+                "reference": "urn:uuid:c6807bfb-9696-01f9-76e3-16bce415d9ef"
+              },
+              {
+                "reference": "urn:uuid:221d6096-c36e-7afb-a8d0-760138d939de"
+              },
+              {
+                "reference": "urn:uuid:5852a194-3a30-2fa4-55b1-7aa1745e96de"
+              },
+              {
+                "reference": "urn:uuid:fb7bdeae-fbce-d957-ba3c-3529f70b370f"
+              }
+            ]
+          },
+          {
+            "title": "問診結果",
+            "code": {
+              "coding": [
+                {
+                  "code": "01920",
+                  "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/section-code",
+                  "display": "問診結果セクション"
+                }
+              ]
+            },
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>骨粗鬆症検診の問診：過去の検査判定 なし</li><li>骨粗鬆症検診の問診：過去の精密検査の対象有無 わからない</li><li>骨粗鬆症検診の問診：現在の体重 75.5 kg</li><li>骨粗鬆症検診の問診：現在の身長 171.3 cm</li><li>骨粗鬆症検診の問診：骨折の既往歴 あり</li><li>骨粗鬆症検診の問診：過去の骨折の部位 左手首</li><li>骨粗鬆症検診の問診：大腿骨近位部骨折の家族歴 なし</li><li>骨粗鬆症検診の問診：喫煙習慣 喫煙したことはない</li><li>骨粗鬆症検診の問診：飲酒量 500 ml/日</li><li>骨粗鬆症検診の問診：ステロイド内服 内服したことはない</li><li>骨粗鬆症検診の問診：関節リウマチ罹患 なし</li><li>骨粗鬆症検診の問診：その他の既往歴 特記なし</li><li>骨粗鬆症検診の問診：活動量（運動頻度）週１回程度</li><li>骨粗鬆症検診の問診：その他問診事項 特記事項なし</li></ul></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:47790019-6b4d-c902-9ad7-1d164ad07907"
+              },
+              {
+                "reference": "urn:uuid:ee82a1ec-27b0-9142-5add-08b50f232bdd"
+              },
+              {
+                "reference": "urn:uuid:1ada2e00-6286-32ca-d1ca-d32f6a39033e"
+              },
+              {
+                "reference": "urn:uuid:9f74317b-f2a6-eb62-3687-5e192be31fa1"
+              },
+              {
+                "reference": "urn:uuid:569d10ba-d9b4-1d50-7db6-c9e5b5cd1a82"
+              },
+              {
+                "reference": "urn:uuid:d5c48087-bb53-8853-3935-8674d3524f0d"
+              },
+              {
+                "reference": "urn:uuid:ce3d80c7-a3bd-6dea-d4d6-ff268ef663b9"
+              },
+              {
+                "reference": "urn:uuid:6f4c4cd0-d13b-460f-826c-ff6db5957922"
+              },
+              {
+                "reference": "urn:uuid:51beaead-477f-c8f9-e36f-5dc4a5c7698a"
+              },
+              {
+                "reference": "urn:uuid:85b78126-5d48-8193-9d85-29eb9091af61"
+              },
+              {
+                "reference": "urn:uuid:4d84788b-5c7e-9080-a092-d3fca575a7e7"
+              },
+              {
+                "reference": "urn:uuid:1faf44b2-fa8d-6b30-762e-b08de8113c07"
+              },
+              {
+                "reference": "urn:uuid:419e9d73-d8c4-16ea-1c51-7112352cf145"
+              },
+              {
+                "reference": "urn:uuid:e9cc6622-3a53-07cb-d61b-311abc1899e7"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-2",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event",
+            "extension": [
+              {
+                "url": "age",
+                "valueAge": {
+                  "value": 66,
+                  "code": "a",
+                  "system": "http://unitsofmeasure.org",
+                  "unit": "歳"
+                }
+              },
+              {
+                "url": "event",
+                "valueReference": {
+                  "reference": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad"
+                }
+              }
+            ]
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">健診太郎（ケンシンタロウ） 1955年5月4日 男性</div>"
+        },
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102.11234567890",
+            "value": "34567"
+          }
+        ],
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "use": "official",
+            "text": "健診　太郎",
+            "family": "健診",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "use": "official",
+            "text": "ケンシン　タロウ",
+            "family": "ケンシン",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "03-1111-2222",
+            "use": "home"
+          }
+        ],
+        "gender": "male",
+        "birthDate": "1955-05-04",
+        "address": [
+          {
+            "text": "神奈川県横浜市港区１－２－３",
+            "postalCode": "123-4567",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa",
+      "resource": {
+        "resourceType": "PractitionerRole",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-3",
+        "practitioner": {
+          "reference": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba"
+        },
+        "organization": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba",
+      "resource": {
+        "resourceType": "Practitioner",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-4",
+        "name": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "IDE"
+              }
+            ],
+            "text": "東京　太郎",
+            "family": "東京",
+            "given": [
+              "太郎"
+            ]
+          },
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/iso21090-EN-representation",
+                "valueCode": "SYL"
+              }
+            ],
+            "text": "トウキョウ　タロウ",
+            "family": "トウキョウ",
+            "given": [
+              "タロウ"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-5",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.200119.6.102",
+            "value": "1311234567"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "prov",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "厚生労働省第一病院",
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "0123-456-7890"
+          }
+        ],
+        "address": [
+          {
+            "text": "東京都千代田区千代田９－９－９",
+            "postalCode": "100-0001",
+            "country": "JP"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad",
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-6",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Fiscal_Year_At_Primary_Checkup",
+            "valueDate": "2021"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Checkup_Fee_Collection_Status",
+            "valueString": "本人負担はありません。"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>骨粗鬆症検診</p><p>2021年10月1日</p></div>"
+        },
+        "status": "finished",
+        "class": {
+          "code": "checkup",
+          "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/encounter-category",
+          "display": "健診"
+        },
+        "serviceType": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/checkup-encounter-type",
+              "display": "個別受診"
+            }
+          ]
+        },
+        "period": {
+          "start": "2021-10-01",
+          "end": "2021-10-01"
+        },
+        "serviceProvider": {
+          "reference": "urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:eac6609a-9821-61f7-3eb9-b7db3d9f5cfc",
+      "resource": {
+        "resourceType": "Coverage",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-7",
+        "extension": [
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonSymbol",
+            "valueString": "１２３４５"
+          },
+          {
+            "url": "http://jpfhir.jp/fhir/core/Extension/StructureDefinition/JP_Coverage_InsuredPersonNumber",
+            "valueString": "６７８９０"
+          }
+        ],
+        "text": {
+          "status": "generated",
+          "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><ul><li>保険者番号：06123456</li><li>被保険者証記号・番号：１２３４５・６７８９０</li><li>枝番：01</li><li>患者区分：本人</li><li>有効期限：2020年3月31日</li></ul></div>"
+        },
+        "status": "active",
+        "type": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.61"
+            }
+          ]
+        },
+        "beneficiary": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "dependent": "01",
+        "relationship": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.20.2.62",
+              "display": "被保険者"
+            }
+          ]
+        },
+        "period": {
+          "start": "2018-04-01",
+          "end": "2022-03-31"
+        },
+        "payor": [
+          {
+            "reference": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750",
+      "resource": {
+        "resourceType": "Organization",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-8",
+        "identifier": [
+          {
+            "system": "urn:oid:1.2.392.100495.20.3.61",
+            "value": "06123456"
+          }
+        ],
+        "type": [
+          {
+            "coding": [
+              {
+                "code": "ins",
+                "system": "http://terminology.hl7.org/CodeSystem/organization-type"
+              }
+            ]
+          }
+        ],
+        "name": "サンプル健康保険組合"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:cc4dace4-ed9d-14af-d6cf-e71c63fe9b83",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-9",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507",
+              "system": "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes",
+              "display": "DXA検査"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "hasMember": [
+          {
+            "reference": "urn:uuid:c82c230d-4ecb-b05f-fac6-6a4bcfdb46e3"
+          },
+          {
+            "reference": "urn:uuid:2fe72106-770d-c3e5-b73e-d6efd8617660"
+          },
+          {
+            "reference": "urn:uuid:c00c7364-c440-4399-c4a8-49593795df7e"
+          },
+          {
+            "reference": "urn:uuid:c6807bfb-9696-01f9-76e3-16bce415d9ef"
+          },
+          {
+            "reference": "urn:uuid:221d6096-c36e-7afb-a8d0-760138d939de"
+          },
+          {
+            "reference": "urn:uuid:5852a194-3a30-2fa4-55b1-7aa1745e96de"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c82c230d-4ecb-b05f-fac6-6a4bcfdb46e3",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-10",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507195600000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査骨量値"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 95,
+          "code": "{%YAM}",
+          "system": "http://unitsofmeasure.org",
+          "unit": "%YAM"
+        },
+        "interpretation": [
+          {
+            "coding": [
+              {
+                "code": "N",
+                "system": "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"
+              }
+            ]
+          }
+        ],
+        "referenceRange": [
+          {
+            "low": {
+              "value": 80,
+              "code": "{%YAM}",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%YAM"
+            },
+            "high": {
+              "value": 100,
+              "code": "{%YAM}",
+              "system": "http://unitsofmeasure.org",
+              "unit": "%YAM"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2fe72106-770d-c3e5-b73e-d6efd8617660",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-11",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507195700000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査骨密度"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 0.991,
+          "code": "g/cm2",
+          "system": "http://unitsofmeasure.org",
+          "unit": "g/cm2"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c00c7364-c440-4399-c4a8-49593795df7e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-12",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507195800000049",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査測定部位"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "大腿骨"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c6807bfb-9696-01f9-76e3-16bce415d9ef",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-13",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507195900000049",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査に使用した機器"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "Ａ社製 骨密度測定機"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:221d6096-c36e-7afb-a8d0-760138d939de",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-14",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2706",
+              "display": "異状を認めず"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:5852a194-3a30-2fa4-55b1-7aa1745e96de",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-15",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "imaging",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9Z507160800000049",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診のDXA検査所見"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "所見なし"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:fb7bdeae-fbce-d957-ba3c-3529f70b370f",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-16",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P637000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2740",
+              "display": "異状認めず"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:47790019-6b4d-c902-9ad7-1d164ad07907",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-17",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P620000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：過去の検査判定"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee82a1ec-27b0-9142-5add-08b50f232bdd",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-18",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P621000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：過去の精密検査の対象有無"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "9",
+              "system": "urn:oid:1.2.392.100495.100.2700",
+              "display": "わからない"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1ada2e00-6286-32ca-d1ca-d32f6a39033e",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-19",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9N006000000000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：現在の体重"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 75.5,
+          "code": "kg",
+          "system": "http://unitsofmeasure.org",
+          "unit": "kg"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f74317b-f2a6-eb62-3687-5e192be31fa1",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-20",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9N001000000000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：現在の身長"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 171.3,
+          "code": "cm",
+          "system": "http://unitsofmeasure.org",
+          "unit": "cm"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:569d10ba-d9b4-1d50-7db6-c9e5b5cd1a82",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-21",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P622000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：骨折の既往歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "2",
+              "system": "urn:oid:1.2.392.100495.100.2051",
+              "display": "あり"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d5c48087-bb53-8853-3935-8674d3524f0d",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-22",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P623160800000049",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：過去の骨折の部位"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "左手首"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ce3d80c7-a3bd-6dea-d4d6-ff268ef663b9",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-23",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P624000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：大腿骨近位部骨折の家族歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2052",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6f4c4cd0-d13b-460f-826c-ff6db5957922",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-24",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P625000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：喫煙習慣"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2701",
+              "display": "喫煙したことはない"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:51beaead-477f-c8f9-e36f-5dc4a5c7698a",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-25",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P626000000000001",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：飲酒量"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueQuantity": {
+          "value": 500,
+          "code": "ml/d",
+          "system": "http://unitsofmeasure.org",
+          "unit": "ml/日"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:85b78126-5d48-8193-9d85-29eb9091af61",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-26",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P627000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：ステロイド内服"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2702",
+              "display": "内服したことはない"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4d84788b-5c7e-9080-a092-d3fca575a7e7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-27",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P628000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：関節リウマチ罹患"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "1",
+              "system": "urn:oid:1.2.392.100495.100.2051",
+              "display": "なし"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1faf44b2-fa8d-6b30-762e-b08de8113c07",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-28",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P629160800000049",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：その他の既往歴"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記なし"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:419e9d73-d8c4-16ea-1c51-7112352cf145",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-29",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P630000000000011",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：活動量（運動頻度）"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueCodeableConcept": {
+          "coding": [
+            {
+              "code": "3",
+              "system": "urn:oid:1.2.392.100495.100.2703",
+              "display": "週１回程度"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e9cc6622-3a53-07cb-d61b-311abc1899e7",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "Inline-Instance-for-GOFSH-GENERATED-ID-28-30",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "exam",
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "9P634160800000049",
+              "system": $jlac10_cs,
+              "display": "骨粗鬆症検診の問診：その他問診事項"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3"
+        },
+        "valueString": "特記事項なし"
+      }
+    }
+  ]
+}
