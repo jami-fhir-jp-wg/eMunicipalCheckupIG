@@ -1,0 +1,8 @@
+Instance: Inline-Instance-for-GOFSH-GENERATED-ID-29-32
+InstanceOf: Observation
+Usage: #inline
+* status = #final
+* category = $observation-category#exam
+* code = $jlac10_cs#9P676000000000011 "歯周疾患検診の歯肉出血ＢＯＰ（最大値）"
+* subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* valueCodeableConcept = urn:oid:1.2.392.100495.100.2803#1 "出血あり"
