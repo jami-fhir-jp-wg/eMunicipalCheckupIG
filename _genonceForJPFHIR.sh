@@ -4,19 +4,20 @@ publisherJPFHIR_jar=publisherJPFHIR.jar
 input_cache_path=./input-cache/
 echo Checking internet connection...
 #curl -sSf tx.fhir.org > /dev/null
-txjpfhir="-tx http://tx.jpfhir.jp:8099/fx"
-curl -sSf $txjpfhir > /dev/null
+txjpfhirURL="http://tx.jpfhir.jp"
+txjpfhir="-tx $txjpfhirURL"
 cp $publisherJPFHIR_jar ./input-cache/$publisher_jar
+#curl -sSf $txjpfhirURL > /dev/null
+txoption=""
+#if [ $? -eq 0 ]; then
+#	echo "Online"
+#	txoption=""
+#else
+#	echo "Offline"
+#	txoption="-tx n/a"
+#fi
 
-if [ $? -eq 0 ]; then
-	echo "Online"
-	txoption=""
-else
-	echo "Offline"
-	txoption="-tx n/a"
-fi
-
-echo "$txoption"
+#echo "$txoption"
 
 publisher=$input_cache_path/$publisher_jar
 if test -f "$publisher"; then

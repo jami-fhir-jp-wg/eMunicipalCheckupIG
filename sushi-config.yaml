@@ -5,20 +5,26 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 id: eMunicipalCheckup
 canonical: http://jpfhir.jp/fhir/eMunicipalCheckup
-name: EMunicipalCheckupIG
-# title: Example Title
-# description: Example Implementation Guide for getting started with SUSHI
+name: "eMunicipalCheckupImplementationGuide"
+title: "eMunicipal Checkup ImplementationGuide"
+description: Implementation Guide for eMunicipal Checkup
 status: draft # draft | active | retired | unknown
-version: 0.1.0
+version: 0.9.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
 # jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
 publisher:
-  name: JAMI
-  url: http://jami.jp
+  name: KOhe
+  url: http://jpfhir.jp
   # email: test@example.org
+dependencies:
+  jp-core.draft1:
+#    uri: http://jpfhir.jp/fhir/core/jp-core.draft1
+# to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
+    uri: http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.draft1
+    version: 1.1.0-beta
 
 # The dependencies property corresponds to IG.dependsOn. The key is the
 # package id and the value is the version (or dev/current). For advanced
@@ -44,6 +50,10 @@ publisher:
 # sub-pages.
 #
 # pages:
+  index.md:
+    title: 自治体検診HL7&reg; FHIR&reg;記述仕様書 第1版
+  tables.md:
+    title: 各表一覧
 #   index.md:
 #     title: Example Home
 #   implementation.xml:
@@ -308,7 +318,36 @@ parameters:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-
+#-----------------------------------------
+# IG 外部パラメータ設定
+#-----------------------------------------
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    #- input/intro-notes
+    - fsh-generated/includes
+    #- input/summaries
+  path-expansion-params: '../../input/_resources/exp-params.json'
+  active-tables: 'false'
+  apply-version: 'true'
+  apply-copyright: 'true'
+  apply-publisher: 'true'
+  apply-contact: 'true'
+  apply-licese: 'true'
+  apply-jurisdiction: 'true'
+  show-inherited-invariants: 'true'
+  usage-stats-opt-out: 'true'
+  excludexml: 'true'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'false'
+  generate: #what does this do - todo: remove and see
+    - json
+ 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
