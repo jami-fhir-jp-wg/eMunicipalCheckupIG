@@ -70,7 +70,35 @@ dependencies:
 # partial list of allowed parameters see: 
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
 # 
-parameters:
+#-----------------------------------------
+# IG 外部パラメータ設定
+#-----------------------------------------
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    #- input/intro-notes
+    - fsh-generated/includes
+    #- input/summaries
+  path-expansion-params: '../../input/_resources/exp-params.json'
+  active-tables: 'false'
+  apply-version: 'true'
+  apply-copyright: 'true'
+  apply-publisher: 'true'
+  apply-contact: 'true'
+  apply-licese: 'true'
+  apply-jurisdiction: 'true'
+  show-inherited-invariants: 'true'
+  usage-stats-opt-out: 'true'
+  excludexml: 'true'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'false'
+  generate: #what does this do - todo: remove and see
+    - json
   special-url:
     - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup
     - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_511
@@ -303,7 +331,7 @@ parameters:
     - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Practitioner_eMunicipalCheckup
     - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_PractitionerRole_eMunicipalCheckup
     - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Specimen_eMunicipalCheckup
-    
+     
 #   excludettl: true
 #   validation: [allow-any-extensions, no-broken-links]
 #
@@ -318,36 +346,7 @@ parameters:
 menu:
   Home: index.html
   Artifacts: artifacts.html
-#-----------------------------------------
-# IG 外部パラメータ設定
-#-----------------------------------------
-parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-  path-resource:
-    - input/resources
-    - fsh-generated/resources
-  path-pages:
-    - input/pagecontent
-    #- input/intro-notes
-    - fsh-generated/includes
-    #- input/summaries
-  path-expansion-params: '../../input/_resources/exp-params.json'
-  active-tables: 'false'
-  apply-version: 'true'
-  apply-copyright: 'true'
-  apply-publisher: 'true'
-  apply-contact: 'true'
-  apply-licese: 'true'
-  apply-jurisdiction: 'true'
-  show-inherited-invariants: 'true'
-  usage-stats-opt-out: 'true'
-  excludexml: 'true'
-  excludejsn: 'false'
-  excludettl: 'true'
-  excludemap: 'true'
-  excludeexample: 'false'
-  generate: #what does this do - todo: remove and see
-    - json
- 
+
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
 # │  resource. These properties are less commonly needed than those above.                         │
