@@ -69,7 +69,7 @@ dependencies:
 # values, the value in the YAML should be a sequence/array. For a
 # partial list of allowed parameters see: 
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-#
+# 
 parameters:
   special-url:
     - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup
