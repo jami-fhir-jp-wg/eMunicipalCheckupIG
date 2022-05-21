@@ -10,7 +10,7 @@ title: "eMunicipal Checkup ImplementationGuide"
 description: "Implementation Guide for eMunicipal Checkup"
 status: draft # draft | active | retired | unknown
 version: 0.9.0
-fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
 copyrightYear: 2022+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
 # license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
@@ -55,7 +55,7 @@ pages:
     title: 自治体検診HL7&reg; FHIR&reg;記述仕様書 第1版
   tables.md:
     title: 各表一覧
-    
+
 #   index.md:
 #     title: Example Home
 #   implementation.xml:
