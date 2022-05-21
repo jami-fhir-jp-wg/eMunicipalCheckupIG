@@ -49,11 +49,13 @@ dependencies:
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
 #
-# pages:
+
+pages:
   index.md:
     title: 自治体検診HL7&reg; FHIR&reg;記述仕様書 第1版
   tables.md:
     title: 各表一覧
+    
 #   index.md:
 #     title: Example Home
 #   implementation.xml:

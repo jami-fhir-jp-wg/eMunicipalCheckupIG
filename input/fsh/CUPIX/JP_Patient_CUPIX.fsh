@@ -19,46 +19,6 @@ Description: "TBD"
     * value 1..1
 
 
-* name[IDE]
-  * extension[NameRepresentationUse].valueCode	= #IDE
-  * use 1..1 MS
-  * use = #official (exactly)
-    * ^short = "氏名が正式名称であることを明示するために、NameUseバリューセット（http://hl7.org/fhir/ValueSet/name-use）より「official」を必須で設定する。"
-  * text 1..1 MS
-    * ^short = "氏名全体の文字列をtext要素に入れる。氏名の姓と名が分離できない場合は本要素のみを使用する。"
-  * family 0..1 MS
-    * ^short = "氏名の姓。"
-  * given 0..* MS
-    * ^short = "氏名の名。ミドルネームがある場合には、ミドルネーム、名の順で繰り返す。"
-
-* name[SYL]
-  * ^short = "よみ（カタカナ）"
-  * extension[NameRepresentationUse].valueCode	 = #SYL
-    * ^short = "カナ表記であることを示す固定値。"
-  * use 1..1 MS
-  * use = #official (exactly)
-    * ^short = "氏名が正式名称であることを明示するために、NameUseバリューセット（http://hl7.org/fhir/ValueSet/name-use）より「official」を必須で設定する。"
-  * text 1..1 MS
-    * ^short = "カナ氏名全体の文字列をtext要素に入れる。氏名の姓と名が分離できない場合は本要素のみを使用する。カタカナはJIS X 0208のカタカナ（全角カナ）みとし、JIS X 0201のカタカナ（半角カナ）は使用してはならない。"
-  * family 0..1 MS
-    * ^short = "カナ氏名の姓。"
-  * given 0..* MS
-    * ^short = "カナ氏名の名。ミドルネームがある場合には、ミドルネーム、名の順で繰り返す。"
-
-/*
-* name[ABC]
-  * extension[NameRepresentationUse].valueCode	= #ABC
-  * use 1..1 MS
-  * use = #official(exactly)
-    * ^short = "氏名が正式名称であることを明示するために、NameUseバリューセット（http://hl7.org/fhir/ValueSet/name-use）より「official」を必須で設定する。"
-  * text 1..1 MS
-    * ^short = "氏名全体の文字列をtext要素に入れる。氏名の姓と名が分離できない場合は本要素のみを使用する。"
-  * family 0..1 MS
-    * ^short = "氏名の姓。"
-  * given 0..* MS
-    * ^short = "氏名の名。ミドルネームがある場合には、ミドルネーム、名の順で繰り返す。"
-*/
-
 * gender 1..1 MS
   * ^short = "患者の性別。'male'または'female'。"
 

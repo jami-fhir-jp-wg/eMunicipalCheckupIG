@@ -69,41 +69,6 @@ Description: "セクションコード"
 * #01920	"問診結果セクション"
 * #01995 	"添付書類セクション"
 
-//--------------------------------------------------------------------
-// 保険種別コード	Coverage.type
-//	保険種別コードを表すコードシステム。
-//--------------------------------------------------------------------
-CodeSystem:  MHLW_codeSystem_ePreCDA_insuranceCategory_tbl11
-Id:   mhlw-codeSystem-ePreCDA-insuranceCategory-tbl11
-Description: "厚労省電子処方CDA規格別表11 保険種別コード"
-* ^url = "urn:oid:1.2.392.100495.20.2.61"
-* ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuranceCategory"
-* ^status = #active
-* ^content = #complete
-* ^caseSensitive = false
-* #1	"医保"	
-* #2	"国保"	
-* #3	"労災"	
-* #4	"自賠責"	
-* #5	"公害"	
-* #6	"自費"	
-* #7	"後期高齢者"	
-* #8	"公費"	
-
-//--------------------------------------------------------------------
-// 被保険者区分コード	Coverage.relationship
-//	被保険者区分を表すコードシステム。
-//--------------------------------------------------------------------
-CodeSystem:  MHLW_codeSystem_ePreCDA_insuredRelationship_tbl12
-Id:   mhlw-codeSystem-ePreCDA-insuredRelationship-tbl12
-Description: "厚労省電子処方CDA規格別表12 被保険者区分コード"
-* ^url = "urn:oid:1.2.392.100495.20.2.62"
-* ^valueSet = "http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship"
-* ^status = #active
-* ^content = #complete
-* ^caseSensitive = false
-* #1	"被保険者"	
-* #2	"被扶養者"	
 
 //--------------------------------------------------------------------
 // 受診区分	Encounter.class

@@ -6,9 +6,12 @@ Description:    "TBD"
 
 * ^status = #draft
 
-* name 1..* MS
-* name only JP_HumanName
-
-* name[IDE] 1..1 MS
-* name[SYL] 1..1 MS
-
+* name ^slicing.discriminator.type = #value
+* name ^slicing.discriminator.path = "extension.value[x]"
+* name ^slicing.rules = #open
+* name contains
+    IDE 1..1 and
+    SYL 1..1 and
+    @default 0..*
+* name[IDE] only JP_HumanName
+* name[SYL] only JP_HumanName
