@@ -11,7 +11,7 @@ Description:    "TBD"
 * name ^slicing.rules = #open
 * name contains
     IDE 1..1 and
-    SYL 1..1 and
+    SYL 0..1 and
     @default 0..*
 * name[IDE] only JP_HumanName
 * name[SYL] only JP_HumanName
