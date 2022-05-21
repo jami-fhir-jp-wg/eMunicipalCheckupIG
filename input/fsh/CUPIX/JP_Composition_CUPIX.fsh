@@ -133,14 +133,10 @@ Description:    "TBD"
   * ^slicing.discriminator.type = #pattern
 //  * ^slicing.discriminator.path = "code"
   * ^slicing.discriminator.path = "code.coding.code"
-  * ^slicing.rules = #closed
-  * ^slicing.ordered = false
-  * ^slicing.description = "section.codeに連動したスライシング設定"
+  * ^slicing.rules = #open
 
 * section contains
 // 添付書類だけの場合は０もあり
-//    OBSERVATION 1..1 MS and
-//    QUESTIONAIRRE 1..1 MS and
     OBSERVATION 0..1 MS and
     QUESTIONAIRRE 0..1 MS and
     ATTACHMENT 0..1 MS
@@ -169,15 +165,21 @@ Description:    "TBD"
     * div 1..1 MS
       * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
   * entry
+    * ^short = "検査結果セクションに含まれるリソースの参照。検査項目を表すObservationリソースが含まれる。"
+    * reference 1..1
+      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
     * ^slicing.discriminator.type = #profile
     * ^slicing.discriminator.path = "resolve()"
     * ^slicing.rules = #open
 //  * entry contains OBS 1..* MS and COV 0..2 MS
-  * entry contains OBS 0..* MS and COV 0..2 MS
-    * ^short = "検査結果セクションに含まれるリソースの参照。検査項目を表すObservationリソースが含まれる。"
+  * entry contains 
+      OBS 0..* MS and 
+      COV 0..2 MS
+
   * entry[OBS] only Reference(JP_Observation_CUPIX or JP_Observation_Group_CUPIX)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
+
   * entry[COV] only Reference(JP_Coverage_CUPIX)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
     * reference 1..1
@@ -209,7 +211,10 @@ Description:    "TBD"
       * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
   * entry 0..*
     * ^short = "問診結果セクションに含まれるリソースの参照。検査項目を表すObservationリソースが含まれる。"
-  * entry only Reference(JP_Observation_CUPIX)
+    * reference 1..1
+      * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
+
+  * entry only Reference(JP_Observation_CUPIX or JP_Observation_Group_CUPIX)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
@@ -237,7 +242,7 @@ Description:    "TBD"
       * ^short = "本セクションの内容をテキストで表現した文字列を入れてもよい。内容を省略しても構わない。 このデータは人がこのセクションの内容の概略をひと目で把握するためだけに使われるものであり、データ処理対象としてはならない。"
   * entry 1..*
     * ^short = "添付書類セクションに含まれるリソースの参照。添付書類を表す。DocumentReferenceリソースが含まれる。"
-  * entry only Reference(JP_DocumentReference_CUPIX)
+  * entry only Reference(JP_DocumentReference_CUPIX or JP_DiagnosticReport_CUPIX)
     * reference 1..1
       * ^short = "参照先のリソースのfullUrl要素に指定されるUUID。"
 
