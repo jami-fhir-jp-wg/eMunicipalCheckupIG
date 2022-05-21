@@ -71,7 +71,7 @@ jobs:
       with:
         personal_token: ${{ secrets.PERSONAL_TOKEN }}
         external_repository: kazuhiko-ohe/jp-core-develop
-        publish_branch: develop1.0-pages
+        publish_branch: develop-eMunicipal
         publish_dir: ./output
     - name: ssh key generate
       run: echo "$SSH_PRIVATE_KEY" > key && chmod 600 key
