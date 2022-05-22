@@ -17,6 +17,17 @@ Description: "自治体検診結果報告書　Bundleリソース　文書情報
     * ^short = "Bundleリソースを一意に特定する識別子。本仕様では、Bundleに対して一意となるように生成されたUUIDを指定する。"
 */
 
+* entry[composition]
+  * ^short = "構成リソース一覧目次に相当。"
+    * ^short = "文書構成情報"
+  * ^slicing.discriminator.type = #profile
+  * ^slicing.discriminator.path = "resource"
+  * ^slicing.rules = #open
+* entry[composition]  contains 
+    first 0..1 and
+    second 0..1 and
+    both 0..1
+    
 * entry[composition].resource only JP_Composition_eMunicipalCheckup
 * entry[patient].resource only JP_Patient_eMunicipalCheckup
 * entry[practitionerRole].resource only JP_PractitionerRole_eMunicipalCheckup
