@@ -6,9 +6,16 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
 * ^url = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_510"
 * ^status = #draft
 
-* category 1..1 MS
-  * coding 1..1 MS
-    * code = #51 (exactly)
+* category 
+  * coding = $report_category_cs#51  "肺がん検診"
+      // 51：肺がん検診
+      // 52：乳がん検診
+      // 53：胃がん検診
+      // 54：子宮頸がん検診
+      // 55：大腸がん検診
+      // 56：肝炎検診
+      // 57：骨粗鬆症検診
+      // 58：歯周疾患検診
 
 //検査結果セクション
 * section[OBSERVATION]
@@ -29,8 +36,6 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
         9P508160800000049 0..1 MS and   // "検査結果情報エントリ 肺がん検診の精密検査その他所見"
         9P509000000000011 0..1 MS       // "検査結果情報エントリ 肺がん検診の精密検査による偶発症の有無"
 
-  * entry[COV] only Reference(JP_Coverage_eMunicipalCheckup)
-    * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
   * entry[Group_9P500] only Reference(JP_Observation_eMunicipalCheckup_Group_9P500)
     * ^short = "検査結果セクションに含まれる 胸部エックス線検査 をあらわすObservationリソースへの参照。"
   * entry[9P502000000000011] only Reference(JP_Observation_eMunicipalCheckup_9P502000000000011)

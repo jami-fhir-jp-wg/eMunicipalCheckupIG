@@ -6,6 +6,17 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
 * ^url = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_511"
 * ^status = #draft
 
+* event
+  * code
+    * coding
+      * ^short = "自治体検診の健診プログラムサービスコード（検診区分）"
+      * system = $checkup_type_cs (exactly)
+        * ^short = "自治体検診の健診プログラムサービスコード（検診区分）を識別するURI。固定値。"
+      * code  from $checkup_type_vs // 健診プログラムサービスコード（検診区分）
+      //1：一次検診
+      // 2：二次検診
+      // 3:一次検診と精密検査の同時実施
+
 
 //検査結果セクション
 * section[OBSERVATION]
