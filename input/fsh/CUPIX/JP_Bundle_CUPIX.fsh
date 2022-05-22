@@ -50,11 +50,6 @@ Description: "健診・検診結果報告書　Bundleリソース共通定義"
     media 0..* MS and
     documentReference 0..* MS
 
-* entry[composition]
-  * ^short = "構成リソース一覧目次に相当。"
-  * resource only JP_Composition_CUPIX
-    * ^short = "文書構成情報"
-
 * entry[patient]
   * ^short = "受診者情報エントリ"
   * resource only JP_Patient_CUPIX
