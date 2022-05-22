@@ -108,7 +108,7 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
 
 * entry[composition]
   * ^slicing.discriminator.type = #pattern
-  * ^slicing.discriminator.path = "event.code.coding.code"
+  * ^slicing.discriminator.path = "resource.event.code.coding.code"
   * ^slicing.rules = #open
 * entry[composition] contains 
     first 0..1 and
@@ -117,12 +117,15 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
 * entry[composition][first]
   * resource only JP_Composition_eMunicipalCheckup_511
     * ^short = "文書構成情報(肺がん一次検診)"
+  * resource.event.code.coding = $checkup_type_cs#1 (exactly)
 * entry[composition][second]
   * resource only JP_Composition_eMunicipalCheckup_512
     * ^short = "文書構成情報(肺がん精密検査)"
+  * resource.event.code.coding = $checkup_type_cs#2 (exactly)
 * entry[composition][both]
   * resource only JP_Composition_eMunicipalCheckup_513
     * ^short = "文書構成情報(肺がん一次検診と精密検査)"
+  * resource.event.code.coding = $checkup_type_cs#3 (exactly)
 
 * entry[Group_9P500]
   * ^short = "検査結果情報エントリ 胸部エックス線検査"
