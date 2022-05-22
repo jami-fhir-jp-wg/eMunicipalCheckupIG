@@ -107,10 +107,13 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
     9N737000000000012 0..1 MS       //　"検査結果情報エントリ 肺がん検診時の喫煙指数"
 
 * entry[composition]
+  * ^short = "構成リソース一覧目次に相当。"
+  * resource only JP_Composition_CUPIX
+    * ^short = "文書構成情報"
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "resource"
   * ^slicing.rules = #open
-* entry[composition] contains 
+  contains 
     first 0..1 and
     second 0..1 and
     both 0..1
