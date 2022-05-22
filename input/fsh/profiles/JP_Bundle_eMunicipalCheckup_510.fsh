@@ -89,6 +89,7 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
     and eventCategory03
     
 * entry contains
+    composition 1..1 MS and 
     Group_9P500 0..1 MS and         // "検査結果情報エントリ 胸部エックス線検査"
     9P502000000000011 0..1 MS and       // "検査結果情報エントリ 肺がん検診の胸部エックス線検査判定"
     9P503160800000049 0..1 MS and       // "検査結果情報エントリ 肺がん検診の胸部エックス線検査所見"
@@ -117,7 +118,6 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
     second 0..1 and
     both 0..1
     
-
 * entry[composition][first]
   * resource only JP_Composition_eMunicipalCheckup_511
     * ^short = "文書構成情報(肺がん一次検診)"
