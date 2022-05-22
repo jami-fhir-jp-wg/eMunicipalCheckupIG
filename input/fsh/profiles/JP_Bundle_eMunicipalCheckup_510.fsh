@@ -2,10 +2,10 @@ Invariant: eventCategory01
 Description: "一次検診条件"
 Severity: #error
 Expression: "entry[0].event.code.coding.code = '1'
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P504000000000011).exist()  
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P507000000000011).exist().not() 
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P508160800000049).exist().not()  
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P509000000000011).exist().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P504000000000011).exists()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P507000000000011).exists().not() 
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P508160800000049).exists().not()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P509000000000011).exists().not()   
  "
 // exist // "検査結果情報エントリ 肺がん検診の精密検査対象有無"
 // not exist // "検査結果情報エントリ 肺がん検診の精密検査結果"
@@ -16,23 +16,23 @@ Invariant: eventCategory02
 Description: "二次検診条件"
 Severity: #error
 Expression: "entry[0].event.code.coding.code = '2'
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P507000000000011).exist()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P507000000000011).exists()  
 
- and (entry.resource=JP_Observation_eMunicipalCheckup_Group_9P500).exist().not() 
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P502000000000011).exist().not()  
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P503160800000049).exist().not()   
- and (entry.resource=JP_Observation_eMunicipalCheckup_Group_7A030).exist().not() 
- and (entry.resource=JP_Observation_eMunicipalCheckup_7A030161506144349).exist().not()  
- and (entry.resource=JP_Observation_eMunicipalCheckup_7A030000006144311).exist().not()   
-and (entry.resource=JP_Observation_eMunicipalCheckup_7A030160806144349).exist().not() 
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P504000000000011).exist().not()  
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P505160800000049).exist().not()   
-and (entry.resource=JP_Observation_eMunicipalCheckup_9P506000000000011).exist().not() 
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P508160800000049).exist().not()   
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P509000000000011).exist().not()   
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P500000000000011).exist().not()   
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P501000000000011).exist().not()   
- and (entry.resource=JP_Observation_eMunicipalCheckup_9N737000000000012).exist().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_Group_9P500).exists().not() 
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P502000000000011).exists().not()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P503160800000049).exists().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_Group_7A030).exists().not() 
+ and (entry.resource=JP_Observation_eMunicipalCheckup_7A030161506144349).exists().not()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_7A030000006144311).exists().not()   
+and (entry.resource=JP_Observation_eMunicipalCheckup_7A030160806144349).exists().not() 
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P504000000000011).exists().not()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P505160800000049).exists().not()   
+and (entry.resource=JP_Observation_eMunicipalCheckup_9P506000000000011).exists().not() 
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P508160800000049).exists().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P509000000000011).exists().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P500000000000011).exists().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P501000000000011).exists().not()   
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9N737000000000012).exists().not()   
 "
 /*
 * entry[Group_9P500] 0..0         // "検査結果情報エントリ 胸部エックス線検査"
@@ -57,8 +57,8 @@ Invariant: eventCategory03
 Description: "一次、二次検診両方実施条件"
 Severity: #error
 Expression: "entry[0].event.code.coding.code = '3'
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P504000000000011).exist()  
- and (entry.resource=JP_Observation_eMunicipalCheckup_9P507000000000011).exist()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P504000000000011).exists()  
+ and (entry.resource=JP_Observation_eMunicipalCheckup_9P507000000000011).exists()  
 "
 /*
 * entry[9P504000000000011]  1..1  // "検査結果情報エントリ 肺がん検診の精密検査対象有無"
