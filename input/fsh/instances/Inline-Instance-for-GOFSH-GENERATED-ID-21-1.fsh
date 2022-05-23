@@ -15,7 +15,8 @@ Usage: #inline
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * encounter = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)
 * date = "2021-10-21T12:12:21+09:00"
-* author = Reference(urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa)
+* author[0] = Reference(urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa)
+* author[1] = Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
 * title = "肺がん検診結果のお知らせ"
 * confidentiality = #N
 * custodian = Reference(urn:uuid:d1fb6063-8f12-4c2c-922a-7b5e467c8407)
