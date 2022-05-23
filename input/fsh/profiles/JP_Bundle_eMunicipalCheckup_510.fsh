@@ -110,6 +110,7 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
 * entry[composition]
   * ^short = "構成リソース一覧目次に相当。"
     * ^short = "文書構成情報"
+  * resource only JP_Composition_eMunicipalCheckup_510  
   * ^slicing.discriminator.type = #profile
   * ^slicing.discriminator.path = "resource"
   * ^slicing.rules = #open
