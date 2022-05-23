@@ -1,6 +1,7 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-2
 InstanceOf: Patient
 Usage: #inline
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Patient_eMunicipalCheckup"
 * extension.url = "http://jpfhir.jp/fhir/eCheckup/Extension/StructureDefinition/JP_Age_At_Event"
 * extension.extension[0].url = "age"
 * extension.extension[=].valueAge = 66 'a' "歳"
