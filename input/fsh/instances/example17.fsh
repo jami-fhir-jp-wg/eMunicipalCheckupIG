@@ -1,9 +1,11 @@
 Instance: example17
-InstanceOf: JP_Bundle_eMunicipalCheckup_510
+InstanceOf: JP_Bundle_eMunicipalCheckup
 //InstanceOf: JP_Bundle_eMunicipalCheckup
 Usage: #example
 Description: "例17 肺がん検診「FHIR構造パターン」記述例"
-* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_510"
+
+//* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_510"
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup"
 * identifier.system = "urn:ietf:rfc:3986"
 * identifier.value = "urn:uuid:f3b74ffe-4df6-6abd-9d40-f6870fd165bf"
 * type = #document

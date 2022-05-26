@@ -1,6 +1,7 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-11
-InstanceOf: Observation
+InstanceOf: JP_Observation_eMunicipalCheckup
 Usage: #inline
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup"
 * status = #final
 * category = $observation-category#imaging
 * code = $jlac10_cs#9P503160800000049 "肺がん検診の胸部エックス線検査所見"

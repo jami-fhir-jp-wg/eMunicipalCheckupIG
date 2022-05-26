@@ -1,7 +1,7 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-5
-InstanceOf: Organization
+InstanceOf: JP_Organization_eMunicipalCheckup_Provider
 Usage: #inline
-* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Organization_eMunicipalCheckup"
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Organization_eMunicipalCheckup_Provider"
 
 * identifier.system = "urn:oid:1.2.392.200119.6.102"
 * identifier.value = "1311234567"

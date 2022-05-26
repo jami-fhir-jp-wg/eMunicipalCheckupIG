@@ -6,12 +6,9 @@ Description:    "TBD"
 
 * ^status = #draft
 
-* name ^slicing.discriminator.type = #value
-* name ^slicing.discriminator.path = "extension.value[x]"
-* name ^slicing.rules = #open
-* name contains
-    IDE 1..1 and
-    SYL 0..1 and
-    @default 0..*
-* name[IDE] only JP_HumanName
-* name[SYL] only JP_HumanName
+* text 0..1 MS
+  * ^short = "本リソースをテキストで表現したものを入れてもよい。"
+  * status 1..1 MS
+  * status = $narrative_cs#generated
+    * ^short = "固定値。テキスト内容の全てがリソースのコンテンツから生成されたことを示す。"
+  * div 1..1 MS

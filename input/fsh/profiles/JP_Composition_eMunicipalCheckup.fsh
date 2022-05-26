@@ -3,9 +3,9 @@ Parent:         JP_Composition_CUPIX
 Id:             JP-Composition-eMunicipalCheckup
 //Title:          "自治体検診結果報告書　Compositionリソース　文書構成情報"
 Description:    "自治体検診結果報告書　Compositionリソース　文書構成情報"
+
 * ^url = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup"
 * ^status = #draft
-
 * type
   * coding
     * code
@@ -55,6 +55,8 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
 * section[OBSERVATION]
   * entry[COV] only Reference(JP_Coverage_eMunicipalCheckup)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
+
+
 
 //問診結果セクション
 * section[QUESTIONAIRRE]

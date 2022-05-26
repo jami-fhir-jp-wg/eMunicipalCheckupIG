@@ -35,6 +35,7 @@ Description: "健診・検診結果報告書　Bundleリソース共通定義"
   * ^slicing.discriminator.path = "resource"
   * ^slicing.rules = #open
 * entry contains
+    composition 1..1 MS and 
     patient 1..1 MS and
     practitionerRole 1..1 MS and
     organizationProvider 1..1 MS and
@@ -48,6 +49,9 @@ Description: "健診・検診結果報告書　Bundleリソース共通定義"
     diagnosticReport 0..* MS and
     media 0..* MS and
     documentReference 0..* MS
+
+* entry[composition]
+  * resource only JP_Composition_CUPIX
 
 * entry[patient]
   * ^short = "受診者情報エントリ"

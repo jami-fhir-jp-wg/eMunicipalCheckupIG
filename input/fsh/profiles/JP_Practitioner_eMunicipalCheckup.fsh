@@ -6,6 +6,3 @@ Id:             JP-Practitioner-eMunicipalCheckup
 Description:    "自治体検診結果報告書　Practitionerリソース　検診結果報告書作成者情報"
 * ^url = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Practitioner_eMunicipalCheckup"
 * ^status = #draft
-
-* name[IDE] 1..1 MS
-* name[SYL] 0..1 MS

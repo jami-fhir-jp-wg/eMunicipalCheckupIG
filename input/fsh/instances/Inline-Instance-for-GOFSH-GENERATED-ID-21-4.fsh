@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-4
-InstanceOf: Practitioner
+InstanceOf: JP_Practitioner_eMunicipalCheckup
 Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Practitioner_eMunicipalCheckup"
 

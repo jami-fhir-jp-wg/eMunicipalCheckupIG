@@ -1,7 +1,9 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-1
-InstanceOf: Composition
+//InstanceOf: JP_Composition_eMunicipalCheckup_513
+InstanceOf: JP_Composition_eMunicipalCheckup
 Usage: #inline
-* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_513"
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup"
+//* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_513"
 * language = #ja
 * extension.url = "http://hl7.org/fhir/StructureDefinition/composition-clinicaldocument-versionNumber"
 * extension.valueString = "1.0"

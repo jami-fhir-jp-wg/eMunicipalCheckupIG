@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-7
-InstanceOf: Coverage
+InstanceOf: JP_Coverage_eMunicipalCheckup
 Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Coverage_eMunicipalCheckup"
 

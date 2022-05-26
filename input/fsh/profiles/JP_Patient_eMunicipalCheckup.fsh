@@ -25,12 +25,10 @@ Description:    "自治体検診結果報告書　Patientリソース　受診�
   * value 1..1
   * obeys emc-pat-1
 
+/*
 * name contains ABC 0..1 MS
-* name[ABC] only JP_HumanName
 * name[ABC]
   * ^short = "受診者氏名(半角アルファベット）"
-  * extension[NameRepresentationUse].url =  $iso21090-EN-representation (exactly)
-    * ^short = "拡張を識別するURL。固定値。"
   * extension[NameRepresentationUse].valueCode	 = #ABC (exactly)
     * ^short = "半角アルファベット文字表記であることを示す固定値。"
   * use 1..1 MS
@@ -42,6 +40,7 @@ Description:    "自治体検診結果報告書　Patientリソース　受診�
     * ^short = "半角アルファベット文字氏名の姓。"
   * given 0..* MS
     * ^short = "半角アルファベット文字氏名の名。ミドルネームがある場合には、ミドルネーム、名の順で繰り返す。"
+*/
 
 * telecom 0..1 MS
   * ^short = "受診者連絡先電話番号"

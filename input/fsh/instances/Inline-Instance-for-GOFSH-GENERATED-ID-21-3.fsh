@@ -1,5 +1,5 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-3
-InstanceOf: PractitionerRole
+InstanceOf: JP_PractitionerRole_eMunicipalCheckup
 Usage: #inline
 * meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_PractitionerRole_eMunicipalCheckup"
 * practitioner = Reference(urn:uuid:6c4ef273-df66-00ab-c021-d05c5a19e0ba)

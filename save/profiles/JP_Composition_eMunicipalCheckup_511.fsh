@@ -6,6 +6,7 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
 * ^url = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_511"
 * ^status = #draft
 
+* event.code.coding = $checkup_type_cs#1 (exactly)
 
 //検査結果セクション
 * section[OBSERVATION]

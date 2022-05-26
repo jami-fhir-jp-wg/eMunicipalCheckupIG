@@ -25,7 +25,7 @@ Description:    "自治体検診結果報告書　Bundleリソース　文書情
 
 * entry ^slicing.discriminator.type = #profile
 * entry ^slicing.discriminator.path = "resource"
-* entry ^slicing.rules = #closed
+* entry ^slicing.rules = #open
 * entry contains
     composition 1..1 MS and
     patient 1..1 MS and
