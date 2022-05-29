@@ -1,6 +1,8 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-23-9
 InstanceOf: Observation
 Usage: #inline
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup"
+
 * status = #final
 * category = $observation-category#imaging
 * code = $observationGroup_codes_cs#9N281 "マンモグラフィー検査"

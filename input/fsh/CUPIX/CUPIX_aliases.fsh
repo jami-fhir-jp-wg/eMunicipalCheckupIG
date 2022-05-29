@@ -39,3 +39,6 @@ Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-
 Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $attachement-format = http://jpfhir.jp/fhir/eCheckup/CodeSystem/attachement-format
 
+Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
+Alias: $subscriber-relationship-vs = http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
+

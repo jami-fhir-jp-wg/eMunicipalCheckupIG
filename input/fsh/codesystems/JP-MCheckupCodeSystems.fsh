@@ -581,7 +581,7 @@ CodeSystem: MunicipalCheckup_codeSystem_observationGroup
 Id: MunicipalCheckup-codeSystem-observationGroup
 Description: "一連検査グループコード"
 * ^url = $observationGroup_codes_cs
-* ^valueSet = $observationGroup_codes_vs
+// * ^valueSet = $observationGroup_codes_vs
 * ^status = #active
 * ^content = #complete
 * ^caseSensitive = true
@@ -596,6 +596,13 @@ Description: "一連検査グループコード"
 * #9Z531	"骨粗鬆症エックス線検査"
 * #9Z536	"骨粗鬆症CT 検査"
 * #9Z541	"骨粗鬆症超音波検査"
+
+ValueSet: MunicipalCheckup_valueSet_observationGroup
+Id: MunicipalCheckup-valueSet-observationGroup
+Description: "がん検診の過去の受診歴"
+* ^url = $observationGroup_codes_vs
+* ^status = #active
+* include codes from system $observationGroup_codes_cs
 
 //--------------------------------------------------------------------
 // がん検診の過去の受診歴
@@ -614,12 +621,19 @@ Description: "がん検診の過去の受診歴"
 * #4	"なし又は「３．前々々年度」以前に受けた"
 * #9	"わからない"
 
+ValueSet: MunicipalCheckup_valueSet_2000
+Id: MunicipalCheckup-valueSet-2000
+Description: "がん検診の過去の受診歴"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2000
+
 
 //--------------------------------------------------------------------
 // がん検診による偶発症の有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2010
-Id: MunicipalCheckup-codeSystem-result-2010
+CodeSystem: MunicipalCheckup_codeSystem_2010
+Id: MunicipalCheckup-codeSystem-2010
 Description: "がん検診による偶発症の有無"
 * ^url = "urn:oid:1.2.392.100495.100.2010"
 //* ^valueSet = ""
@@ -630,11 +644,18 @@ Description: "がん検診による偶発症の有無"
 * #2	"検診中または検診後に重篤な偶発症あり（３以外）"
 * #3	"「２．検診中または検診後に重篤な偶発症あり」のうち偶発症による死亡あり"
 
+ValueSet: MunicipalCheckup_valueSet_2010
+Id: MunicipalCheckup-valueSet-2010
+Description: "がん検診による偶発症の有無"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2010
+
 //--------------------------------------------------------------------
 // がん検診の精密検査による偶発症の有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2011
-Id: MunicipalCheckup-codeSystem-result-2011
+CodeSystem: MunicipalCheckup_codeSystem_2011
+Id: MunicipalCheckup-codeSystem-2011
 Description: "がん検診の精密検査による偶発症の有無"
 * ^url = "urn:oid:1.2.392.100495.100.2011"
 //* ^valueSet = ""
@@ -645,11 +666,19 @@ Description: "がん検診の精密検査による偶発症の有無"
 * #2	"精密検査中または精密検査後に重篤な偶発症あり（３以外）"
 * #3	"「２．精密検査中または精密検査後に重篤な偶発症あり」のうち偶発症による死亡あり"
 
+
+ValueSet: MunicipalCheckup_valueSet_2011
+Id: MunicipalCheckup-valueSet-2011
+Description: "がん検診の精密検査による偶発症の有無"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2011
+
 //--------------------------------------------------------------------
 // 自治体検診における検査所見
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2050
-Id: MunicipalCheckup-codeSystem-result-2050
+CodeSystem: MunicipalCheckup_codeSystem_2050
+Id: MunicipalCheckup-codeSystem-2050
 Description: "自治体検診における検査所見"
 * ^url = "urn:oid:1.2.392.100495.100.2050"
 //* ^valueSet = ""
@@ -659,11 +688,18 @@ Description: "自治体検診における検査所見"
 * #1	"所見なし"
 * #2	"所見あり"
 
+ValueSet: MunicipalCheckup_valueSet_2050
+Id: MunicipalCheckup-valueSet-2050
+Description: "自治体検診における検査所見"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2050"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2050
+
 //--------------------------------------------------------------------
 // 自治体検診の問診における有無の回答（二択）
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2051
-Id: MunicipalCheckup-codeSystem-result-2051
+CodeSystem: MunicipalCheckup_codeSystem_2051
+Id: MunicipalCheckup-codeSystem-2051
 Description: "自治体検診の問診における有無の回答（二択）"
 * ^url = "urn:oid:1.2.392.100495.100.2051"
 //* ^valueSet = ""
@@ -673,11 +709,18 @@ Description: "自治体検診の問診における有無の回答（二択）"
 * #1	"なし"
 * #2	"あり"
 
+ValueSet: MunicipalCheckup_valueSet_2051
+Id: MunicipalCheckup-valueSet-2051
+Description: "自治体検診の問診における有無の回答（二択）"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2051"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2051
+
 //--------------------------------------------------------------------
 // 自治体検診の問診における有無の回答（三択）
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2052
-Id: MunicipalCheckup-codeSystem-result-2052
+CodeSystem: MunicipalCheckup_codeSystem_2052
+Id: MunicipalCheckup-codeSystem-2052
 Description: "自治体検診の問診における有無の回答（三択）"
 * ^url = "urn:oid:1.2.392.100495.100.2052"
 //* ^valueSet = ""
@@ -688,12 +731,20 @@ Description: "自治体検診の問診における有無の回答（三択）"
 * #2	"あり"
 * #9	"わからない"
 
+ValueSet: MunicipalCheckup_valueSet_2052
+Id: MunicipalCheckup-valueSet-2052
+Description: "自治体検診の問診における有無の回答（三択）"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2052
+
+
 //--------------------------------------------------------------------
 // 自治体検診の問診における有無の回答（二択②）
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2053
-Id: MunicipalCheckup-codeSystem-result-2053
-Description: "自治体検診の問診における有無の回答（二択②）"
+CodeSystem: MunicipalCheckup_codeSystem_2053
+Id: MunicipalCheckup-codeSystem-2053
+Description: "自治体検診の問診における有無の回答（二択2）"
 * ^url = "urn:oid:1.2.392.100495.100.2053"
 //* ^valueSet = ""
 * ^status = #active
@@ -702,11 +753,19 @@ Description: "自治体検診の問診における有無の回答（二択②）
 * #1	"はい"
 * #2	"いいえ"
 
+ValueSet: MunicipalCheckup_valueSet_2053
+Id: MunicipalCheckup-valueSet-2053
+Description: "自治体検診の問診における有無の回答（二択2）"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2053"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2053
+
+
 //--------------------------------------------------------------------
 // 自治体検診の問診における有無の回答（三択②）
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2054
-Id: MunicipalCheckup-codeSystem-result-2054
+CodeSystem: MunicipalCheckup_codeSystem_2054
+Id: MunicipalCheckup-codeSystem-2054
 Description: "自治体検診の問診における有無の回答（三択②）"
 * ^url = "urn:oid:1.2.392.100495.100.2054"
 //* ^valueSet = ""
@@ -717,11 +776,20 @@ Description: "自治体検診の問診における有無の回答（三択②）
 * #2	"いいえ"
 * #9	"わからない"
 
+
+ValueSet: MunicipalCheckup_valueSet_2054
+Id: MunicipalCheckup-valueSet-2054
+Description: "自治体検診の問診における有無の回答（三択2）"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2054"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2054
+
+
 //--------------------------------------------------------------------
 // 肺がん検診の胸部エックス線検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2100
-Id: MunicipalCheckup-codeSystem-result-2100
+CodeSystem: MunicipalCheckup_codeSystem_2100
+Id: MunicipalCheckup-codeSystem-2100
 Description: "肺がん検診の胸部エックス線検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2100"
 //* ^valueSet = ""
@@ -734,11 +802,19 @@ Description: "肺がん検診の胸部エックス線検査判定"
 * #4	"Ｅ（肺癌の疑い）"
 * #9	"Ａ（読影不能）"
 
+ValueSet: MunicipalCheckup_valueSet_2100
+Id: MunicipalCheckup-valueSet-2100
+Description: "肺がん検診の胸部エックス線検査判定"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2100"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2100
+
+
 //--------------------------------------------------------------------
 // 肺がん検診の喀痰検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2101
-Id: MunicipalCheckup-codeSystem-result-2101
+CodeSystem: MunicipalCheckup_codeSystem_2101
+Id: MunicipalCheckup-codeSystem-2101
 Description: "肺がん検診の喀痰検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2101"
 //* ^valueSet = ""
@@ -751,11 +827,20 @@ Description: "肺がん検診の喀痰検査判定"
 * #4	"Ｅ（悪性腫瘍細胞を認める）"
 * #9	"Ａ（喀痰中に組織球を認めない）"
 
+
+ValueSet: MunicipalCheckup_valueSet_2101
+Id: MunicipalCheckup-valueSet-2101
+Description: "肺がん検診の喀痰検査判定"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2101"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2101
+
+
 //--------------------------------------------------------------------
 // 肺がん検診の精密検査対象有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2140
-Id: MunicipalCheckup-codeSystem-result-2140
+CodeSystem: MunicipalCheckup_codeSystem_2140
+Id: MunicipalCheckup-codeSystem-2140
 Description: "肺がん検診の精密検査対象有無"
 * ^url = "urn:oid:1.2.392.100495.100.2140"
 //* ^valueSet = ""
@@ -766,11 +851,19 @@ Description: "肺がん検診の精密検査対象有無"
 * #2	"要精密検査（肺がん疑い）"
 * #9	"判定不能"
 
+ValueSet: MunicipalCheckup_valueSet_2140
+Id: MunicipalCheckup-valueSet-2140
+Description: "肺がん検診の精密検査対象有無"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2140"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2140
+
+
 //--------------------------------------------------------------------
 // 肺がん検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2150
-Id: MunicipalCheckup-codeSystem-result-2150
+CodeSystem: MunicipalCheckup_codeSystem_2150
+Id: MunicipalCheckup-codeSystem-2150
 Description: "肺がん検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2150"
 //* ^valueSet = ""
@@ -783,11 +876,19 @@ Description: "肺がん検診の精密検査結果"
 * #4	"肺がんの疑いのある者又は未確定"
 * #5	"肺がん以外の疾患であった者（転移性の肺がんを含む）"
 
+ValueSet: MunicipalCheckup_valueSet_2150
+Id: MunicipalCheckup-valueSet-2150
+Description: "肺がん検診の精密検査結果"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2150"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2150
+
+
 //--------------------------------------------------------------------
 // 乳がん検診のマンモグラフィー検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2200
-Id: MunicipalCheckup-codeSystem-result-2200
+CodeSystem: MunicipalCheckup_codeSystem_2200
+Id: MunicipalCheckup-codeSystem-2200
 Description: "乳がん検診のマンモグラフィー検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2200"
 //* ^valueSet = ""
@@ -802,11 +903,19 @@ Description: "乳がん検診のマンモグラフィー検査判定"
 * #9	"カテゴリーＮ－１（要再撮影）"
 * #99	"カテゴリーＮ－２（判定は他の検査法による）"
 
+ValueSet: MunicipalCheckup_valueSet_2200
+Id: MunicipalCheckup-valueSet-2200
+Description: "乳がん検診のマンモグラフィー検査判定"
+* ^url = "http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2200"
+* ^status = #active
+* include codes from system urn:oid:1.2.392.100495.100.2200
+
+
 //--------------------------------------------------------------------
 // 乳がん検診の精密検査対象有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2240
-Id: MunicipalCheckup-codeSystem-result-2240
+CodeSystem: MunicipalCheckup_codeSystem_2240
+Id: MunicipalCheckup-codeSystem-2240
 Description: "乳がん検診の精密検査対象有無"
 * ^url = "urn:oid:1.2.392.100495.100.2240"
 //* ^valueSet = ""
@@ -820,8 +929,8 @@ Description: "乳がん検診の精密検査対象有無"
 //--------------------------------------------------------------------
 // 乳がん検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2250
-Id: MunicipalCheckup-codeSystem-result-2250
+CodeSystem: MunicipalCheckup_codeSystem_2250
+Id: MunicipalCheckup-codeSystem-2250
 Description: "乳がん検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2250"
 //* ^valueSet = ""
@@ -838,8 +947,8 @@ Description: "乳がん検診の精密検査結果"
 //--------------------------------------------------------------------
 // 胃がん検診の精密検査対象有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2340
-Id: MunicipalCheckup-codeSystem-result-2340
+CodeSystem: MunicipalCheckup_codeSystem_2340
+Id: MunicipalCheckup-codeSystem-2340
 Description: "胃がん検診の精密検査対象有無"
 * ^url = "urn:oid:1.2.392.100495.100.2340"
 //* ^valueSet = ""
@@ -853,8 +962,8 @@ Description: "胃がん検診の精密検査対象有無"
 //--------------------------------------------------------------------
 // 胃がん検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2350
-Id: MunicipalCheckup-codeSystem-result-2350
+CodeSystem: MunicipalCheckup_codeSystem_2350
+Id: MunicipalCheckup-codeSystem-2350
 Description: "胃がん検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2350"
 //* ^valueSet = ""
@@ -871,8 +980,8 @@ Description: "胃がん検診の精密検査結果"
 //--------------------------------------------------------------------
 // 子宮頸がん検診の頸部細胞診検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2400
-Id: MunicipalCheckup-codeSystem-result-2400
+CodeSystem: MunicipalCheckup_codeSystem_2400
+Id: MunicipalCheckup-codeSystem-2400
 Description: "子宮頸がん検診の頸部細胞診検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2400"
 //* ^valueSet = ""
@@ -894,8 +1003,8 @@ Description: "子宮頸がん検診の頸部細胞診検査判定"
 //--------------------------------------------------------------------
 // 子宮頸がん検診の精密検査の対象有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2440
-Id: MunicipalCheckup-codeSystem-result-2440
+CodeSystem: MunicipalCheckup_codeSystem_2440
+Id: MunicipalCheckup-codeSystem-2440
 Description: "子宮頸がん検診の精密検査の対象有無"
 * ^url = "urn:oid:1.2.392.100495.100.2440"
 //* ^valueSet = ""
@@ -909,8 +1018,8 @@ Description: "子宮頸がん検診の精密検査の対象有無"
 //--------------------------------------------------------------------
 // 子宮頸がん検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2450
-Id: MunicipalCheckup-codeSystem-result-2450
+CodeSystem: MunicipalCheckup_codeSystem_2450
+Id: MunicipalCheckup-codeSystem-2450
 Description: "子宮頸がん検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2450"
 //* ^valueSet = ""
@@ -931,8 +1040,8 @@ Description: "子宮頸がん検診の精密検査結果"
 //--------------------------------------------------------------------
 // 大腸がん検診の便潜血検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2500
-Id: MunicipalCheckup-codeSystem-result-2500
+CodeSystem: MunicipalCheckup_codeSystem_2500
+Id: MunicipalCheckup-codeSystem-2500
 Description: "大腸がん検診の便潜血検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2500"
 //* ^valueSet = ""
@@ -946,8 +1055,8 @@ Description: "大腸がん検診の便潜血検査判定"
 //--------------------------------------------------------------------
 // 大腸がん検診の精密検査の対象有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2540
-Id: MunicipalCheckup-codeSystem-result-2540
+CodeSystem: MunicipalCheckup_codeSystem_2540
+Id: MunicipalCheckup-codeSystem-2540
 Description: "大腸がん検診の精密検査の対象有無"
 * ^url = "urn:oid:1.2.392.100495.100.2540"
 //* ^valueSet = ""
@@ -961,8 +1070,8 @@ Description: "大腸がん検診の精密検査の対象有無"
 //--------------------------------------------------------------------
 // 大腸がん検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2550
-Id: MunicipalCheckup-codeSystem-result-2550
+CodeSystem: MunicipalCheckup_codeSystem_2550
+Id: MunicipalCheckup-codeSystem-2550
 Description: "大腸がん検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2550"
 //* ^valueSet = ""
@@ -982,8 +1091,8 @@ Description: "大腸がん検診の精密検査結果"
 //--------------------------------------------------------------------
 // 肝炎ウイルス検診のB 型肝炎ウイルス検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2640
-Id: MunicipalCheckup-codeSystem-result-2640
+CodeSystem: MunicipalCheckup_codeSystem_2640
+Id: MunicipalCheckup-codeSystem-2640
 Description: "肝炎ウイルス検診のB 型肝炎ウイルス検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2640"
 //* ^valueSet = ""
@@ -997,8 +1106,8 @@ Description: "肝炎ウイルス検診のB 型肝炎ウイルス検査判定"
 //--------------------------------------------------------------------
 // 肝炎ウイルス検診のC 型肝炎ウイルス検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2641
-Id: MunicipalCheckup-codeSystem-result-2641
+CodeSystem: MunicipalCheckup_codeSystem_2641
+Id: MunicipalCheckup-codeSystem-2641
 Description: "肝炎ウイルス検診のC 型肝炎ウイルス検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2641"
 //* ^valueSet = ""
@@ -1012,8 +1121,8 @@ Description: "肝炎ウイルス検診のC 型肝炎ウイルス検査判定"
 //--------------------------------------------------------------------
 // 肝炎ウイルス検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2650
-Id: MunicipalCheckup-codeSystem-result-2650
+CodeSystem: MunicipalCheckup_codeSystem_2650
+Id: MunicipalCheckup-codeSystem-2650
 Description: "肝炎ウイルス検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2650"
 //* ^valueSet = ""
@@ -1029,8 +1138,8 @@ Description: "肝炎ウイルス検診の精密検査結果"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の問診：過去の精密検査の対象有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2700
-Id: MunicipalCheckup-codeSystem-result-2700
+CodeSystem: MunicipalCheckup_codeSystem_2700
+Id: MunicipalCheckup-codeSystem-2700
 Description: "骨粗鬆症検診の問診：過去の精密検査の対象有無"
 * ^url = "urn:oid:1.2.392.100495.100.2700"
 //* ^valueSet = ""
@@ -1045,8 +1154,8 @@ Description: "骨粗鬆症検診の問診：過去の精密検査の対象有無
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の問診：喫煙習慣
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2701
-Id: MunicipalCheckup-codeSystem-result-2701
+CodeSystem: MunicipalCheckup_codeSystem_2701
+Id: MunicipalCheckup-codeSystem-2701
 Description: "骨粗鬆症検診の問診：喫煙習慣"
 * ^url = "urn:oid:1.2.392.100495.100.2701"
 //* ^valueSet = ""
@@ -1060,8 +1169,8 @@ Description: "骨粗鬆症検診の問診：喫煙習慣"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の問診：ステロイド内服
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2702
-Id: MunicipalCheckup-codeSystem-result-2702
+CodeSystem: MunicipalCheckup_codeSystem_2702
+Id: MunicipalCheckup-codeSystem-2702
 Description: "骨粗鬆症検診の問診：ステロイド内服"
 * ^url = "urn:oid:1.2.392.100495.100.2702"
 //* ^valueSet = ""
@@ -1075,8 +1184,8 @@ Description: "骨粗鬆症検診の問診：ステロイド内服"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の問診：活動量（運動頻度）
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2703
-Id: MunicipalCheckup-codeSystem-result-2703
+CodeSystem: MunicipalCheckup_codeSystem_2703
+Id: MunicipalCheckup-codeSystem-2703
 Description: "骨粗鬆症検診の問診：活動量（運動頻度）"
 * ^url = "urn:oid:1.2.392.100495.100.2703"
 //* ^valueSet = ""
@@ -1092,8 +1201,8 @@ Description: "骨粗鬆症検診の問診：活動量（運動頻度）"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の問診：月経の有無
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2704
-Id: MunicipalCheckup-codeSystem-result-2704
+CodeSystem: MunicipalCheckup_codeSystem_2704
+Id: MunicipalCheckup-codeSystem-2704
 Description: "骨粗鬆症検診の問診：月経の有無"
 * ^url = "urn:oid:1.2.392.100495.100.2704"
 //* ^valueSet = ""
@@ -1107,8 +1216,8 @@ Description: "骨粗鬆症検診の問診：月経の有無"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の問診：閉経の理由
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2705
-Id: MunicipalCheckup-codeSystem-result-2705
+CodeSystem: MunicipalCheckup_codeSystem_2705
+Id: MunicipalCheckup-codeSystem-2705
 Description: "骨粗鬆症検診の問診：閉経の理由"
 * ^url = "urn:oid:1.2.392.100495.100.2705"
 //* ^valueSet = ""
@@ -1126,8 +1235,8 @@ Description: "骨粗鬆症検診の問診：閉経の理由"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の検査判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2706
-Id: MunicipalCheckup-codeSystem-result-2706
+CodeSystem: MunicipalCheckup_codeSystem_2706
+Id: MunicipalCheckup-codeSystem-2706
 Description: "骨粗鬆症検診の検査判定"
 * ^url = "urn:oid:1.2.392.100495.100.2706"
 //* ^valueSet = ""
@@ -1142,8 +1251,8 @@ Description: "骨粗鬆症検診の検査判定"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の判定
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2740
-Id: MunicipalCheckup-codeSystem-result-2740
+CodeSystem: MunicipalCheckup_codeSystem_2740
+Id: MunicipalCheckup-codeSystem-2740
 Description: "骨粗鬆症検診の判定"
 * ^url = "urn:oid:1.2.392.100495.100.2740"
 //* ^valueSet = ""
@@ -1158,8 +1267,8 @@ Description: "骨粗鬆症検診の判定"
 //--------------------------------------------------------------------
 // 骨粗鬆症検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2750
-Id: MunicipalCheckup-codeSystem-result-2750
+CodeSystem: MunicipalCheckup_codeSystem_2750
+Id: MunicipalCheckup-codeSystem-2750
 Description: "骨粗鬆症検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2750"
 //* ^valueSet = ""
@@ -1174,8 +1283,8 @@ Description: "骨粗鬆症検診の精密検査結果"
 //--------------------------------------------------------------------
 // 歯周疾患検診の問診：１日での歯をみがく頻度
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2800
-Id: MunicipalCheckup-codeSystem-result-2800
+CodeSystem: MunicipalCheckup_codeSystem_2800
+Id: MunicipalCheckup-codeSystem-2800
 Description: "歯周疾患検診の問診：１日での歯をみがく頻度"
 * ^url = "urn:oid:1.2.392.100495.100.2800"
 //* ^valueSet = ""
@@ -1190,8 +1299,8 @@ Description: "歯周疾患検診の問診：１日での歯をみがく頻度"
 //--------------------------------------------------------------------
 // 歯周疾患検診の問診：歯間ブラシやフロスの使用頻度
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2801
-Id: MunicipalCheckup-codeSystem-result-2801
+CodeSystem: MunicipalCheckup_codeSystem_2801
+Id: MunicipalCheckup-codeSystem-2801
 Description: "歯周疾患検診の問診：歯間ブラシやフロスの使用頻度"
 * ^url = "urn:oid:1.2.392.100495.100.2801"
 //* ^valueSet = ""
@@ -1206,8 +1315,8 @@ Description: "歯周疾患検診の問診：歯間ブラシやフロスの使用
 //--------------------------------------------------------------------
 // 歯周疾患検診の問診：喫煙歴
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2802
-Id: MunicipalCheckup-codeSystem-result-2802
+CodeSystem: MunicipalCheckup_codeSystem_2802
+Id: MunicipalCheckup-codeSystem-2802
 Description: "歯周疾患検診の問診：喫煙歴"
 * ^url = "urn:oid:1.2.392.100495.100.2802"
 //* ^valueSet = ""
@@ -1221,8 +1330,8 @@ Description: "歯周疾患検診の問診：喫煙歴"
 //--------------------------------------------------------------------
 // 歯周疾患検診の歯肉出血ＢＯＰ
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2803
-Id: MunicipalCheckup-codeSystem-result-2803
+CodeSystem: MunicipalCheckup_codeSystem_2803
+Id: MunicipalCheckup-codeSystem-2803
 Description: "歯周疾患検診の歯肉出血ＢＯＰ"
 * ^url = "urn:oid:1.2.392.100495.100.2803"
 //* ^valueSet = ""
@@ -1237,8 +1346,8 @@ Description: "歯周疾患検診の歯肉出血ＢＯＰ"
 //--------------------------------------------------------------------
 // 歯周疾患検診の歯周ポケットＰＤ
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2804
-Id: MunicipalCheckup-codeSystem-result-2804
+CodeSystem: MunicipalCheckup_codeSystem_2804
+Id: MunicipalCheckup-codeSystem-2804
 Description: "歯周疾患検診の歯周ポケットＰＤ"
 * ^url = "urn:oid:1.2.392.100495.100.2804"
 //* ^valueSet = ""
@@ -1254,8 +1363,8 @@ Description: "歯周疾患検診の歯周ポケットＰＤ"
 //--------------------------------------------------------------------
 // 歯周疾患検診の歯石の付着
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2805
-Id: MunicipalCheckup-codeSystem-result-2805
+CodeSystem: MunicipalCheckup_codeSystem_2805
+Id: MunicipalCheckup-codeSystem-2805
 Description: "歯周疾患検診の歯石の付着"
 * ^url = "urn:oid:1.2.392.100495.100.2805"
 //* ^valueSet = ""
@@ -1269,8 +1378,8 @@ Description: "歯周疾患検診の歯石の付着"
 //--------------------------------------------------------------------
 // 歯周疾患検診の口腔清掃状態
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2806
-Id: MunicipalCheckup-codeSystem-result-2806
+CodeSystem: MunicipalCheckup_codeSystem_2806
+Id: MunicipalCheckup-codeSystem-2806
 Description: "歯周疾患検診の口腔清掃状態"
 * ^url = "urn:oid:1.2.392.100495.100.2806"
 //* ^valueSet = ""
@@ -1284,8 +1393,8 @@ Description: "歯周疾患検診の口腔清掃状態"
 //--------------------------------------------------------------------
 // 歯周疾患検診の判定区分
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2840
-Id: MunicipalCheckup-codeSystem-result-2840
+CodeSystem: MunicipalCheckup_codeSystem_2840
+Id: MunicipalCheckup-codeSystem-2840
 Description: "歯周疾患検診の判定区分"
 * ^url = "urn:oid:1.2.392.100495.100.2840"
 //* ^valueSet = ""
@@ -1300,8 +1409,8 @@ Description: "歯周疾患検診の判定区分"
 //--------------------------------------------------------------------
 // 歯周疾患検診の精密検査結果
 //--------------------------------------------------------------------
-CodeSystem: MunicipalCheckup_codeSystem_result_2850
-Id: MunicipalCheckup-codeSystem-result-2850
+CodeSystem: MunicipalCheckup_codeSystem_2850
+Id: MunicipalCheckup-codeSystem-2850
 Description: "歯周疾患検診の精密検査結果"
 * ^url = "urn:oid:1.2.392.100495.100.2850"
 //* ^valueSet = ""

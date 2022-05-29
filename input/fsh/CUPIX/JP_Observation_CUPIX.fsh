@@ -31,11 +31,11 @@ Description:    "TBD"
 
 * code 1..1 MS
   * ^short = "健診項目コード。健診項目を識別するJLAC10コードを指定。"
+* code from $EMCUPX_observation_codes_vs  (required)
   //TODO: JLAC10のURLがおかしいので、Issueとして挙げる
-  * coding 1..1 MS
+  * coding 1.. MS
     * system 1..1 MS
-    * system = "http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10" (exactly)
-      * ^short = "JLAC10コードを識別するURI。固定値。"
+      * ^short = "健診項目コードを識別するURI。固定値。"
     * code 1..1 MS
       * ^short = "健診項目コード"
     * display 0..1 MS
@@ -64,7 +64,7 @@ Description:    "TBD"
 
 * valueCodeableConcept 0..1 MS
   * ^short = "検診結果がコード型である健診項目の結果を表す。"
-  * coding 1..1 MS
+  * coding 1.. MS
     * extension contains http://hl7.org/fhir/StructureDefinition/ordinalValue named ordinalValue 0..1 MS
     * extension[ordinalValue]
       * url 1..1 MS

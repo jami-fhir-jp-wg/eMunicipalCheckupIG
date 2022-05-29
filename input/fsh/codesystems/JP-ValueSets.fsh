@@ -71,3 +71,17 @@ Id: MunicipalCheckup-valueSet-encounterCategory
 Description: "受診区分"
 * ^url = $encounter_cateogry_vs
 * $encounter_cateogry_cs#checkup	"健診"
+
+//--------------------------------------------------------------------
+// 厚労省電子処方CDA規格別表12 被保険者区分コード
+// 別表１２	被保険者区分コード	OID: 1.2.392.100495.20.2.62
+//--------------------------------------------------------------------
+ValueSet:  MHLW_valueSet_ePreCDA_insuredRelationship_tbl12
+Id:   mhlw-valueSet-ePreCDA-insuredRelationship-tbl12
+Description: "厚労省電子処方CDA規格別表12 被保険者区分コード"
+* ^url = $subscriber-relationship-vs
+// * include codes from valueset http://hl7.org/fhir/ValueSet/subscriber-relationship
+* include codes from system $subscriber-relationship-cs
+// Alias: $subscriber-relationship-cs = urn:oid:1.2.392.100495.20.2.62
+// Alias: $subscriber-relationship-vs = http://jpfhir.jp/fhir/Common/ValueSet/mhlw-ePreCDA-insuredRelationship
+

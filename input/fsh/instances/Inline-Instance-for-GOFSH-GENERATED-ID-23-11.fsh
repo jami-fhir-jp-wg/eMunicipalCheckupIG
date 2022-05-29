@@ -1,6 +1,8 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-23-11
 InstanceOf: Observation
 Usage: #inline
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup"
+
 * status = #final
 * category = $observation-category#imaging
 * code = $jlac10_cs#9N281160800000049 "乳がん検診のマンモグラフィー検査所見"

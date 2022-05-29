@@ -31,10 +31,9 @@ Description:    "TBD"
 
 * code 1..1 MS
   * ^short = "健診項目グループコード。健診項目グループを識別するコードを指定。"
-  //TODO: JLAC10のURLがおかしいので、Issueとして挙げる
+* code from $EMCUPX_observation_codes_vs (required)
   * coding 1..1 MS
     * system 1..1 MS
-    * system = "http://jpfhir.jp/fhir/eCheckup/CodeSystem/observationGroup-codes" (exactly)
       * ^short = "健診項目グループコードを識別するURI。固定値。"
     * code 1..1 MS
       * ^short = "健診項目グループコード"

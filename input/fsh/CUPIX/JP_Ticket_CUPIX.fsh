@@ -27,6 +27,8 @@ Description: "TBD"
 * beneficiary only Reference(JP_Patient_CUPIX)
   * ^short = "受診者情報（Patientリソース）への参照"
 
+* relationship from $subscriber-relationship-vs (extensible)
+
 * period 1..1 MS
   * ^short = "受診券の有効期間。ISO8601に準拠してyyyy-mm-dd形式で指定する。"
 

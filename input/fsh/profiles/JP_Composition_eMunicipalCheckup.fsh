@@ -55,13 +55,15 @@ Description:    "自治体検診結果報告書　Compositionリソース　文�
 * section[OBSERVATION]
   * entry[COV] only Reference(JP_Coverage_eMunicipalCheckup)
     * ^short = "検査結果セクションに含まれる保険証情報および受診券情報をあらわすCoverageリソースへの参照。"
-
-
+  * entry[OBS] only Reference(JP_Observation_eMunicipalCheckup or JP_Observation_eMunicipalCheckup_Group)
+    * ^short = "検査結果セクションに含まれる検査結果または検査結果グループを示すObservationリソースへの参照。"
 
 //問診結果セクション
 * section[QUESTIONAIRRE]
   * entry only Reference(JP_Observation_eMunicipalCheckup or JP_Observation_eMunicipalCheckup_Group)
+    * ^short = "問診結果セクションに含まれる検査結果または検査結果グループを示すObservationリソースへの参照。"
 
 //添付書類セクション
 * section[ATTACHMENT]
   * entry only Reference(JP_DocumentReference_eMunicipalCheckup or JP_DiagnosticReport_eMunicipalCheckup)
+    * ^short = "添付書類セクションに含まれるドキュメントまたは診断レポートを示すObservationリソースへの参照。"

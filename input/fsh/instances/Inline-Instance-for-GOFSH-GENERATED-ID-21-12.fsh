@@ -1,6 +1,7 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-12
-InstanceOf: Observation
+InstanceOf: JP_Observation_eMunicipalCheckup_Group
 Usage: #inline
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group"
 * status = #final
 * category = $observation-category#laboratory
 * code = $observationGroup_codes_cs#7A030 "喀痰検査"

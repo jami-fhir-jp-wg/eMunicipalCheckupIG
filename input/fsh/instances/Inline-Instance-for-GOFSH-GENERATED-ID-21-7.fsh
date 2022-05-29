@@ -16,6 +16,25 @@ Usage: #inline
 * beneficiary = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
 * dependent = "01"
 * relationship = urn:oid:1.2.392.100495.20.2.62#1 "被保険者"
+//  * coding.system = "http://terminology.hl7.org/CodeSystem/subscriber-relationship"
+//  * coding.code = #1
+//  * coding.display = "被保険者"
+//  * coding.extension[0].url = "http://hl7.org/fhir/StructureDefinition/valueset-reference"
+//  * coding.extension[=].valueUri = $subscriber-relationship-vs
 * period.start = "2018-04-01"
 * period.end = "2022-03-31"
 * payor = Reference(urn:uuid:7c9f9f7f-e546-0ac2-6828-a9e0b24e5750)
+
+/*
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+        "code": "1",
+        "display": "被保険者本人,
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-reference", 
+          "valueUri" : "urn:oid:1.2.392.100495.20.2.62" 
+        }]
+      }
+    ]
+*/

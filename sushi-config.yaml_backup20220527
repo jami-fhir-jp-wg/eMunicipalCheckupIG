@@ -1,0 +1,475 @@
+# ╭─────────────────────────Commonly Used ImplementationGuide Properties───────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. The most commonly   │
+# │  used properties are included. For a list of all supported properties and their functions,     │
+# │  see: https://fshschool.org/docs/sushi/configuration/.                                      │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+id: eMunicipalCheckup
+canonical: http://jpfhir.jp/fhir/eMunicipalCheckup
+name: "eMunicipalCheckupImplementationGuide"
+title: "eMunicipal Checkup ImplementationGuide"
+description: "Implementation Guide for eMunicipal Checkup"
+status: draft # draft | active | retired | unknown
+version: 0.9.0
+fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html 
+copyrightYear: 2022+
+releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
+# license: CC0-1.0 # https://www.hl7.org/fhir/valueset-spdx-license.html
+# jurisdiction: urn:iso:std:iso:3166#US "United States of America" # https://www.hl7.org/fhir/valueset-jurisdiction.html
+publisher:
+  name: KOhe
+  url: http://jpfhir.jp
+  # email: test@example.org
+dependencies:
+  jp-core.draft1:
+#    uri: http://jpfhir.jp/fhir/core/jp-core.draft1
+# to avoid warning message "The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole"
+    uri: http://jpfhir.jp/fhir/core/ImplementationGuide/jp-core.draft1
+    version: 1.1.0-beta
+
+# The dependencies property corresponds to IG.dependsOn. The key is the
+# package id and the value is the version (or dev/current). For advanced
+# use cases, the value can be an object with keys for id, uri, and version.
+#
+# dependencies:
+#   hl7.fhir.us.core: 3.1.0
+#   hl7.fhir.us.mcode:
+#     id: mcode
+#     uri: http://hl7.org/fhir/us/mcode/ImplementationGuide/hl7.fhir.us.mcode
+#     version: 1.0.0
+#
+#
+# The pages property corresponds to IG.definition.page. SUSHI can
+# auto-generate the page list, but if the author includes pages in
+# this file, it is assumed that the author will fully manage the
+# pages section and SUSHI will not generate any page entries.
+# The page file name is used as the key. If title is not provided,
+# then the title will be generated from the file name.  If a
+# generation value is not provided, it will be inferred from the
+# file name extension.  Any subproperties that are valid filenames
+# with supported extensions (e.g., .md/.xml) will be treated as
+# sub-pages.
+#
+
+pages:
+  index.md:
+    title: 自治体検診HL7&reg; FHIR&reg;記述仕様書 第1版
+  tables.md:
+    title: 各表一覧
+
+#   index.md:
+#     title: Example Home
+#   implementation.xml:
+#   examples.xml:
+#     title: Examples Overview
+#     simpleExamples.xml:
+#     complexExamples.xml:
+#
+#
+# The parameters property represents IG.definition.parameter. Rather
+# than a list of code/value pairs (as in the ImplementationGuide
+# resource), the code is the YAML key. If a parameter allows repeating
+# values, the value in the YAML should be a sequence/array. For a
+# partial list of allowed parameters see: 
+# https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+# 
+#-----------------------------------------
+# IG 外部パラメータ設定
+#-----------------------------------------
+parameters:  # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
+  path-resource:
+    - input/resources
+    - fsh-generated/resources
+  path-pages:
+    - input/pagecontent
+    #- input/intro-notes
+    - fsh-generated/includes
+    #- input/summaries
+  path-expansion-params: '../../input/_resources/exp-params.json'
+  active-tables: 'false'
+  apply-version: 'true'
+  apply-copyright: 'true'
+  apply-publisher: 'true'
+  apply-contact: 'true'
+  apply-licese: 'true'
+  apply-jurisdiction: 'true'
+  show-inherited-invariants: 'true'
+  usage-stats-opt-out: 'true'
+  excludexml: 'true'
+  excludejsn: 'false'
+  excludettl: 'true'
+  excludemap: 'true'
+  excludeexample: 'false'
+  generate: #what does this do - todo: remove and see
+    - json
+  special-url:
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_510
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_511
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_512
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_513
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_521
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_522
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_523
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_531
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_532
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_533
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_541
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_542
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_543
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_551
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_552
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_553
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_561
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_562
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_563
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_571
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_572
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_573
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_581
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_582
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Bundle_eMunicipalCheckup_583
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_510
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_511
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_512
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_513
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_521
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_522
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_523
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_531
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_532
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_533
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_541
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_542
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_543
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_551
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_552
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_553
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_561
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_562
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_563
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_571
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_572
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_573
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_581
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_582
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Composition_eMunicipalCheckup_583
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Coverage_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_DiagnosticReport_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_DocumentReference_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Encounter_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Media_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_1B040000001599811
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_1B040160801599849
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_7A021000008543311
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_7A021160808543349
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_7A030000006144311
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_7A030160806144349
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_7A030161506144349
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N001000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N006000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N281000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N281160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N291160700000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N296160700000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N401000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9N737000000000012
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P500000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P501000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P502000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P503160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P504000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P505160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P506000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P507000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P508160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P509000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P520000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P521000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P522000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P523160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P524000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P525000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P526160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P527000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P540000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P541000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P542160700000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P543160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P544160700000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P545160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P546000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P547160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P548000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P549000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P550160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P551000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P560000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P561000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P562000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P563160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P564000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P565000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P566160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P567000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P580000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P581000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P582000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P583160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P584000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P585000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P586160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P587000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P600000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P602000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P604000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P606000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P607000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P609000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P611000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P613000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P615000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P616000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P617160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P620000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P621000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P622000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P623160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P624000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P625000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P626000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P627000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P628000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P629160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P630000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P631000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P632000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P633000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P634160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P637000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P638000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P639160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P650000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P651000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P652000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P653000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P654000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P655000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P656000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P657000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P658000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P659000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P660000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P661000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P662160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P663000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P664000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P665000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P666000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P667000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P668000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P669000000000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P670000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P671000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P672000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P673000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P674000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P675000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P676000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P677000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P678000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P679000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P680000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P681000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P682000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P683000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P684000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P685000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P686000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P687000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P688000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P689160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P690000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P691000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9P692160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z507000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z507160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z507195600000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z507195700000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z507195800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z507195900000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z531000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z531160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z531195600000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z531195700000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z531195800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z531195900000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z536000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z536160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z536195600000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z536195700000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z536195800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z536195900000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z541000000000011
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z541160800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z541195600000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z541195700000001
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z541195800000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_9Z541195900000049
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_1B040
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_7A021
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_7A030
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9N281
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9P500
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9P542
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9P544
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9Z507
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9Z531
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9Z536
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup_Group_9Z541
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Organization_eMunicipalCheckup_Insurer
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Organization_eMunicipalCheckup_Provider
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Patient_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Practitioner_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_PractitionerRole_eMunicipalCheckup
+    - http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Specimen_eMunicipalCheckup
+     
+#   excludettl: true
+#   validation: [allow-any-extensions, no-broken-links]
+#
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │ The menu property will be used to generate the input/menu.xml file. The menu is represented    │
+# │ as a simple structure where the YAML key is the menu item name and the value is the URL.       │
+# │ The IG publisher currently only supports one level deep on sub-menus. To provide a             │
+# │ custom menu.xml file, do not include this property and include a `menu.xml` file in            │
+# │ input/includes. To use a provided input/includes/menu.xml file, delete the "menu"              │
+# │ property below.                                                                                │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Artifacts: artifacts.html
+
+# ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
+# │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
+# │  resource. These properties are less commonly needed than those above.                         │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+#
+# Those who need more control or want to add additional details to the contact values can use
+# contact directly and follow the format outlined in the ImplementationGuide resource and
+# ContactDetail.
+#
+# contact:
+#   - name: Bob Smith
+#     telecom:
+#       - system: email # phone | fax | email | pager | url | sms | other
+#         value: bobsmith@example.org
+#         use: work
+#
+#
+# The global property corresponds to the IG.global property, but it
+# uses the type as the YAML key and the profile as its value. Since
+# FHIR does not explicitly disallow more than one profile per type,
+# neither do we; the value can be a single profile URL or an array
+# of profile URLs.
+#
+# global:
+#   Patient: http://example.org/fhir/StructureDefinition/my-patient-profile
+#   Encounter: http://example.org/fhir/StructureDefinition/my-encounter-profile
+#
+#
+# The resources property corresponds to IG.definition.resource.
+# SUSHI can auto-generate all of the resource entries based on
+# the FSH definitions and/or information in any user-provided
+# JSON or XML resource files. If the generated entries are not
+# sufficient or complete, however, the author can add entries
+# here. If the reference matches a generated entry, it will
+# replace the generated entry. If it doesn't match any generated
+# entries, it will be added to the generated entries. The format
+# follows IG.definition.resource with the following differences:
+#   * use IG.definition.resource.reference.reference as the YAML key
+#   * specify "omit" to omit a FSH-generated resource from the
+#     resource list.
+#   * groupingId can be used, but top-level groups syntax may be a
+#     better option (see below).
+# The following are simple examples to demonstrate what this might
+# look like:
+#
+# resources:
+#   Patient/my-example-patient:
+#     name: My Example Patient
+#     description: An example Patient
+#     exampleBoolean: true
+#   Patient/bad-example: omit
+#
+#
+# Groups can control certain aspects of the IG generation.  The IG
+# documentation recommends that authors use the default groups that
+# are provided by the templating framework, but if authors want to
+# use their own instead, they can use the mechanism below.  This will
+# create IG.definition.grouping entries and associate the individual
+# resource entries with the corresponding groupIds.
+#
+# groups:
+#   GroupA:
+#     name: Group A
+#     description: The Alpha Group
+#     resources:
+#     - StructureDefinition/animal-patient
+#     - StructureDefinition/arm-procedure
+#   GroupB:
+#     name: Group B
+#     description: The Beta Group
+#     resources:
+#     - StructureDefinition/bark-control
+#     - StructureDefinition/bee-sting
+#
+#
+# The ImplementationGuide resource defines several other properties
+# not represented above. These properties can be used as-is and
+# should follow the format defined in ImplementationGuide:
+# * date
+# * meta
+# * implicitRules
+# * language
+# * text
+# * contained
+# * extension
+# * modifierExtension
+# * experimental
+# * useContext
+# * copyright
+# * packageId
+#
+#
+# ╭──────────────────────────────────────────SUSHI flags───────────────────────────────────────────╮
+# │  The flags below configure aspects of how SUSHI processes FSH.                                 │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+# The FSHOnly flag indicates if only FSH resources should be exported.
+# If set to true, no IG related content will be generated.
+# The default value for this property is false.
+#
+# FSHOnly: false
+#
+#
+# When set to true, the "short" and "definition" field on the root element of an Extension will
+# be set to the "Title" and "Description" of that Extension. Default is true.
+#
+# applyExtensionMetadataToRoot: true
+#
+#
+# The instanceOptions property is used to configure certain aspects of how SUSHI processes instances.
+# See the individual option definitions below for more detail.
+#
+# instanceOptions:
+#   Determines for which types of Instances SUSHI will automatically set meta.profile
+#   if InstanceOf references a profile:
+#
+#   setMetaProfile: always # always | never | inline-only | standalone-only
+#
+#
+#   Determines for which types of Instances SUSHI will automatically set id
+#   if InstanceOf references a profile:
+#
+#   setId: always # always | standalone-only

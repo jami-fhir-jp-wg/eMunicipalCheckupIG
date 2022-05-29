@@ -1,6 +1,7 @@
 Instance: Inline-Instance-for-GOFSH-GENERATED-ID-21-15
 InstanceOf: Observation
 Usage: #inline
+* meta.profile = "http://jpfhir.jp/fhir/eMunicipalCheckup/StructureDefinition/JP_Observation_eMunicipalCheckup"
 * status = #final
 * category = $observation-category#laboratory
 * code = $jlac10_cs#7A030160806144349 "肺がん検診の喀痰検査所見"

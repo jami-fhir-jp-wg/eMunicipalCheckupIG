@@ -57,14 +57,33 @@ Description: "TBD"
   * ^short = "被保険者証記号・番号に対する個人単位被保険者番号（枝番）。「オンライン又は光ディスク等による請求に係る記録条件仕様（医科用）」に従い、桁数が2桁に満たない場合は、先頭に"0"を記録し2桁で記録する。被保険者番号の枝番を記述する拡張要素にも同一の値を記述すること。"
 
 * relationship 1..1 MS
+* relationship from $subscriber-relationship-vs (required)
   * ^short = "給付される患者と被保険者との関係（本人、または被扶養者）。被保険者区分コード表より「1：被保険者」、または、「2：被扶養者」を指定する。"
   * coding 1..1 MS
+  * coding from $subscriber-relationship-vs (required)
+//    * extension[0].url = "http://hl7.org/fhir/StructureDefinition/valueset-reference"
+//    * extension[=].valueUri = $subscriber-relationship-vs
     * system 1..1 MS
-    * system = "urn:oid:1.2.392.100495.20.2.62"
       * ^short = "被保険者区分コードのコード体系を識別するURI。固定値。"
     * code 1..1 MS
       * ^short = "被保険者区分コード"
+    * code from $subscriber-relationship-vs (required)
     * display 0..1 MS
+
+/*
+    "coding": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/subscriber-relationship",
+        "code": "1",
+        "display": "被保険者本人,
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/valueset-reference", 
+          "valueUri" : "urn:oid:1.2.392.100495.20.2.62" 
+        }]
+      }
+    ]
+*/
+
 
 * period 1..1 MS
   * ^short = "保険証の有効期間。保険証に明示的に記載がある場合、かつ、医療機関がその情報を把握している場合のみ記録する。"
