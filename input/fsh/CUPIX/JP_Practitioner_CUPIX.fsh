@@ -1,7 +1,7 @@
 Profile:        JP_Practitioner_CUPIX
 Parent:         JP_Practitioner
 Id:             JP-Practitioner-CUPIX
-Description:    "TBD"
+Description:    "健診・検診結果報告書　Practitionerリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Practitioner-CUPIX"
 
 * ^status = #draft

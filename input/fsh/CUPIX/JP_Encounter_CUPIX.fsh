@@ -1,8 +1,7 @@
 Profile:        JP_Encounter_CUPIX
 Parent:         JP_Encounter
 Id:             JP-Encounter-CUPIX
-//Title:          "自治体検診結果報告書　Encounterリソース  検診実施情報"
-Description:    "TBD"
+Description:    "健診・検診結果報告書　Encounterリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Encounter-CUPIX"
 
 * ^status = #draft

@@ -1,7 +1,7 @@
 Profile: JP_Patient_CUPIX
 Parent: JP_Patient
 Id: JP-Patient-CUPIX
-Description: "TBD"
+Description: "健診・検診結果報告書　Patientリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Patient-CUPIX"
 
 * ^status = #draft

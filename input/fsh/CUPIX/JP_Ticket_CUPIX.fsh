@@ -1,7 +1,7 @@
 Profile: JP_Ticket_CUPIX
 Parent: Coverage
 Id: JP-Ticket-CUPIX
-Description: "TBD"
+Description: "健診・検診結果報告書　Coverageリソース保険者発行受診券共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Ticket-CUPIX"
 
 * ^status = #draft

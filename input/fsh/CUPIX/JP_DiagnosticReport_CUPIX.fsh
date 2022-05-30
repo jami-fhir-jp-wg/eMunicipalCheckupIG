@@ -2,7 +2,7 @@ Profile:        JP_DiagnosticReport_CUPIX
 Parent:         JP_DiagnosticReport_Common
 Id:             JP-DiagnositicReport-CUPIX
 //Title:          "自治体検診結果報告書　DiagnosticReportリソース 検査報告書情報"
-Description:    "自治体検診結果報告書　DiagnosticReportリソース 検査報告書情報"
+Description:    "健診・検診結果報告書　DiagnositicReportリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-DiagnositicReport-CUPIX"
 
 * ^status = #draft

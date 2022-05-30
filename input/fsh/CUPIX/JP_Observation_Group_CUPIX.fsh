@@ -1,8 +1,7 @@
 Profile:        JP_Observation_Group_CUPIX
 Parent:         JP_Observation_Common
 Id:             JP-Observation-Group-CUPIX
-Title:          "TBD"
-Description:    "TBD"
+Description:    "健診・検診結果報告書　ObservationGroupリソースGroup仕様共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Observation-Group-CUPIX"
 
 * ^status = #draft

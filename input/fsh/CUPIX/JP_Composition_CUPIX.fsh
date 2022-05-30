@@ -1,8 +1,7 @@
 Profile:        JP_Composition_CUPIX
 Parent:         Composition
 Id:             JP-Composition-CUPIX
-Title:          "TBD"
-Description:    "TBD"
+Description:    "健診・検診結果報告書　Compositionリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Composition-CUPIX"
 * ^status = #draft
 * obeys emc-cmp-1 and emc-cmp-2

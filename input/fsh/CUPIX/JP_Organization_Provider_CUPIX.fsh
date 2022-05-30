@@ -1,7 +1,7 @@
 Profile:        JP_Organization_Provider_CUPIX
 Parent:         JP_Organization
 Id:             JP-Organization-Provider-CUPIX
-Description:    "TBD"
+Description:    "健診・検診結果報告書　Organizationリソース医療機関／健診機関共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Organization-Provider-CUPIX"
 
 * ^status = #draft

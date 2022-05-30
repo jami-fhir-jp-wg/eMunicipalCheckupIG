@@ -1,8 +1,7 @@
 Profile:        JP_Media_CUPIX
 Parent:         Media
 Id:             JP-Media-CUPIX
-Title:          "TBD"
-Description:    "TBD"
+Description:    "健診・検診結果報告書　Mediaリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Media-CUPIX"
 
 * ^status = #draft

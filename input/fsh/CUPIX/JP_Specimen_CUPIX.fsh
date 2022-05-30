@@ -1,8 +1,7 @@
 Profile:        JP_Specimen_CUPIX
 Parent:         Specimen
 Id:             JP-Specimen-CUPIX
-Title:          "TBD"
-Description:    "TBD"
+Description:    "健診・検診結果報告書　Specimenリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Specimen-CUPIX"
 
 * ^status = #draft

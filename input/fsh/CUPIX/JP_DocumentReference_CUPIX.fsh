@@ -1,8 +1,7 @@
 Profile:        JP_DocumentReference_CUPIX
 Parent:         DocumentReference
 Id:             JP-DocumentReference-CUPIX
-Title:          "TBD"
-Description:    "TBD"
+Description:    "健診・検診結果報告書　DocumentReferenceリソース共通定義"
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-DocumentReference-CUPIX"
 
 * ^status = #draft

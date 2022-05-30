@@ -1,7 +1,7 @@
 Profile: JP_Coverage_CUPIX
 Parent: JP_Coverage
 Id: JP-Coverage-CUPIX
-Description: "TBD"
+Description: "健診・検診結果報告書　Coverageリソース共通定義”
 * ^url = "http://jpfhir.jp/fhir/CUPIX/StructureDefinition/JP-Coverage-CUPIX"
 
 * ^status = #draft
