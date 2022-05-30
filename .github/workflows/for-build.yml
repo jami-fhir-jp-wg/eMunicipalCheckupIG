@@ -44,6 +44,10 @@ jobs:
     - name: Install Jekyll
       run: |
         sudo apt-get install jekyll
+    - name: Download filepp
+      run: |
+        sudo apt-get install filepp
+
     # -- DUMMY download from here
     - name: Download IG Publisher
       uses: Legion2/download-release-action@v2.1.0
@@ -59,6 +63,9 @@ jobs:
       with:
         args:  https://tx.jpfhir.jp/download/publisherJPFHIR.jar
 
+    - name: Run filepp by file pre proccessor converting egg to egg.fsh
+      run: | 
+        while read -r f; do echo "converting $f to $f.fsh"; filepp $f >$f.fsh; done < <(find ./ -name *.egg -mindepth 1)
     - name: Run IG Publisher
       env:
         PACKAGE: jp-core.draft1#1.1.0-beta
