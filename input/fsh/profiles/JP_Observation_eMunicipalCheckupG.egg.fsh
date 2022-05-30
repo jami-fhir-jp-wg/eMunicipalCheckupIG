@@ -32,6 +32,9 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 
 * subject only Reference(JP_Patient_eMunicipalCheckup)
 
+// 検診種別ごとの検診項目コード　code.coding.codeの　の制約を記述する
+// slicingで個々に定義する意義はないかもしれないが、残しておく
+//-- ここから
 * code from $EMCUPX_observation_codes_vs (required)
 * code.coding  1.. MS
   * ^slicing.discriminator.type = #value
@@ -60,11 +63,6 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * code.coding[obs_9P500000000000011]
   * system = $EMCUPX_observation_codes_cs
   * code = #9P500000000000011  (exactly)  //  "肺がん検診の過去の受診歴"    // 肺がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2000
-//  * obeys cat-emc-obs-9P500000000000011-cat
-//  * obeys cat-emc-obs-9P500000000000011-cat-warning
-//  * obeys emc-obs-9P500000000000011-system  
-//  * obeys valueType-CodeableConcept-warning
-//  * obeys obs-9P500000000000011
 
 * code.coding[obs_9P501000000000011]
   * system = $EMCUPX_observation_codes_cs
@@ -113,48 +111,10 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * code.coding[obs_9P509000000000011]
   * system = $EMCUPX_observation_codes_cs
   * code = #9P509000000000011  (exactly)  //   "肺がん検診の精密検査による偶発症の有無"    // 肺がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2011
+//--ここまで
 
-
-/*
-* value[x].coding from 
-  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000
-or  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052
-*/
-
-/*
-* valueQuantity 0..1 MS
-* valueQuantity only Quantity
-* valueQuantity ^short = "数値（物理量）型の結果の場合に使用する。"
-* valueQuantity.value 1.. MS
-* valueQuantity.value ^short = "測定値"
-* valueQuantity.unit MS
-* valueQuantity.unit ^short = "単位コードの表示名"
-* valueQuantity.system 1.. MS
-* valueQuantity.system = "http://unitsofmeasure.org" (exactly)
-* valueQuantity.system ^short = "単位コードのコード体系。UCUMのURIを指定する。固定値"
-* valueQuantity.code 1.. MS
-* valueQuantity.code ^short = "単位コード"
-*/
-
-/*
-* valueString 0..1 MS
-* valueString only string
-* valueString ^short = "文字型の検診結果の場合に使用する"
-*/
-
-/*
-* valueInteger 0..1 MS
-* valueInteger only integer
-* valueInteger ^short = "数値型の検診結果の場合に使用する"
-*/
-
-/*
-* valueDateTime 0..1 MS
-* valueDateTime only dateTime
-* valueDateTime ^short = "日付型の検診結果の場合に使用する"
-*/
-
-
+// 以下のslicing定義がないと、それぞれのデータタイプが使用できなくなるので必須（理由不明）
+//--ここから
 * value[x][valueQuantity] 0.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
@@ -171,11 +131,21 @@ or  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "$this"
   * ^slicing.rules = #open
+//--ここまで
 
+
+// 検診 の結果のvalueSetを検診項目ごとに異なる制約を定義するためのslicing
+// 本来はvalue[x]をslicingしたいが、value[x] のmax cardinalityが１以下だとsliceできないので、
+// やむをえず maxが1以上である codingでsliceしている。意味的には異なるレベルでのslicingなので推奨はされていない
+// 異なる value[x][valueCodeableConcept].coding.system ごとに異なるValueSetをとるため
 * value[x][valueCodeableConcept].coding 1.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
+
+// 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
+//-- ここから
+// 肺がん検診
 * value[x][valueCodeableConcept].coding contains
         obs_9P500000000000011 0..1
     and obs_9P501000000000011 0..1
@@ -185,6 +155,7 @@ or  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052
     and obs_9P506000000000011 0..1
     and obs_9P507000000000011 0..1
     and obs_9P509000000000011  0..1   
+
 * value[x][valueCodeableConcept].coding[obs_9P500000000000011]
   * system = "urn:oid:1.2.392.100495.100.2000"  (exactly)
   * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000 (required)
@@ -209,16 +180,18 @@ or  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052
 * value[x][valueCodeableConcept].coding[obs_9P509000000000011]
   * system = "urn:oid:1.2.392.100495.100.2011"  (exactly)
   * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011 (required)
+//-- ここまで
 
+// 検体材料
 * specimen only Reference(JP_Specimen_eMunicipalCheckup)
 
+// 単独検診項目は子供検査項目を含まない
 //* hasMember only Reference(JP_Observation_eMunicipalCheckup)
 * hasMember 0..0
 
 * derivedFrom only Reference(JP_Media_eMunicipalCheckup)
 
 // 各種制約
-
 Invariant: obs-9P500000000000011
 Description: "obs-肺がん検診の過去の受診歴のtypeとsystemgが正しい"
 Expression: "code.coding.where(
