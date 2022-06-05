@@ -1,0 +1,28 @@
+{
+  "name": "eMunicipalCheckup",
+  "version": "0.1.0",
+  "tools-version": 3,
+  "type": "IG",
+  "date": "20220424152832",
+  "license": "CC0-1.0",
+  "canonical": "http://jpfhir.jp/fhir/eMunicipalCheckup",
+  "notForPublication": true,
+  "url": "file://Users/kazohe/GitHub/eMunicipalCheckupIG/work",
+  "fhirVersions": [
+    "4.0.1"
+  ],
+  "dependencies": {
+    "hl7.fhir.r4.core": "4.0.1"
+  },
+  "author": "JAMI",
+  "maintainers": [
+    {
+      "name": "JAMI",
+      "url": "http://jami.jp"
+    }
+  ],
+  "directories": {
+    "lib": "package",
+    "example": "example"
+  }
+}
