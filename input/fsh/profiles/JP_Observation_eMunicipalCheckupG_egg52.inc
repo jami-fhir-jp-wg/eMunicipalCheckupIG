@@ -1,126 +1,117 @@
-#define $$KN  乳がん検診
 
-#define $$cd$$KN_過去の受診歴  9P520000000000011
+#define	$$urn   urn:oid:1.2.392.100495.100.
+#define	$$url   http://jpfhir/eMunicipalCheckup/ValueSet/valueSet
 
-#define  $$cd$$KN_過去の受診歴	9P520000000000011
-#define  $$cd$$KN_がんに係る症状の有無	9P521000000000011
-#define  $$cd$$KN_マンモグラフィー検査判定	9N281000000000011
-#define  $$cd$$KN_マンモグラフィー検査所見	9N281160800000049
-#define  $$cd$$KN_精密検査対象有無	9P522000000000011
-#define  $$cd$$KN_その他所見	9P523160800000049
-#define  $$cd$$KN_偶発症の有無	9P524000000000011
-#define  $$cd$$KN_精密検査結果	9P525000000000011
-#define  $$cd$$KN_精密検査所見	9P526160800000049
-#define  $$cd$$KN_精密検査による偶発症の有無	9P527000000000011
+//----------
+#define	$$KN    乳がん検診
 
+#define	$$item	過去の受診歴
+#define	$$oidnum	2000
+#define	$$cd$$KN_$$item	9P520000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
+
+#define	$$item	がんに係る症状の有無
+#define	$$oidnum	2052
+#define	$$cd$$KN_$$item	9P521000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
+
+#define	$$item	マンモグラフィー検査判定
+#define	$$cd$$KN_$$item	9N281000000000011
+#define	$$oidnum	2200
+#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
+
+#define	$$item	マンモグラフィー検査所見
+#define	$$cd$$KN_$$item	9N281160800000049
+#define $$item04    $$item
+
+#define	$$item	精密検査対象有無 
+#define	$$cd$$KN_$$item	9P522000000000011
+#define	$$oidnum	2240
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
+
+#define	$$item	その他所見
+#define	$$cd$$KN_$$item	9P523160800000049
+#define $$item06    $$item
+
+#define	$$item	偶発症の有無
+#define	$$cd$$KN_$$item	9P524000000000011
+#define	$$oidnum	2010
+#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
+
+#define	$$item	精密検査結果
+#define	$$cd$$KN_$$item	9P525000000000011
+#define	$$oidnum	2250
+#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item08    $$item
+
+#define	$$item	精密検査所見
+#define	$$cd$$KN_$$item	9P526160800000049
+#define $$item09    $$item
+
+#define	$$item	精密検査による偶発症の有無
+#define	$$cd$$KN_$$item	9P527000000000011
+#define	$$oidnum	2011
+#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
 
 // JP_Observation_eMunicipalCheckupG_egg52.incから展開 
 * code.coding contains
-        obs_$$cd$$KN_過去の受診歴 0..1
-    and obs_$$cd$$KN_乳がんに係る症状の有無 0..1
-    and obs_$$cd$$KN_喫煙指数 0..1
-    and obs_$$cd$$KN_胸部エックス線検査判定 0..1
-    and obs_$$cd$$KN_胸部エックス線検査所見 0..1
-    and obs_$$cd$$KN_喀痰検査受診日 0..1
-    and obs_$$cd$$KN_喀痰検査判定 0..1
-    and obs_$$cd$$KN_喀痰検査所見 0..1
-    and obs_$$cd$$KN_精密検査対象有無 0..1
-    and obs_$$cd$$KN_その他所見 0..1
-    and obs_$$cd$$KN_偶発症の有無 0..1
-    and obs_$$cd$$KN_精密検査結果 0..1
-    and obs_$$cd$$KN_精密検査その他所見 0..1
-    and obs_$$cd$$KN_精密検査による偶発症の有無  0..1   
+        obs_$$cd$$KN_$$item01 0..1
+    and obs_$$cd$$KN_$$item02 0..1
+    and obs_$$cd$$KN_$$item03 0..1
+    and obs_$$cd$$KN_$$item04 0..1
+    and obs_$$cd$$KN_$$item05 1..1
+    and obs_$$cd$$KN_$$item06 0..1
+    and obs_$$cd$$KN_$$item07 0..1
+    and obs_$$cd$$KN_$$item08 1..1
+    and obs_$$cd$$KN_$$item09 0..1
+    and obs_$$cd$$KN_$$item10 0..1
 
-//
-* code.coding[obs_$$cd$$KN_過去の受診歴]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_過去の受診歴  (exactly)  //  "$$KN_過去の受診歴"    // 乳がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2000
-
-* code.coding[obs_$$cd$$KN_乳がんに係る症状の有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_乳がんに係る症状の有無 (exactly) //   "$$KN_乳がんに係る症状の有無"    // 乳がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2052
-
-* code.coding[obs_$$cd$$KN_喫煙指数]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_喫煙指数  (exactly) //   "$$KN_喫煙指数"    // 乳がん一次検診,問診,PQ,
-
-* code.coding[obs_$$cd$$KN_胸部エックス線検査判定]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_胸部エックス線検査判定  (exactly) //   "$$KN_胸部エックス線検査判定"    // 乳がん一次検診,胸部エックス線検査,CD,urn:oid:1.2.392.100495.100.2100
-
-* code.coding[obs_$$cd$$KN_胸部エックス線検査所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_胸部エックス線検査所見   (exactly) // 乳がん一次検診,胸部エックス線検査,ST,
-
-* code.coding[obs_$$cd$$KN_喀痰検査受診日]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_喀痰検査受診日  (exactly) //   "$$KN_喀痰検査受診日"    // 乳がん一次検診,喀痰検査,ST,
-* code.coding[obs_$$cd$$KN_喀痰検査判定]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_喀痰検査判定  (exactly) //   "$$KN_喀痰検査判定"    // 乳がん一次検診,喀痰検査,CD,urn:oid:1.2.392.100495.100.2101
-
-* code.coding[obs_$$cd$$KN_喀痰検査所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_喀痰検査所見  (exactly)  //   "$$KN_喀痰検査所見"    // 乳がん一次検診,喀痰検査,ST,
-* code.coding[obs_$$cd$$KN_精密検査対象有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_精密検査対象有無  (exactly)  //   "$$KN_精密検査対象有無"    // 乳がん一次検診,検診結果,CD,urn:oid:1.2.392.100495.100.2140
-
-* code.coding[obs_$$cd$$KN_その他所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_その他所見  (exactly)  //   "$$KN_その他所見"    // 乳がん一次検診,検診結果,ST,
-* code.coding[obs_$$cd$$KN_偶発症の有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_偶発症の有無  (exactly)     // 乳がん一次検診,検診結果,CD,urn:oid:1.2.392.100495.100.2010
-
-* code.coding[obs_$$cd$$KN_精密検査結果]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_精密検査結果  (exactly)  //   "$$KN_精密検査結果"    // 乳がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2150
-
-* code.coding[obs_$$cd$$KN_精密検査その他所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_精密検査その他所見  (exactly)  //   "$$KN_精密検査その他所見"    // 乳がん精密検査,検診結果,ST,
-* code.coding[obs_$$cd$$KN_精密検査による偶発症の有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd$$KN_精密検査による偶発症の有無  (exactly)  //   "$$KN_精密検査による偶発症の有無"    // 乳がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2011
+//-- ここから 検査項目JLAC10のsystem urlと項目コード（JLAC10)の出力
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item01)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item02)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item03)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item04)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item05)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item06)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item07)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item08)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item09)
+* insert Obs_code_coding_slicing($$EMCUPX_observation_codes_cs, $$cd$$KN_$$item10)
 //--ここまで
+
 
 
 // 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
 //-- ここから
 // 乳がん検診
 * value[x][valueCodeableConcept].coding contains
-        obs_$$cd$$KN_過去の受診歴 0..1
-    and obs_$$cd$$KN_乳がんに係る症状の有無 0..1
-    and obs_$$cd$$KN_胸部エックス線検査判定 0..1
-    and obs_$$cd$$KN_喀痰検査判定 0..1
-    and obs_$$cd$$KN_精密検査対象有無 0..1
-    and obs_$$cd$$KN_偶発症の有無 0..1
-    and obs_$$cd$$KN_精密検査結果 0..1
-    and obs_$$cd$$KN_精密検査による偶発症の有無  0..1   
+        obs_$$cd$$KN_$$item01 0..1
+    and obs_$$cd$$KN_$$item02 0..1
+    and obs_$$cd$$KN_$$item03 0..1
+    and obs_$$cd$$KN_$$item05 1..1
+    and obs_$$cd$$KN_$$item07 0..1
+    and obs_$$cd$$KN_$$item08 1..1
+    and obs_$$cd$$KN_$$item10 0..1
 
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_過去の受診歴]
-  * system = "$$csys$$KN_過去の受診歴"  (exactly)
-  * code from $$vset$$KN_過去の受診歴 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_乳がんに係る症状の有無]
-  * system = "$$csys$$KN_乳がんに係る症状の有無" (exactly)
-  * code from $$vset$$KN_乳がんに係る症状の有無 (required) 
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_胸部エックス線検査判定]
-  * system = "$$csys$$KN_胸部エックス線検査判定" (exactly)
-  * code from $$vset$$KN_胸部エックス線検査判定 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_喀痰検査判定]
-  * system = "$$csys$$KN_喀痰検査判定" (exactly)
-  * code from $$vset$$KN_喀痰検査判定 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_精密検査対象有無]
-  * system = "$$csys$$KN_精密検査対象有無" (exactly)
-  * code from $$vset$$KN_精密検査対象有無 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_偶発症の有無]
-  * system = "$$csys$$KN_偶発症の有無" (exactly)
-  * code from $$vset$$KN_偶発症の有無 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_精密検査結果]
-  * system = "$$csys$$KN_精密検査結果" (exactly)
-  * code from $$vset$$KN_精密検査結果 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd$$KN_精密検査による偶発症の有無]
-  * system = "$$csys$$KN_精密検査による偶発症の有無"  (exactly)
-  * code from $$vset$$KN_精密検査による偶発症の有無 (required)
+* insert valCC_coding_slicing($$cd$$KN_item01,$$cs$$KN_item01,$$vs$$KN_item01)
+* insert valCC_coding_slicing($$cd$$KN_item02, $$cs$$KN_item02, $$vs$$KN_item02)
+* insert valCC_coding_slicing($$cd$$KN_item03, $$cs$$KN_item03, $$vs$$KN_item03)
+* insert valCC_coding_slicing($$cd$$KN_item05, $$cs$$KN_item05, $$vs$$KN_item05)
+* insert valCC_coding_slicing($$cd$$KN_item06, $$cs$$KN_item06, $$vs$$KN_item06)
+* insert valCC_coding_slicing($$cd$$KN_item08, $$cs$$KN_item08, $$vs$$KN_item08)
+* insert valCC_coding_slicing($$cd$$KN_item10, $$cs$$KN_item10, $$vs$$KN_item10)
+
 //-- ここまで
