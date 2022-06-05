@@ -1,61 +1,5 @@
 #define $$EMCUPX_observation_codes_cs   http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10
 
-#define $$cd肺がん検診の過去の受診歴  9P500000000000011
-#define $$vset肺がん検診の過去の受診歴  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000
-#define $$csys肺がん検診の過去の受診歴  urn:oid:1.2.392.100495.100.2000
-
-#define $$cd肺がん検診時の肺がんに係る症状の有無	9P501000000000011
-#define $$vset肺がん検診時の肺がんに係る症状の有無  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052
-#define $$csys肺がん検診時の肺がんに係る症状の有無  urn:oid:1.2.392.100495.100.2052
-
-#define  $$cd肺がん検診時の喫煙指数	9N737000000000012
-
-#define  $$cd肺がん検診の胸部エックス線検査判定	9P502000000000011
-#define $$vset肺がん検診の胸部エックス線検査判定  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2100
-#define $$csys肺がん検診の胸部エックス線検査判定  urn:oid:1.2.392.100495.100.2100
-
-#define  $$cd肺がん検診の胸部エックス線検査所見	9P503160800000049
-
-#define  $$cd肺がん検診の喀痰検査受診日	7A030161506144349
-
-#define  $$cd肺がん検診の喀痰検査判定	7A030000006144311
-#define $$vset肺がん検診の喀痰検査判定  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2101
-#define $$csys肺がん検診の喀痰検査判定  urn:oid:1.2.392.100495.100.2101
-
-#define  $$cd肺がん検診の喀痰検査所見	7A030160806144349
-
-#define  $$cd肺がん検診の精密検査対象有無	9P504000000000011
-#define $$vset肺がん検診の精密検査対象有無  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2140
-#define $$csys肺がん検診の精密検査対象有無  urn:oid:1.2.392.100495.100.2140
-
-#define  $$cd肺がん検診のその他所見	9P505160800000049
-
-#define  $$cd肺がん検診による偶発症の有無	9P506000000000011
-#define $$vset肺がん検診による偶発症の有無  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010
-#define $$csys肺がん検診による偶発症の有無  urn:oid:1.2.392.100495.100.2010
-
-#define  $$cd肺がん検診の精密検査結果	9P507000000000011
-#define $$vset肺がん検診の精密検査結果  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2150
-#define $$csys肺がん検診の精密検査結果  urn:oid:1.2.392.100495.100.2150
-
-#define  $$cd肺がん検診の精密検査その他所見	9P508160800000049
-
-#define  $$cd肺がん検診の精密検査による偶発症の有無	9P509000000000011
-#define $$vset肺がん検診の精密検査による偶発症の有無  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011
-#define $$csys肺がん検診の精密検査による偶発症の有無  urn:oid:1.2.392.100495.100.2011
-
-#define  $$cd乳がん検診の過去の受診歴	9P520000000000011
-#define  $$cd乳がん検診時の乳がんに係る症状の有無	9P521000000000011
-#define  $$cd乳がん検診のマンモグラフィー検査判定	9N281000000000011
-#define  $$cd乳がん検診のマンモグラフィー検査所見	9N281160800000049
-#define  $$cd乳がん検診の精密検査対象有無	9P522000000000011
-#define  $$cd乳がん検診のその他所見	9P523160800000049
-#define  $$cd乳がん検診による偶発症の有無	9P524000000000011
-#define  $$cd乳がん検診の精密検査結果	9P525000000000011
-#define  $$cd乳がん検診の精密検査所見	9P526160800000049
-
-#define  $$cd乳がん検診の精密検査による偶発症の有無	9P527000000000011
-
 #define  $$cd胃がん検診の過去の受診歴	9P540000000000011
 #define  $$cd胃がん検診時の胃がんに係る症状の有無	9P541000000000011
 #define  $$cd胃がん検診の胃部エックス線検査検査判定	9P542160700000011
@@ -204,6 +148,18 @@
 #define  $$cd歯周疾患検診の精密検査結果	9P691000000000011
 #define  $$cd歯周疾患検診の精密検査所見	9P692160800000049
 
+RuleSet: Obs_code_coding_slicing(obs_system, obs_cd)
+* code.coding[obs_{obs_cd}]
+  * system = "{obs_system}"
+  * code = #{obs_cd}  (exactly)  
+
+RuleSet: valCC_coding_slicing(laboItemCode, code_system, valueset)
+* value[x][valueCodeableConcept].coding[obs_{laboItemCode}]
+  * system = "{code_system}"  (exactly)
+  * code from {valueset} (required)
+
+[obs_$$cd肺がん検診の過去の受診歴]
+
 Profile:        JP_Observation_eMunicipalCheckup
 Parent:         JP_Observation_CUPIX
 Id:             JP-Observation-eMunicipalCheckup
@@ -223,77 +179,6 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
-
-//
-* code.coding contains
-        obs_$$cd肺がん検診の過去の受診歴 0..1
-    and obs_$$cd肺がん検診時の肺がんに係る症状の有無 0..1
-    and obs_$$cd肺がん検診時の喫煙指数 0..1
-    and obs_$$cd肺がん検診の胸部エックス線検査判定 0..1
-    and obs_$$cd肺がん検診の胸部エックス線検査所見 0..1
-    and obs_$$cd肺がん検診の喀痰検査受診日 0..1
-    and obs_$$cd肺がん検診の喀痰検査判定 0..1
-    and obs_$$cd肺がん検診の喀痰検査所見 0..1
-    and obs_$$cd肺がん検診の精密検査対象有無 0..1
-    and obs_$$cd肺がん検診のその他所見 0..1
-    and obs_$$cd肺がん検診による偶発症の有無 0..1
-    and obs_$$cd肺がん検診の精密検査結果 0..1
-    and obs_$$cd肺がん検診の精密検査その他所見 0..1
-    and obs_$$cd肺がん検診の精密検査による偶発症の有無  0..1   
-
-
-//
-* code.coding[obs_$$cd肺がん検診の過去の受診歴]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の過去の受診歴  (exactly)  //  "肺がん検診の過去の受診歴"    // 肺がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2000
-
-* code.coding[obs_$$cd肺がん検診時の肺がんに係る症状の有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診時の肺がんに係る症状の有無 (exactly) //   "肺がん検診時の肺がんに係る症状の有無"    // 肺がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2052
-
-* code.coding[obs_$$cd肺がん検診時の喫煙指数]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診時の喫煙指数  (exactly) //   "肺がん検診時の喫煙指数"    // 肺がん一次検診,問診,PQ,
-
-* code.coding[obs_$$cd肺がん検診の胸部エックス線検査判定]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の胸部エックス線検査判定  (exactly) //   "肺がん検診の胸部エックス線検査判定"    // 肺がん一次検診,胸部エックス線検査,CD,urn:oid:1.2.392.100495.100.2100
-
-* code.coding[obs_$$cd肺がん検診の胸部エックス線検査所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の胸部エックス線検査所見   (exactly) // 肺がん一次検診,胸部エックス線検査,ST,
-
-* code.coding[obs_$$cd肺がん検診の喀痰検査受診日]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の喀痰検査受診日  (exactly) //   "肺がん検診の喀痰検査受診日"    // 肺がん一次検診,喀痰検査,ST,
-* code.coding[obs_$$cd肺がん検診の喀痰検査判定]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の喀痰検査判定  (exactly) //   "肺がん検診の喀痰検査判定"    // 肺がん一次検診,喀痰検査,CD,urn:oid:1.2.392.100495.100.2101
-
-* code.coding[obs_$$cd肺がん検診の喀痰検査所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の喀痰検査所見  (exactly)  //   "肺がん検診の喀痰検査所見"    // 肺がん一次検診,喀痰検査,ST,
-* code.coding[obs_$$cd肺がん検診の精密検査対象有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の精密検査対象有無  (exactly)  //   "肺がん検診の精密検査対象有無"    // 肺がん一次検診,検診結果,CD,urn:oid:1.2.392.100495.100.2140
-
-* code.coding[obs_$$cd肺がん検診のその他所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診のその他所見  (exactly)  //   "肺がん検診のその他所見"    // 肺がん一次検診,検診結果,ST,
-* code.coding[obs_$$cd肺がん検診による偶発症の有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診による偶発症の有無  (exactly)     // 肺がん一次検診,検診結果,CD,urn:oid:1.2.392.100495.100.2010
-
-* code.coding[obs_$$cd肺がん検診の精密検査結果]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の精密検査結果  (exactly)  //   "肺がん検診の精密検査結果"    // 肺がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2150
-
-* code.coding[obs_$$cd肺がん検診の精密検査その他所見]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の精密検査その他所見  (exactly)  //   "肺がん検診の精密検査その他所見"    // 肺がん精密検査,検診結果,ST,
-* code.coding[obs_$$cd肺がん検診の精密検査による偶発症の有無]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #$$cd肺がん検診の精密検査による偶発症の有無  (exactly)  //   "肺がん検診の精密検査による偶発症の有無"    // 肺がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2011
 //--ここまで
 
 // 以下のslicing定義がないと、それぞれのデータタイプが使用できなくなるので必須（理由不明）
@@ -316,54 +201,18 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
   * ^slicing.rules = #open
 //--ここまで
 
-
 // 検診 の結果のvalueSetを検診項目ごとに異なる制約を定義するためのslicing
 // 本来はvalue[x]をslicingしたいが、value[x] のmax cardinalityが１以下だとsliceできないので、
 // やむをえず maxが1以上である codingでsliceしている。意味的には異なるレベルでのslicingなので推奨はされていない
 // 異なる value[x][valueCodeableConcept].coding.system ごとに異なるValueSetをとるため
+//--ここから
 * value[x][valueCodeableConcept].coding 1.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
+//--ここまで
 
-// 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
-//-- ここから
-// 肺がん検診
-* value[x][valueCodeableConcept].coding contains
-        obs_$$cd肺がん検診の過去の受診歴 0..1
-    and obs_$$cd肺がん検診時の肺がんに係る症状の有無 0..1
-    and obs_$$cd肺がん検診の胸部エックス線検査判定 0..1
-    and obs_$$cd肺がん検診の喀痰検査判定 0..1
-    and obs_$$cd肺がん検診の精密検査対象有無 0..1
-    and obs_$$cd肺がん検診による偶発症の有無 0..1
-    and obs_$$cd肺がん検診の精密検査結果 0..1
-    and obs_$$cd肺がん検診の精密検査による偶発症の有無  0..1   
-
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診の過去の受診歴]
-  * system = "$$csys肺がん検診の過去の受診歴"  (exactly)
-  * code from $$vset肺がん検診の過去の受診歴 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診時の肺がんに係る症状の有無]
-  * system = "$$csys肺がん検診時の肺がんに係る症状の有無" (exactly)
-  * code from $$vset肺がん検診時の肺がんに係る症状の有無 (required) 
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診の胸部エックス線検査判定]
-  * system = "$$csys肺がん検診の胸部エックス線検査判定" (exactly)
-  * code from $$vset肺がん検診の胸部エックス線検査判定 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診の喀痰検査判定]
-  * system = "$$csys肺がん検診の喀痰検査判定" (exactly)
-  * code from $$vset肺がん検診の喀痰検査判定 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診の精密検査対象有無]
-  * system = "$$csys肺がん検診の精密検査対象有無" (exactly)
-  * code from $$vset肺がん検診の精密検査対象有無 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診による偶発症の有無]
-  * system = "$$csys肺がん検診による偶発症の有無" (exactly)
-  * code from $$vset肺がん検診による偶発症の有無 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診の精密検査結果]
-  * system = "$$csys肺がん検診の精密検査結果" (exactly)
-  * code from $$vset肺がん検診の精密検査結果 (required)
-* value[x][valueCodeableConcept].coding[obs_$$cd肺がん検診の精密検査による偶発症の有無]
-  * system = "$$csys肺がん検診の精密検査による偶発症の有無"  (exactly)
-  * code from $$vset肺がん検診の精密検査による偶発症の有無 (required)
-//-- ここまで
+#include  "JP_Observation_eMunicipalCheckupG_egg51.inc"
 
 // 検体材料
 * specimen only Reference(JP_Specimen_eMunicipalCheckup)

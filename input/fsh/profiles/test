@@ -1,0 +1,4 @@
+#include deftest1.inc
+#include deftest2.inc
+
+printprint test1

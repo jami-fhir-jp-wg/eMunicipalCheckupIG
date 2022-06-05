@@ -5,21 +5,18 @@
 
 
 
+RuleSet: Obs_code_coding_slicing(obs_system, obs_cd)
+* code.coding[obs_{obs_cd}]
+  * system = "{obs_system}"
+  * code = #{obs_cd}  (exactly)  
 
+// value[x][valueCodeableConcept].coding
+RuleSet: valCC_coding_slicing(laboItemCode, code_system, valueset)
+* value[x][valueCodeableConcept].coding[obs_{laboItemCode}]
+  * system = "{code_system}"  (exactly)
+  * code from {valueset} (required)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+[obs_$$cd肺がん検診の過去の受診歴]
 
 Profile:        JP_Observation_eMunicipalCheckup
 Parent:         JP_Observation_CUPIX
@@ -40,77 +37,6 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "code"
   * ^slicing.rules = #open
-
-//
-* code.coding contains
-        obs_9P500000000000011 0..1
-    and obs_9P501000000000011 0..1
-    and obs_9N737000000000012 0..1
-    and obs_9P502000000000011 0..1
-    and obs_9P503160800000049 0..1
-    and obs_7A030161506144349 0..1
-    and obs_7A030000006144311 0..1
-    and obs_7A030160806144349 0..1
-    and obs_9P504000000000011 0..1
-    and obs_9P505160800000049 0..1
-    and obs_9P506000000000011 0..1
-    and obs_9P507000000000011 0..1
-    and obs_9P508160800000049 0..1
-    and obs_9P509000000000011  0..1   
-
-
-//
-* code.coding[obs_9P500000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P500000000000011  (exactly)  //  "肺がん検診の過去の受診歴"    // 肺がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2000
-
-* code.coding[obs_9P501000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P501000000000011 (exactly) //   "肺がん検診時の肺がんに係る症状の有無"    // 肺がん一次検診,問診,CD,urn:oid:1.2.392.100495.100.2052
-
-* code.coding[obs_9N737000000000012]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9N737000000000012  (exactly) //   "肺がん検診時の喫煙指数"    // 肺がん一次検診,問診,PQ,
-
-* code.coding[obs_9P502000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P502000000000011  (exactly) //   "肺がん検診の胸部エックス線検査判定"    // 肺がん一次検診,胸部エックス線検査,CD,urn:oid:1.2.392.100495.100.2100
-
-* code.coding[obs_9P503160800000049]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P503160800000049   (exactly) // 肺がん一次検診,胸部エックス線検査,ST,
-
-* code.coding[obs_7A030161506144349]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #7A030161506144349  (exactly) //   "肺がん検診の喀痰検査受診日"    // 肺がん一次検診,喀痰検査,ST,
-* code.coding[obs_7A030000006144311]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #7A030000006144311  (exactly) //   "肺がん検診の喀痰検査判定"    // 肺がん一次検診,喀痰検査,CD,urn:oid:1.2.392.100495.100.2101
-
-* code.coding[obs_7A030160806144349]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #7A030160806144349  (exactly)  //   "肺がん検診の喀痰検査所見"    // 肺がん一次検診,喀痰検査,ST,
-* code.coding[obs_9P504000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P504000000000011  (exactly)  //   "肺がん検診の精密検査対象有無"    // 肺がん一次検診,検診結果,CD,urn:oid:1.2.392.100495.100.2140
-
-* code.coding[obs_9P505160800000049]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P505160800000049  (exactly)  //   "肺がん検診のその他所見"    // 肺がん一次検診,検診結果,ST,
-* code.coding[obs_9P506000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P506000000000011  (exactly)     // 肺がん一次検診,検診結果,CD,urn:oid:1.2.392.100495.100.2010
-
-* code.coding[obs_9P507000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P507000000000011  (exactly)  //   "肺がん検診の精密検査結果"    // 肺がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2150
-
-* code.coding[obs_9P508160800000049]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P508160800000049  (exactly)  //   "肺がん検診の精密検査その他所見"    // 肺がん精密検査,検診結果,ST,
-* code.coding[obs_9P509000000000011]
-  * system = $EMCUPX_observation_codes_cs
-  * code = #9P509000000000011  (exactly)  //   "肺がん検診の精密検査による偶発症の有無"    // 肺がん精密検査,検診結果,CD,urn:oid:1.2.392.100495.100.2011
 //--ここまで
 
 // 以下のslicing定義がないと、それぞれのデータタイプが使用できなくなるので必須（理由不明）
@@ -133,19 +59,78 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
   * ^slicing.rules = #open
 //--ここまで
 
-
 // 検診 の結果のvalueSetを検診項目ごとに異なる制約を定義するためのslicing
 // 本来はvalue[x]をslicingしたいが、value[x] のmax cardinalityが１以下だとsliceできないので、
 // やむをえず maxが1以上である codingでsliceしている。意味的には異なるレベルでのslicingなので推奨はされていない
 // 異なる value[x][valueCodeableConcept].coding.system ごとに異なるValueSetをとるため
+//--ここから
 * value[x][valueCodeableConcept].coding 1.. MS
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
+//--ここまで
 
-// 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
+
+
+/*
+*/
+/*
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[1])
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[2])
+
+// JP_Observation_eMunicipalCheckupG_egg51.incから展開 
+* code.coding contains
+        obs_9P500000000000011 0..1
+    and obs_9P501000000000011 0..1
+    and obs_9N737000000000012 0..1
+    and obs_9P502000000000011 0..1
+    and obs_9P503160800000049 0..1
+    and obs_7A030161506144349 0..1
+    and obs_7A030000006144311 0..1
+    and obs_7A030160806144349 0..1
+    and obs_9P504000000000011 0..1
+    and obs_9P505160800000049 0..1
+    and obs_9P506000000000011 0..1
+    and obs_9P507000000000011 0..1
+    and obs_9P508160800000049 0..1
+    and obs_9P509000000000011  0..1   
+
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[1])
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[2])
+
+//* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P500000000000011)
+//* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P501000000000011)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9N737000000000012)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P502000000000011)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P503160800000049)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 7A030161506144349)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 7A030000006144311)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 7A030160806144349)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P504000000000011)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P505160800000049)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P506000000000011)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P507000000000011)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P508160800000049)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P509000000000011)
+//--ここまで
+
+
 //-- ここから
 // 肺がん検診
+// 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
 * value[x][valueCodeableConcept].coding contains
         obs_9P500000000000011 0..1
     and obs_9P501000000000011 0..1
@@ -156,6 +141,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
     and obs_9P507000000000011 0..1
     and obs_9P509000000000011  0..1   
 
+//　* insert valCC_coding_slicing(9P500000000000011, urn:oid:1.2.392.100495.100.2000, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000)
 * value[x][valueCodeableConcept].coding[obs_9P500000000000011]
   * system = "urn:oid:1.2.392.100495.100.2000"  (exactly)
   * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000 (required)
