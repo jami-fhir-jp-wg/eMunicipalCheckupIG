@@ -2,120 +2,228 @@
 #define	$$url   http://jpfhir/eMunicipalCheckup/ValueSet/valueSet
 
 //----------
+#define $$KN  肺がん検診
+
+#define	$$item	過去の受診歴
+#define	$$oidnum	2000
+#define $$cd$$KN_$$item  9P500000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
+
+#define	$$item	がんに係る症状の有無
+#define	$$oidnum	2052
+#define $$cd$$KN_$$item	9P501000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
+
+#define	$$item	喫煙指数
+#define $$cd$$KN_$$item	9N737000000000012
+#define $$item03    $$item
+
+#define	$$item	胸部エックス線検査判定
+#define	$$oidnum	2100
+#define $$cd$$KN_$$item	9P502000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item04    $$item
+
+#define	$$item	胸部エックス線検査判定
+#define $$cd$$KN_$$item	9P503160800000049
+#define $$item05    $$item
+
+#define	$$item	喀痰検査受診日
+#define $$cd$$KN_$$item	7A030161506144349
+#define $$item06    $$item
+
+#define	$$item	喀痰検査判定
+#define	$$oidnum	2101
+#define $$cd$$KN_$$item	7A030000006144311
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
+
+#define	$$item	喀痰検査所見
+#define $$cd$$KN_$$item 7A030160806144349
+#define $$item08    $$item
+
+#define	$$item	精密検査対象有無
+#define	$$oidnum	2140
+#define $$cd$$KN_$$item	9P504000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item09    $$item
+
+#define	$$item	その他所見
+#define $$cd$$KN_その他所見	9P505160800000049
+#define $$item10    $$item
+
+#define	$$item	偶発症の有無
+#define	$$oidnum	2010
+#define $$cd$$KN_偶発症の有無	9P506000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item11    $$item
+
+#define	$$item	精密検査結果
+#define	$$oidnum	2150
+#define $$cd$$KN_$$item	9P507000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item12    $$item
+
+#define	$$item	精密検査その他所見
+#define $$cd$$KN_$$item	9P508160800000049
+#define $$item13    $$item
+
+#define	$$item	精密検査による偶発症の有無
+#define	$$oidnum	2011
+#define $$cd$$KN_$$item	9P507000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$cd$$KN_$$item	9P509000000000011
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item14    $$item
+
+//----------
 #define	$$KN    乳がん検診
 #define	$$item	過去の受診歴
 #define	$$oidnum	2000
 #define	$$cd$$KN_$$item	9P520000000000011
 #define	$$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$cd$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
 
 #define	$$item	がんに係る症状の有無
 #define	$$oidnum	2052
 #define	$$cd$$KN_$$item	9P521000000000011
 #define	$$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
 
 #define	$$item	マンモグラフィー検査判定
 #define	$$cd$$KN_$$item	9N281000000000011
 #define	$$oidnum	2200
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
 
 #define	$$item	マンモグラフィー検査所見
 #define	$$cd$$KN_$$item	9N281160800000049
+#define $$item04    $$item
 
 #define	$$item	精密検査対象有無 
 #define	$$cd$$KN_$$item	9P522000000000011
 #define	$$oidnum	2240
 #define	$$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
 
 #define	$$item	その他所見
 #define	$$cd$$KN_$$item	9P523160800000049
+#define $$item06    $$item
 
 #define	$$item	偶発症の有無
 #define	$$cd$$KN_$$item	9P524000000000011
 #define	$$oidnum	2010
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P525000000000011
 #define	$$oidnum	2250
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item08    $$item
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P526160800000049
+#define $$item09    $$item
 
 #define	$$item	精密検査による偶発症の有無
 #define	$$cd$$KN_$$item	9P527000000000011
 #define	$$oidnum	2011
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
 
 //----------
 #define	$$KN  胃がん検診
+
 #define	$$item	過去の受診歴
 #define	$$cd$$KN_$$item	9P540000000000011
 #define	$$oidnum	2000
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
 
 #define	$$item	がんに係る症状の有無
 #define	$$cd$$KN_$$item	9P541000000000011
 #define	$$oidnum	2052
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
 
 #define	$$item	胃部エックス線検査検査判定
 #define	$$cd$$KN_$$item	9P542160700000011
 #define	$$oidnum	2050
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
 
 #define	$$item	胃部エックス線検査所見
 #define	$$cd$$KN_$$item	9P543160800000049
+#define $$item04    $$item
 
 #define	$$item	胃内視鏡検査検査判定
 #define	$$cd$$KN_$$item	9P544160700000011
 #define	$$oidnum	2050
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
 
 #define	$$item	胃内視鏡検査所見
 #define	$$cd$$KN_$$item	9P545160800000049
+#define $$item06    $$item
 
 #define	$$item	精密検査の対象有無
 #define	$$cd$$KN_$$item	9P546000000000011
 #define	$$oidnum	2340
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
 
 #define	$$item	その他所見
 #define	$$cd$$KN_$$item	9P547160800000049
+#define $$item08    $$item
 
 #define	$$item	偶発症の有無
-#define	$$item	$$item
 #define	$$cd$$KN_$$item	9P548000000000011
 #define	$$oidnum	2010
-#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item09    $$item
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P549000000000011
 #define	$$oidnum	2350
-
-#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P550160800000049
+#define $$item11    $$item
+
 #define	$$item	精密検査による偶発症の有無
 #define	$$cd$$KN_$$item	9P551000000000011
 #define	$$oidnum	2011
-#define	 $$cs$$KN_$$item	$$urn.$$oidnum
+#define	$$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item12    $$item
 
 //--------
 #define	$$KN  子宮頸がん検診
@@ -124,599 +232,826 @@
 #define	$$oidnum	2000
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
 
 #define	$$item	がんに係る症状の有無
 #define	$$cd$$KN_$$item	9P561000000000011
 #define	$$oidnum	2052
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
 
 #define	$$item	視診所見有無
 #define	$$cd$$KN_$$item	9N291160700000011
 #define	$$oidnum	2050
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
 
 #define	$$item	視診所見内容
 #define	$$cd$$KN_$$item	9N291160800000049
+#define $$item04    $$item
 
 #define	$$item	内診所見有無
 #define	$$cd$$KN_$$item	9N296160700000011
 #define	$$oidnum	2050
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
+
 
 #define	$$item	内診所見内容
 #define	$$cd$$KN_$$item	9N296160800000049
+#define $$item06    $$item
 
 #define	$$item	頸部細胞診検査判定
 #define	$$cd$$KN_$$item	7A021000008543311
 #define	$$oidnum	2400
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
+
 
 #define	$$item	頸部細胞診検査所見
 #define	$$cd$$KN_$$item	7A021160808543349
+#define $$item08    $$item
 
 #define	$$item	精密検査の対象有無
 #define	$$cd$$KN_$$item	9P562000000000011
 #define	$$oidnum	2440
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item09    $$item
+
 
 #define	$$item	その他所見
 #define	$$cd$$KN_$$item	9P563160800000049
+#define $$item10    $$item
+
+
 #define	$$item	偶発症の有無
 #define	$$cd$$KN_$$item	9P564000000000011
 #define	$$oidnum	2010
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item11    $$item
+
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P565000000000011
 #define	$$oidnum	2450
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item12    $$item
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P566160800000049
+#define $$item13    $$item
+
 #define	$$item	精密検査による偶発症の有無
 #define	$$cd$$KN_$$item	9P567000000000011
 #define	$$oidnum	2011
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item14    $$item
 
+//-----
 #define	$$KN  大腸がん検診
+
 #define	$$item	過去の受診歴
 #define	$$cd$$KN_$$item	9P580000000000011
 #define	$$oidnum	2000
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
+
 
 #define	$$item	大腸がんに係る症状の有無
 #define	$$cd$$KN_$$item	9P581000000000011
 #define	$$oidnum	2052
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
+
 
 #define	$$item	便潜血検査判定
 #define	$$cd$$KN_$$item	1B040000001599811
 #define	$$oidnum	2500
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
+
 
 #define	$$item	便潜血検査所見
 #define	$$cd$$KN_$$item	1B040160801599849
+#define $$item04    $$item
+
+
 #define	$$item	精密検査の対象有無
 #define	$$cd$$KN_$$item	9P582000000000011
 #define	$$oidnum	2540
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
+
 
 #define	$$item	その他所見
 #define	$$cd$$KN_$$item	9P583160800000049
+#define $$item06    $$item
+
 #define	$$item	偶発症の有無
 #define	$$cd$$KN_$$item	9P584000000000011
 #define	$$oidnum	2010
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
+
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P585000000000011
 #define	$$oidnum	2550
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item08    $$item
+
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P586160800000049
+#define $$item09    $$item
+
 #define	$$item	精密検査による偶発症の有無
 #define	$$cd$$KN_$$item	9P587000000000011
 #define	$$oidnum	2011
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
 
-#define	肝炎ウイルス検診
+//-----------
+#define	$$KN  肝炎ウイルス検診
+
 #define	$$item	問診肝臓病歴、肝機能が悪いと言われた経験の有無
 #define	$$cd$$KN_$$item	9P600000000000011
 #define	$$oidnum	2052
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
+
 
 #define	$$item	問診肝臓病歴、肝機能が悪いと言われた時期
 #define	$$cd$$KN_$$item	9P601160800000049
+#define $$item02    $$item
+
+
 #define	$$item	問診広範な外科的処置歴の有無
 #define	$$cd$$KN_$$item	9P602000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
+
 
 #define	$$item	問診広範な外科的処置時期
 #define	$$cd$$KN_$$item	9P603160800000049
+#define $$item04    $$item
+
+
 #define	$$item	問診妊娠・分娩時の多量出血歴の有無
 #define	$$cd$$KN_$$item	9P604000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
+
 
 #define	$$item	問診妊娠・分娩時の多量出血の時期
 #define	$$cd$$KN_$$item	9P605160800000049
+#define $$item06    $$item
+
+
 #define	$$item	問診定期的な肝機能検査受診の有無
 #define	$$cd$$KN_$$item	9P606000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
+
 
 #define	$$item	問診B型肝炎ウイルス検査の受診歴の有無
 #define	$$cd$$KN_$$item	9P607000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item08    $$item
+
 
 #define	$$item	問診B型肝炎ウイルス検査の受診時期
 #define	$$cd$$KN_$$item	9P608160800000049
+#define $$item09    $$item
+
 #define	$$item	問診B型肝炎治療歴の有無
 #define	$$cd$$KN_$$item	9P609000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
+
 
 #define	$$item	問診B型肝炎治療時期
 #define	$$cd$$KN_$$item	9P610160800000049
+#define $$item11    $$item
+
+
 #define	$$item	問診C型肝炎ウイルス検査の受診歴の有無
 #define	$$cd$$KN_$$item	9P611000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item12    $$item
+
 
 #define	$$item	問診C型肝炎ウイルス検査の受診時期
 #define	$$cd$$KN_$$item	9P612160800000049
+#define $$item13    $$item
+
 #define	$$item	問診C型肝炎治療歴の有無
 #define	$$cd$$KN_$$item	9P613000000000011
 #define	$$oidnum	2054
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item14    $$item
+
 
 #define	$$item	問診C型肝炎治療時期
 #define	$$cd$$KN_$$item	9P614160800000049
+#define $$item15    $$item
+
 #define	$$item	B型肝炎ウイルス検査判定
 #define	$$cd$$KN_$$item	9P615000000000011
 #define	$$oidnum	2640
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item16    $$item
+
 
 #define	$$item	C型肝炎ウイルス検査判定
 #define	$$cd$$KN_$$item	9N401000000000011
 #define	$$oidnum	2641
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item17    $$item
+
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P616000000000011
 #define	$$oidnum	2650
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item18    $$item
+
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P617160800000049
+#define $$item19    $$item
+
+//----
+#define	$$KN  骨粗鬆症検診の問診
 #define	$$item	問診過去の検査判定
 #define	$$cd$$KN_$$item	9P620000000000011
 #define	$$oidnum	2052
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
+
 
 #define	$$item	問診過去の精密検査の対象有無
 #define	$$cd$$KN_$$item	9P621000000000011
 #define	$$oidnum	2700
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
+
 
 #define	$$item	問診現在の体重
 #define	$$cd$$KN_$$item	9N006000000000001
+#define $$item03    $$item
+
 #define	$$item	問診現在の身長
 #define	$$cd$$KN_$$item	9N001000000000001
+#define $$item04    $$item
+
 #define	$$item	問診骨折の既往歴
 #define	$$cd$$KN_$$item	9P622000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item05    $$item
+
 
 #define	$$item	問診過去の骨折の部位
 #define	$$cd$$KN_$$item	9P623160800000049
+#define $$item06    $$item
+
 #define	$$item	問診大腿骨近位部骨折の家族歴
 #define	$$cd$$KN_$$item	9P624000000000011
 #define	$$oidnum	2052
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item07    $$item
+
 
 #define	$$item	問診喫煙習慣
 #define	$$cd$$KN_$$item	9P625000000000011
 #define	$$oidnum	2701
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item08    $$item
+
 
 #define	$$item	問診飲酒量
 #define	$$cd$$KN_$$item	9P626000000000001
+#define $$item09    $$item
+
 #define	$$item	問診ステロイド内服
 #define	$$cd$$KN_$$item	9P627000000000011
 #define	$$oidnum	2702
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
+
 
 #define	$$item	問診関節リウマチ罹患
 #define	$$cd$$KN_$$item	9P628000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item11    $$item
+
 
 #define	$$item	問診その他の既往歴
 #define	$$cd$$KN_$$item	9P629160800000049
+#define $$item12    $$item
+
 #define	$$item	問診活動量（運動頻度）
 #define	$$cd$$KN_$$item	9P630000000000011
 #define	$$oidnum	2703
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item13    $$item
+
 
 #define	$$item	問診月経の有無
 #define	$$cd$$KN_$$item	9P631000000000011
 #define	$$oidnum	2704
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item14    $$item
+
 
 #define	$$item	問診閉経の理由
 #define	$$cd$$KN_$$item	9P632000000000011
 #define	$$oidnum	2705
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item15    $$item
+
 
 #define	$$item	問診閉経年齢
 #define	$$cd$$KN_$$item	9P633000000000001
+#define $$item16    $$item
+
 #define	$$item	問診その他問診事項
 #define	$$cd$$KN_$$item	9P634160800000049
+#define $$item17    $$item
+
 #define	$$item	DXA検査骨量値
 #define	$$cd$$KN_$$item	9Z507195600000001
+#define $$item18    $$item
+
 #define	$$item	DXA検査骨密度
 #define	$$cd$$KN_$$item	9Z507195700000001
+#define $$item19    $$item
+
 #define	$$item	DXA検査測定部位
 #define	$$cd$$KN_$$item	9Z507195800000049
+#define $$item20    $$item
+
 #define	$$item	DXA検査に使用した機器
 #define	$$cd$$KN_$$item	9Z507195900000049
+#define $$item21    $$item
+
 #define	$$item	DXA検査判定
 #define	$$cd$$KN_$$item	9Z507000000000011
 #define	$$oidnum	2706
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item22   $$item
+
 
 #define	$$item	DXA検査所見
 #define	$$cd$$KN_$$item	9Z507160800000049
+#define $$item23   $$item
+
+
 #define	$$item	エックス線検査骨量値
 #define	$$cd$$KN_$$item	9Z531195600000001
+#define $$item24   $$item
+
 #define	$$item	エックス線検査骨密度
 #define	$$cd$$KN_$$item	9Z531195700000001
+#define $$item25   $$item
+
 #define	$$item	エックス線検査測定部位
 #define	$$cd$$KN_$$item	9Z531195800000049
+#define $$item26   $$item
+
 #define	$$item	エックス線検査に使用した機器
 #define	$$cd$$KN_$$item	9Z531195900000049
+#define $$item27   $$item
+
 #define	$$item	エックス線検査判定
 #define	$$cd$$KN_$$item	9Z531000000000011
 #define	$$oidnum	2706
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item28    $$item
+
 
 #define	$$item	エックス線検査所見
 #define	$$cd$$KN_$$item	9Z531160800000049
+#define $$item29   $$item
+
+
 #define	$$item	CT検査骨量値
 #define	$$cd$$KN_$$item	9Z536195600000001
+#define $$item30   $$item
+
 #define	$$item	CT検査骨密度
 #define	$$cd$$KN_$$item	9Z536195700000001
+#define $$item31   $$item
+
 #define	$$item	CT検査測定部位
 #define	$$cd$$KN_$$item	9Z536195800000049
+#define $$item32   $$item
+
 #define	$$item	CT検査に使用した機器
 #define	$$cd$$KN_$$item	9Z536195900000049
+#define $$item33   $$item
+
 #define	$$item	CT検査判定
 #define	$$cd$$KN_$$item	9Z536000000000011
 #define	$$oidnum	2706
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item34    $$item
+
 
 #define	$$item	CT検査所見
 #define	$$cd$$KN_$$item	9Z536160800000049
+#define $$item35   $$item
+
 #define	$$item	超音波検査骨量値
 #define	$$cd$$KN_$$item	9Z541195600000001
+#define $$item36   $$item
+
 #define	$$item	超音波検査の結果
 #define	$$cd$$KN_$$item	9Z541195700000001
+#define $$item37   $$item
+
 #define	$$item	超音波検査測定部位
 #define	$$cd$$KN_$$item	9Z541195800000049
+#define $$item38   $$item
+
 #define	$$item	超音波検査に使用した機器
 #define	$$cd$$KN_$$item	9Z541195900000049
+#define $$item39   $$item
+
 #define	$$item	超音波検査判定
 #define	$$cd$$KN_$$item	9Z541000000000011
 #define	$$oidnum	2706
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item40    $$item
+
 
 #define	$$item	超音波検査所見
 #define	$$cd$$KN_$$item	9Z541160800000049
+#define $$item41    $$item
+
 #define	$$item	判定
 #define	$$cd$$KN_$$item	9P637000000000011
 #define	$$oidnum	2740
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item42    $$item
+
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P638000000000011
 #define	$$oidnum	2750
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item43    $$item
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P639160800000049
+#define $$item44   $$item
+
+
+//----
+#define	$$KN  歯周疾患検診
+
 #define	$$item	問診１日での歯をみがく頻度
 #define	$$cd$$KN_$$item	9P650000000000011
 #define	$$oidnum	2800
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item01    $$item
+
 
 #define	$$item	問診歯間ブラシやフロスの使用頻度
 #define	$$cd$$KN_$$item	9P651000000000011
 #define	$$oidnum	2801
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item02    $$item
+
 
 #define	$$item	問診過去１年間の歯科検診の受診の有無
 #define	$$cd$$KN_$$item	9P652000000000011
 #define	$$oidnum	2053
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item03    $$item
+
 
 #define	$$item	問診喫煙歴
 #define	$$cd$$KN_$$item	9P653000000000011
 #define	$$oidnum	2802
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item04    $$item
+
 
 #define	$$item	問診喫煙を開始した年齢
 #define	$$cd$$KN_$$item	9P654000000000001
+#define $$item05   $$item
+
 #define	$$item	問診喫煙を止めた年齢
 #define	$$cd$$KN_$$item	9P655000000000001
+#define $$item06   $$item
+
 #define	$$item	問診1日の平均喫煙本数
 #define	$$cd$$KN_$$item	9P656000000000001
+#define $$item07   $$item
+
 #define	$$item	問診糖尿病罹患の有無
 #define	$$cd$$KN_$$item	9P657000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item08    $$item
+
 
 #define	$$item	問診関節リウマチ罹患の有無
 #define	$$cd$$KN_$$item	9P658000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item09    $$item
+
 
 #define	$$item	問診狭心症・心筋梗塞・脳梗塞罹患の有無
 #define	$$cd$$KN_$$item	9P659000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item10    $$item
+
 
 #define	$$item	問診内蔵脂肪型肥満の有無
 #define	$$cd$$KN_$$item	9P660000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item11    $$item
+
 
 #define	$$item	問診妊娠の有無
 #define	$$cd$$KN_$$item	9P661000000000011
 #define	$$oidnum	2051
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item12    $$item
+
 
 #define	$$item	問診その他全身の状態
 #define	$$cd$$KN_$$item	9P662160800000049
+#define $$item13    $$item
+
 #define	$$item	健全歯数
 #define	$$cd$$KN_$$item	9P663000000000001
+#define $$item14    $$item
+
 #define	$$item	未処置歯数
 #define	$$cd$$KN_$$item	9P664000000000001
+#define $$item15    $$item
+
 #define	$$item	処置歯数
 #define	$$cd$$KN_$$item	9P665000000000001
+#define $$item16    $$item
+
 #define	$$item	喪失歯数
 #define	$$cd$$KN_$$item	9P666000000000001
+#define $$item17    $$item
+
 #define	$$item	要補綴歯数
 #define	$$cd$$KN_$$item	9P667000000000001
+#define $$item18    $$item
+
 #define	$$item	欠損補綴歯数
 #define	$$cd$$KN_$$item	9P668000000000001
+#define $$item19    $$item
+
 #define	$$item	現在歯数
 #define	$$cd$$KN_$$item	9P669000000000001
+#define $$item20    $$item
+
 #define	$$item	歯肉出血ＢＯＰ（１７または１６）
 #define	$$cd$$KN_$$item	9P670000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item21    $$item
+
 
 #define	$$item	歯肉出血ＢＯＰ（１１）
 #define	$$cd$$KN_$$item	9P671000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item22    $$item
+
 
 #define	$$item	歯肉出血ＢＯＰ（２６または２７）
 #define	$$cd$$KN_$$item	9P672000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item23    $$item
+
 
 #define	$$item	歯肉出血ＢＯＰ（４７または４６）
 #define	$$cd$$KN_$$item	9P673000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item24    $$item
+
 
 #define	$$item	歯肉出血ＢＯＰ（３１）
 #define	$$cd$$KN_$$item	9P674000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item25    $$item
+
 
 #define	$$item	歯肉出血ＢＯＰ（３６または３７）
 #define	$$cd$$KN_$$item	9P675000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item26    $$item
+
 
 #define	$$item	歯肉出血ＢＯＰ（最大値）
 #define	$$cd$$KN_$$item	9P676000000000011
 #define	$$oidnum	2803
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item27    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（１７または１６）
 #define	$$cd$$KN_$$item	9P677000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item28    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（１１）
 #define	$$cd$$KN_$$item	9P678000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item29    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（２６または２７）
 #define	$$cd$$KN_$$item	9P679000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item30    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（４７または４６）
 #define	$$cd$$KN_$$item	9P680000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item31    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（３１）
 #define	$$cd$$KN_$$item	9P681000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item32    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（３６または３７）
 #define	$$cd$$KN_$$item	9P682000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item33    $$item
+
 
 #define	$$item	歯周ポケットＰＤ（最大値）
 #define	$$cd$$KN_$$item	9P683000000000011
 #define	$$oidnum	2804
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item34    $$item
+
 
 #define	$$item	歯石の付着
 #define	$$cd$$KN_$$item	9P684000000000011
 #define	$$oidnum	2805
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item35    $$item
+
 
 #define	$$item	口腔清掃状態
 #define	$$cd$$KN_$$item	9P685000000000011
 #define	$$oidnum	2806
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item36    $$item
+
 
 #define	$$item	歯列咬合所見
 #define	$$cd$$KN_$$item	9P686000000000011
 #define	$$oidnum	2050
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item37    $$item
+
 
 #define	$$item	顎関節所見
 #define	$$cd$$KN_$$item	9P687000000000011
 #define	$$oidnum	2050
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item38    $$item
+
 
 #define	$$item	粘膜所見
 #define	$$cd$$KN_$$item	9P688000000000011
 #define	$$oidnum	2050
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item39    $$item
+
 
 #define	$$item	その他所見
 #define	$$cd$$KN_$$item	9P689160800000049
 #define	$$item	判定区分
+#define $$item40    $$item
+
+
 #define	$$cd$$KN_$$item	9P690000000000011
 #define	$$oidnum	2840
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item41    $$item
+
 
 #define	$$item	精密検査結果
 #define	$$cd$$KN_$$item	9P691000000000011
 #define	$$oidnum	2850
-
 #define	 $$cs$$KN_$$item	$$urn.$$oidnum
 #define	$$vs$$KN_$$item	$$url-$$oidnum
+#define $$item42    $$item
 
 #define	$$item	精密検査所見
 #define	$$cd$$KN_$$item	9P692160800000049
+#define $$item43    $$item
 	
-/*
-#define	$$cd$$KN_過去の受診歴  9P520000000000011
-#define	 $$cd$$KN_過去の受診歴	9P520000000000011
-#define	 $$cd$$KN_がんに係る症状の有無	9P521000000000011
-#define	 $$cd$$KN_マンモグラフィー検査判定	9N281000000000011
-#define	 $$cd$$KN_マンモグラフィー検査所見	9N281160800000049
-#define	 $$cd$$KN_精密検査対象有無	9P522000000000011
-#define	 $$cd$$KN_その他所見	9P523160800000049
-#define	 $$cd$$KN_偶発症の有無	9P524000000000011
-#define	 $$cd$$KN_精密検査結果	9P525000000000011
-#define	 $$cd$$KN_精密検査所見	9P526160800000049
-#define	 $$cd$$KN_精密検査による偶発症の有無	9P527000000000011
-*/
 
 // JP_Observation_eMunicipalCheckupG_egg52.incから展開 
 * code.coding contains

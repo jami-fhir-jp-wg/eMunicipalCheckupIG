@@ -97,10 +97,10 @@
     and obs_$$cd$$KN_$$item06 0..1
     and obs_$$cd$$KN_$$item07 0..1
     and obs_$$cd$$KN_$$item08 0..1
-    and obs_$$cd$$KN_$$item09 0..1
+    and obs_$$cd$$KN_$$item09 1..1
     and obs_$$cd$$KN_$$item10 0..1
     and obs_$$cd$$KN_$$item11 0..1
-    and obs_$$cd$$KN_$$item12 0..1
+    and obs_$$cd$$KN_$$item12 1..1
     and obs_$$cd$$KN_$$item13 0..1
     and obs_$$cd$$KN_$$item14 0..1   
 
@@ -125,21 +125,21 @@
 // 肺がん検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
 * value[x][valueCodeableConcept].coding contains
-        obs_$$cd$$KN_$$過去の受診歴 0..1
-    and obs_$$cd$$KN_$$がんに係る症状の有無 0..1
-    and obs_$$cd$$KN_$$胸部エックス線検査判定 0..1
-    and obs_$$cd$$KN_$$喀痰検査判定 0..1
-    and obs_$$cd$$KN_$$精密検査対象有無 0..1
-    and obs_$$cd$$KN_$$偶発症の有無 0..1
-    and obs_$$cd$$KN_$$精密検査結果 0..1
-    and obs_$$cd$$KN_$$精密検査による偶発症の有無  0..1   
+        obs_$$cd$$KN_$$item01 0..1
+    and obs_$$cd$$KN_$$item02 0..1
+    and obs_$$cd$$KN_$$item04 0..1
+    and obs_$$cd$$KN_$$item07 0..1
+    and obs_$$cd$$KN_$$item09 0..1
+    and obs_$$cd$$KN_$$item11 0..1
+    and obs_$$cd$$KN_$$item12 0..1
+    and obs_$$cd$$KN_$$item14  0..1   
 
-* insert valCC_coding_slicing($$cd$$KN_過去の受診歴,$$cs$$KN_過去の受診歴,$$vs$$KN_過去の受診歴)
-* insert valCC_coding_slicing($$cd$$KN_がんに係る症状の有無, $$cs$$KN_がんに係る症状の有無, $$vs$$KN_がんに係る症状の有無)
-* insert valCC_coding_slicing($$cd$KN_胸部エックス線検査判定, $$cs$$KN_胸部エックス線検査判定, $$vs$$KN_胸部エックス線検査判定)
-* insert valCC_coding_slicing($$cd$KN_喀痰検査判定, $$cs$$KN_喀痰検査判定, $$vs$$KN_喀痰検査判定)
-* insert valCC_coding_slicing($$cd$KN_精密検査対象有無, $$cs$$KN_精密検査対象有無, $$vs$$KN_精密検査対象有無)
-* insert valCC_coding_slicing($$cd$cdがん検診による偶発症の有無, $$cs$$cdがん検診による偶発症の有無, $$vs$$cdがん検診による偶発症の有無)
-* insert valCC_coding_slicing($$cd$KN_精密検査結果, $$cs$$KN_精密検査結果, $$vs$$KN_精密検査結果)
-* insert valCC_coding_slicing($$cd$KN_精密検査による偶発症の有無, $$cs$$KN_精密検査による偶発症の有無, $$vs$$KN_精密検査による偶発症の有無)
+* insert valCC_coding_slicing($$cd$$KN_item01,$$cs$$KN_item01,$$vs$$KN_item01)
+* insert valCC_coding_slicing($$cd$$KN_item02, $$cs$$KN_item02, $$vs$$KN_item02)
+* insert valCC_coding_slicing($$cd$$KN_item04, $$cs$$KN_item04, $$vs$$KN_item04)
+* insert valCC_coding_slicing($$cd$$KN_item07, $$cs$$KN_item07, $$vs$$KN_item07)
+* insert valCC_coding_slicing($$cd$$KN_item09, $$cs$$KN_item09, $$vs$$KN_item09)
+* insert valCC_coding_slicing($$cd$$KN_item11, $$cs$$KN_item11, $$vs$$KN_item11)
+* insert valCC_coding_slicing($$cd$$KN_item12, $$cs$$KN_item12, $$vs$$KN_item12)
+* insert valCC_coding_slicing($$cd$$KN_item14, $$cs$$KN_item14, $$vs$$KN_item14)
 //-- ここまで

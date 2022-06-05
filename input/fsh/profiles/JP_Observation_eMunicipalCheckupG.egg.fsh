@@ -1,16 +1,10 @@
 
 
-
-
-
-
-
 RuleSet: Obs_code_coding_slicing(obs_system, obs_cd)
 * code.coding[obs_{obs_cd}]
   * system = "{obs_system}"
   * code = #{obs_cd}  (exactly)  
 
-// value[x][valueCodeableConcept].coding
 RuleSet: valCC_coding_slicing(laboItemCode, code_system, valueset)
 * value[x][valueCodeableConcept].coding[obs_{laboItemCode}]
   * system = "{code_system}"  (exactly)
@@ -71,11 +65,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //--ここまで
 
 
-
-/*
-*/
-/*
-*/
+//----------
 
 
 
@@ -88,84 +78,127 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 
 
 
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[1])
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[2])
+
+
 
 // JP_Observation_eMunicipalCheckupG_egg51.incから展開 
 * code.coding contains
-        obs_9P500000000000011 0..1
-    and obs_9P501000000000011 0..1
-    and obs_9N737000000000012 0..1
-    and obs_9P502000000000011 0..1
-    and obs_9P503160800000049 0..1
-    and obs_7A030161506144349 0..1
-    and obs_7A030000006144311 0..1
-    and obs_7A030160806144349 0..1
-    and obs_9P504000000000011 0..1
-    and obs_9P505160800000049 0..1
-    and obs_9P506000000000011 0..1
-    and obs_9P507000000000011 0..1
-    and obs_9P508160800000049 0..1
-    and obs_9P509000000000011  0..1   
+        obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201101 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201102 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201103 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201104 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201105 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201106 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201107 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201108 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201109 1..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201110 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201111 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201112 1..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201113 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201114 0..1   
 
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[1])
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, $$cd$$cd[2])
-
-//* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P500000000000011)
-//* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P501000000000011)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9N737000000000012)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P502000000000011)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P503160800000049)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 7A030161506144349)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 7A030000006144311)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 7A030160806144349)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P504000000000011)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P505160800000049)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P506000000000011)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P507000000000011)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P508160800000049)
-* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P509000000000011)
+//-- ここから 検査項目JLAC10のsystem urlと項目コード（JLAC10)の出力
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201101)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201102)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201103)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201104)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201105)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201106)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201107)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201108)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201109)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201110)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201111)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201112)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201113)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201114)
 //--ここまで
-
 
 //-- ここから
 // 肺がん検診
-// 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
+// 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
 * value[x][valueCodeableConcept].coding contains
-        obs_9P500000000000011 0..1
-    and obs_9P501000000000011 0..1
-    and obs_9P502000000000011 0..1
-    and obs_7A030000006144311 0..1
-    and obs_9P504000000000011 0..1
-    and obs_9P506000000000011 0..1
-    and obs_9P507000000000011 0..1
-    and obs_9P509000000000011  0..1   
+        obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201101 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201102 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201104 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201107 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201109 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201111 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201112 0..1
+    and obs_http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-201114  0..1   
 
-//　* insert valCC_coding_slicing(9P500000000000011, urn:oid:1.2.392.100495.100.2000, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000)
-* value[x][valueCodeableConcept].coding[obs_9P500000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2000"  (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000 (required)
-* value[x][valueCodeableConcept].coding[obs_9P501000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2052" (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052 (required) 
-* value[x][valueCodeableConcept].coding[obs_9P502000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2100" (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2100 (required)
-* value[x][valueCodeableConcept].coding[obs_7A030000006144311]
-  * system = "urn:oid:1.2.392.100495.100.2101" (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2101 (required)
-* value[x][valueCodeableConcept].coding[obs_9P504000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2140" (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2140 (required)
-* value[x][valueCodeableConcept].coding[obs_9P506000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2010" (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010 (required)
-* value[x][valueCodeableConcept].coding[obs_9P507000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2150" (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2150 (required)
-* value[x][valueCodeableConcept].coding[obs_9P509000000000011]
-  * system = "urn:oid:1.2.392.100495.100.2011"  (exactly)
-  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011 (required)
+* insert valCC_coding_slicing($$cd肺がん検診_item01,$$cs肺がん検診_item01,$$vs肺がん検診_item01)
+* insert valCC_coding_slicing($$cd肺がん検診_item02, $$cs肺がん検診_item02, $$vs肺がん検診_item02)
+* insert valCC_coding_slicing($$cd肺がん検診_item04, $$cs肺がん検診_item04, $$vs肺がん検診_item04)
+* insert valCC_coding_slicing($$cd肺がん検診_item07, $$cs肺がん検診_item07, $$vs肺がん検診_item07)
+* insert valCC_coding_slicing($$cd肺がん検診_item09, $$cs肺がん検診_item09, $$vs肺がん検診_item09)
+* insert valCC_coding_slicing($$cd肺がん検診_item11, $$cs肺がん検診_item11, $$vs肺がん検診_item11)
+* insert valCC_coding_slicing($$cd肺がん検診_item12, $$cs肺がん検診_item12, $$vs肺がん検診_item12)
+* insert valCC_coding_slicing($$cd肺がん検診_item14, $$cs肺がん検診_item14, $$vs肺がん検診_item14)
+//-- ここまで
+
+
+//----------
+
+
+
+
+
+
+
+
+
+
+
+// JP_Observation_eMunicipalCheckupG_egg52.incから展開 
+* code.coding contains
+        obs_9P52700000000001101 0..1
+    and obs_9P52700000000001102 0..1
+    and obs_9P52700000000001103 0..1
+    and obs_9P52700000000001104 0..1
+    and obs_9P52700000000001105 1..1
+    and obs_9P52700000000001106 0..1
+    and obs_9P52700000000001107 0..1
+    and obs_9P52700000000001108 1..1
+    and obs_9P52700000000001109 0..1
+    and obs_9P52700000000001110 0..1
+
+//-- ここから 検査項目JLAC10のsystem urlと項目コード（JLAC10)の出力
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001101)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001102)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001103)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001104)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001105)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001106)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001107)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001108)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001109)
+* insert Obs_code_coding_slicing(http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10, 9P52700000000001110)
+//--ここまで
+
+
+
+// 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
+//-- ここから
+// 乳がん検診
+* value[x][valueCodeableConcept].coding contains
+        obs_9P52700000000001101 0..1
+    and obs_9P52700000000001102 0..1
+    and obs_9P52700000000001103 0..1
+    and obs_9P52700000000001105 1..1
+    and obs_9P52700000000001107 0..1
+    and obs_9P52700000000001108 1..1
+    and obs_9P52700000000001110 0..1
+
+* insert valCC_coding_slicing($$cd乳がん検診_item01,$$cs乳がん検診_item01,$$vs乳がん検診_item01)
+* insert valCC_coding_slicing($$cd乳がん検診_item02, $$cs乳がん検診_item02, $$vs乳がん検診_item02)
+* insert valCC_coding_slicing($$cd乳がん検診_item03, $$cs乳がん検診_item03, $$vs乳がん検診_item03)
+* insert valCC_coding_slicing($$cd乳がん検診_item05, $$cs乳がん検診_item05, $$vs乳がん検診_item05)
+* insert valCC_coding_slicing($$cd乳がん検診_item06, $$cs乳がん検診_item06, $$vs乳がん検診_item06)
+* insert valCC_coding_slicing($$cd乳がん検診_item08, $$cs乳がん検診_item08, $$vs乳がん検診_item08)
+* insert valCC_coding_slicing($$cd乳がん検診_item10, $$cs乳がん検診_item10, $$vs乳がん検診_item10)
+
 //-- ここまで
 
 // 検体材料
@@ -178,10 +211,10 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * derivedFrom only Reference(JP_Media_eMunicipalCheckup)
 
 // 各種制約
-Invariant: obs-9P500000000000011
+Invariant: obs-$$cd肺がん検診の過去の受診歴
 Description: "obs-肺がん検診の過去の受診歴のtypeとsystemgが正しい"
 Expression: "code.coding.where(
-    system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10' and code =9P500000000000011
+    system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10' and code =$$cd肺がん検診の過去の受診歴
     ).exists() implies (
         valueCodeableConcept.coding.system = 'urn:oid:1.2.392.100495.100.2000'
     )"
