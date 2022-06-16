@@ -55,7 +55,7 @@ Expression:
 )"
 
 //--- bundleリソースを構成するentry[2]がPractitionerRoleリソース であり、JP_PractitionerRole_eMunicipalCheckup　プロファイルに準拠している:
-Invariant: bundle-entry2-PractitionerRole_eMunicipalCheckup
+Invariant: bundle-entry2-JP-PractitionerRole-eMunicipalCheckup
 Severity: #error
 Description: "bundleリソースを構成するentry[2]がPractitionerRoleリソース(JP_PractitionerRole_eMunicipalCheckup)である。"
 Expression: 
@@ -64,7 +64,7 @@ Expression:
 )"
 
 //--- bundleリソースを構成するentry[3]がorganization リソース であり、JP_Organization_eMunicipalCheckup_Provider　プロファイルに準拠している:
-Invariant: bundle-entry3-Organization_eMunicipalCheckup_Provider
+Invariant: bundle-entry3-JP-Organization-eMunicipalCheckup-Provider
 Severity: #error
 Description: "bundleリソースを構成するentry[3]がorganizationリソース(JP_Organization_eMunicipalCheckup_Provider)である。"
 Expression: 
@@ -73,7 +73,7 @@ Expression:
 )"
 
 //--- bundleリソースを構成するentry[4]がPractitionerリソース であり、JP_Practitioner_eMunicipalCheckup　プロファイルに準拠している:
-Invariant: bundle-entry4-Practitioner_eMunicipalCheckup
+Invariant: bundle-entry4-JP-Practitioner-eMunicipalCheckup
 Severity: #error
 Description: "bundleリソースを構成するentry[4]がPractitionerリソース(JP_PractitionerRole_eMunicipalCheckup)である。"
 Expression: 
