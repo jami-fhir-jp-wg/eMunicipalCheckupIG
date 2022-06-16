@@ -30,10 +30,11 @@ Description: "自治体検診結果報告書　Bundleリソース　文書情報
 * obeys  category51-event1-valid-obs-9P508160800000049
 * obeys  category51-event1-valid-obs-9P509000000000011
 
-* obeys  bundle-entry0-Composition
 * obeys  bundle-entry0-JP-Composition-eMunicipalCheckup
-* obeys  bundle-entry1-Patient
 * obeys  bundle-entry1-JP-Patient-eMunicipalCheckup
+* obeys  bundle-entry2-JP-PractitionerRole-eMunicipalCheckup
+* obeys  bundle-entry3-JP-Organization-eMunicipalCheckup-Provider
+* obeys  bundle-entry4-JP-Practitioner-eMunicipalCheckup
 
 /*
 * obeys entry-where-patient-check
