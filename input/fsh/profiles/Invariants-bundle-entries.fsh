@@ -36,6 +36,7 @@ Expression:
     documentReference 0..* MS
 */
 
+//--- bundleリソースを構成するentry[0]がCompositionリソース であり、JP_Composition_eMunicipalCheckup　プロファイルに準拠している。
 Invariant: bundle-entry0-JP-Composition-eMunicipalCheckup
 Severity: #error
 Description: "bundleリソースを構成するentry[0]がCompositionリソース(JP_Composition_eMunicipalCheckup)である。"
@@ -44,15 +45,7 @@ Expression:
     entry[0].resource.meta.profile[0]='JP_Composition_eMunicipalCheckup'
 )"
 
-Invariant: bundle-entry0-Composition
-Severity: #error
-Description: "bundleリソースを構成するentry[0]がCompositionリソース(Compostion)である。"
-Expression: 
-" (
-    entry[0].where(resource is Composition ).exists()
-)"
-
-
+//--- bundleリソースを構成するentry[1]がPatientリソース であり、JP_Patient_eMunicipalCheckup　プロファイルに準拠している:
 Invariant: bundle-entry1-JP-Patient-eMunicipalCheckup
 Severity: #error
 Description: "bundleリソースを構成するentry[1]がPatientリソース(JP_Patient_eMunicipalCheckup)である。"
@@ -61,29 +54,29 @@ Expression:
     entry[1].resource.meta.profile[0]='JP_Patient_eMunicipalCheckup'
 )"
 
-
-Invariant: bundle-entry1-Patient
+//--- bundleリソースを構成するentry[2]がPractitionerRoleリソース であり、JP_PractitionerRole_eMunicipalCheckup　プロファイルに準拠している:
+Invariant: bundle-entry2-PractitionerRole_eMunicipalCheckup
 Severity: #error
-Description: "bundleリソースを構成するentry[1]がPatientリソース(Patient)である。"
+Description: "bundleリソースを構成するentry[2]がPractitionerRoleリソース(JP_PractitionerRole_eMunicipalCheckup)である。"
 Expression: 
  "(
-    entry[1].where(resource is Patient ).exists()
+    entry[2].resource.meta.profile[0]='JP_PractitionerRole_eMunicipalCheckup'
 )"
 
-/*
-Invariant: bundle-entry1-PractitionerRole
+//--- bundleリソースを構成するentry[3]がorganization リソース であり、JP_Organization_eMunicipalCheckup_Provider　プロファイルに準拠している:
+Invariant: bundle-entry3-Organization_eMunicipalCheckup_Provider
 Severity: #error
-Description: "bundleリソースを構成するentry[2]がPractitionerRoleリソースである。"
+Description: "bundleリソースを構成するentry[3]がorganizationリソース(JP_Organization_eMunicipalCheckup_Provider)である。"
 Expression: 
  "(
-    entry[2].where(resource is PractitionerRole ).exists()
+    entry[3].resource.meta.profile[0]='JP_Organization_eMunicipalCheckup_Provider'
 )"
 
-Invariant: bundle-entry1-PractitionerRole
+//--- bundleリソースを構成するentry[4]がPractitionerリソース であり、JP_Practitioner_eMunicipalCheckup　プロファイルに準拠している:
+Invariant: bundle-entry4-Practitioner_eMunicipalCheckup
 Severity: #error
-Description: "bundleリソースを構成するentry[1]がPractitionerRoleリソースである。"
+Description: "bundleリソースを構成するentry[4]がPractitionerリソース(JP_PractitionerRole_eMunicipalCheckup)である。"
 Expression: 
  "(
-    entry[3].where(resource is organizationProvider ).exists()
+    entry[4].resource.meta.profile[0]='JP_Practitioner_eMunicipalCheckup'
 )"
-*/

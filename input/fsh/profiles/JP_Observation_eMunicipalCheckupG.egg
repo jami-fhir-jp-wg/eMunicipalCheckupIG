@@ -11,7 +11,6 @@ RuleSet: valCC_coding_slicing(laboItemCode, code_system, valueset)
   * system = "{code_system}"  (exactly)
   * code from {valueset} (required)
 
-[obs_$$cd肺がん検診の過去の受診歴]
 
 Profile:        JP_Observation_eMunicipalCheckup
 Parent:         JP_Observation_CUPIX
@@ -67,12 +66,19 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 
 #include  "JP_Observation_eMunicipalCheckupG_egg51.inc"
 #include  "JP_Observation_eMunicipalCheckupG_egg52.inc"
+#include  "JP_Observation_eMunicipalCheckupG_egg53.inc"
+#include  "JP_Observation_eMunicipalCheckupG_egg54.inc"
+#include  "JP_Observation_eMunicipalCheckupG_egg55.inc"
+#include  "JP_Observation_eMunicipalCheckupG_egg56.inc"
+#include  "JP_Observation_eMunicipalCheckupG_egg57.inc"
+#include  "JP_Observation_eMunicipalCheckupG_egg58.inc"
 
 // 検体材料
 * specimen only Reference(JP_Specimen_eMunicipalCheckup)
 
 // 単独検診項目は子供検査項目を含まない
-//* hasMember only Reference(JP_Observation_eMunicipalCheckup)
+//
+* hasMember only Reference(JP_Observation_eMunicipalCheckup)
 * hasMember 0..0
 
 * derivedFrom only Reference(JP_Media_eMunicipalCheckup)
