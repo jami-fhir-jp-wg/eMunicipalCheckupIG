@@ -1,5 +1,20 @@
 #define $$EMCUPX_observation_codes_cs   http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10
 
+#bigdef $$codeValueStstemInvariant(labocode,valsetnumber) 
+Invariant: code-labocode-valueCodingSystem-valsetnumber
+Severity: #error
+Description: "labocode valsetnumber"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='labocode')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.valsetnumber'
+    )
+"
+#endbigdef
+
 
 RuleSet: Obs_code_coding_slicing(obs_system, obs_cd)
 * code.coding[obs_{obs_cd}]
@@ -145,8 +160,25 @@ Expression: "Observation.valueCodeableConcept.coding.system.exist() implies (
 )"
 Severity: #warning
 
-
 Invariant: valueType-string-warning
 Description: "valueType-warning"
 Expression: "Observation.value[x].ofType() is string"
 Severity: #warning
+
+#include "JP_Observation_eMunicipalCheckupG_eggDef51.inc"
+$$codeValueStstemInvariant($$cd01,$$oidnum01) 
+$$codeValueStstemInvariant($$cd02,$$oidnum02) 
+$$codeValueStstemInvariant($$cd03,$$oidnum03) 
+$$codeValueStstemInvariant($$cd04,$$oidnum04) 
+$$codeValueStstemInvariant($$cd05,$$oidnum05) 
+$$codeValueStstemInvariant($$cd06,$$oidnum06) 
+$$codeValueStstemInvariant($$cd07,$$oidnum07) 
+$$codeValueStstemInvariant($$cd08,$$oidnum08) 
+$$codeValueStstemInvariant($$cd09,$$oidnum09) 
+$$codeValueStstemInvariant($$cd10,$$oidnum10) 
+$$codeValueStstemInvariant($$cd11,$$oidnum11) 
+$$codeValueStstemInvariant($$cd12,$$oidnum12) 
+$$codeValueStstemInvariant($$cd13,$$oidnum13) 
+$$codeValueStstemInvariant($$cd14,$$oidnum14)
+ 
+

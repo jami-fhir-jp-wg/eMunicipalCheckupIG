@@ -1,5 +1,6 @@
 
 
+
 RuleSet: Obs_code_coding_slicing(obs_system, obs_cd)
 * code.coding[obs_{obs_cd}]
   * system = "{obs_system}"
@@ -168,7 +169,6 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P506000000000011, urn:oid:1.2.392.100495.100.2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P507000000000011, urn:oid:1.2.392.100495.100.2150, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2150)
 * insert valCC_coding_slicing(9P509000000000011, urn:oid:1.2.392.100495.100.2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
-*/
 //-- ここまで
 //----------
 //---- ここから
@@ -810,8 +810,193 @@ Expression: "Observation.valueCodeableConcept.coding.system.exist() implies (
 )"
 Severity: #warning
 
-
 Invariant: valueType-string-warning
 Description: "valueType-warning"
 Expression: "Observation.value[x].ofType() is string"
 Severity: #warning
+
+//----------
+Invariant: code-9P500000000000011-valueCodingSystem-2000
+Severity: #error
+Description: "9P500000000000011 2000"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P500000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2000'
+    )
+"
+ 
+Invariant: code-9P501000000000011-valueCodingSystem-2052
+Severity: #error
+Description: "9P501000000000011 2052"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P501000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2052'
+    )
+"
+ 
+Invariant: code-9N737000000000012-valueCodingSystem-2053
+Severity: #error
+Description: "9N737000000000012 2053"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9N737000000000012')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2053'
+    )
+"
+ 
+Invariant: code-9P502000000000011-valueCodingSystem-2100
+Severity: #error
+Description: "9P502000000000011 2100"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P502000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2100'
+    )
+"
+ 
+Invariant: code-9P503160800000049-valueCodingSystem-2051
+Severity: #error
+Description: "9P503160800000049 2051"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P503160800000049')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2051'
+    )
+"
+ 
+Invariant: code-7A030161506144349-valueCodingSystem-$$oidnum06
+Severity: #error
+Description: "7A030161506144349 $$oidnum06"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='7A030161506144349')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.$$oidnum06'
+    )
+"
+ 
+Invariant: code-7A030000006144311-valueCodingSystem-2052
+Severity: #error
+Description: "7A030000006144311 2052"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='7A030000006144311')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2052'
+    )
+"
+ 
+Invariant: code-7A030160806144349-valueCodingSystem-2051
+Severity: #error
+Description: "7A030160806144349 2051"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='7A030160806144349')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2051'
+    )
+"
+ 
+Invariant: code-9P504000000000011-valueCodingSystem-2101
+Severity: #error
+Description: "9P504000000000011 2101"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P504000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2101'
+    )
+"
+ 
+Invariant: code-9P505160800000049-valueCodingSystem-2140
+Severity: #error
+Description: "9P505160800000049 2140"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P505160800000049')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2140'
+    )
+"
+ 
+Invariant: code-9P506000000000011-valueCodingSystem-2010
+Severity: #error
+Description: "9P506000000000011 2010"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P506000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2010'
+    )
+"
+ 
+Invariant: code-9P507000000000011-valueCodingSystem-2150
+Severity: #error
+Description: "9P507000000000011 2150"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P507000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2150'
+    )
+"
+ 
+Invariant: code-9P508160800000049-valueCodingSystem-2703
+Severity: #error
+Description: "9P508160800000049 2703"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P508160800000049')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2703'
+    )
+"
+ 
+Invariant: code-9P509000000000011-valueCodingSystem-2011
+Severity: #error
+Description: "9P509000000000011 2011"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P509000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2011'
+    )
+"
+
+ 
+
