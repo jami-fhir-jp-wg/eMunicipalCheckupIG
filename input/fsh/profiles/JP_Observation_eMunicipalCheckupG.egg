@@ -7,7 +7,7 @@ Description: "labocode valsetnumber"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='labocode')
+        and code='labocode').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.valsetnumber'

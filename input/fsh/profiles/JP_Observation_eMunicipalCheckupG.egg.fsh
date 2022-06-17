@@ -838,7 +838,7 @@ Description: "9P500000000000011 2000"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P500000000000011')
+        and code='9P500000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2000'
@@ -851,7 +851,7 @@ Description: "9P501000000000011 2052"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P501000000000011')
+        and code='9P501000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2052'
@@ -864,7 +864,7 @@ Description: "9P502000000000011 2100"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P502000000000011')
+        and code='9P502000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2100'
@@ -877,7 +877,7 @@ Description: "7A030000006144311 2101"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='7A030000006144311')
+        and code='7A030000006144311').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2101'
@@ -890,7 +890,7 @@ Description: "9P504000000000011 2140"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P504000000000011')
+        and code='9P504000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2140'
@@ -903,7 +903,7 @@ Description: "9P506000000000011 2010"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P506000000000011')
+        and code='9P506000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2010'
@@ -916,7 +916,7 @@ Description: "9P507000000000011 2150"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P507000000000011')
+        and code='9P507000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2150'
@@ -929,7 +929,7 @@ Description: "9P509000000000011 2011"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P509000000000011')
+        and code='9P509000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2011'
@@ -944,7 +944,7 @@ Description: "9P520000000000011 2000"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P520000000000011')
+        and code='9P520000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2000'
@@ -957,7 +957,7 @@ Description: "9P521000000000011 2052"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P521000000000011')
+        and code='9P521000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2052'
@@ -970,7 +970,7 @@ Description: "9N281000000000011 2200"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9N281000000000011')
+        and code='9N281000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2200'
@@ -983,7 +983,7 @@ Description: "9P522000000000011 2240"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P522000000000011')
+        and code='9P522000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2240'
@@ -996,7 +996,7 @@ Description: "9P524000000000011 2010"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P524000000000011')
+        and code='9P524000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2010'
@@ -1009,7 +1009,7 @@ Description: "9P525000000000011 2250"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P525000000000011')
+        and code='9P525000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2250'
@@ -1022,7 +1022,7 @@ Description: "9P527000000000011 2011"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P527000000000011')
+        and code='9P527000000000011').exists()
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2011'
