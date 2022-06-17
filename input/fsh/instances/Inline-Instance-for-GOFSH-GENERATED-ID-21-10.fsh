@@ -6,5 +6,5 @@ Usage: #inline
 * category = $observation-category#imaging
 * code = $jlac10_cs#9P502000000000011 "肺がん検診の胸部エックス線検査判定"
 * subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
-//わざとエラーに
-* valueCodeableConcept = urn:oid:1.2.392.100495.100.2101#4 "Ｅ（肺癌の疑い）"
+//わざとエラーに 4-->12
+* valueCodeableConcept = urn:oid:1.2.392.100495.100.2100#12 "Ｅ（肺癌の疑い）"
