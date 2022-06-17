@@ -101,6 +101,7 @@
 //-- ここから
 // 胃がん検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_$$cd01 0..1
     and obs_$$cd02 0..1
@@ -119,4 +120,5 @@
 * insert valCC_coding_slicing($$cd09, $$cs09, $$vs09)
 * insert valCC_coding_slicing($$cd10, $$cs10, $$vs10)
 * insert valCC_coding_slicing($$cd12, $$cs12, $$vs12)
+*/
 //-- ここまで

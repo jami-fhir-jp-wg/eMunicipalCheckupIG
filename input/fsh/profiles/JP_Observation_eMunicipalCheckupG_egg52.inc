@@ -89,6 +89,7 @@
 // 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
 //-- ここから
 // 乳がん検診
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_$$cd01 0..1
     and obs_$$cd02 0..1
@@ -105,5 +106,5 @@
 * insert valCC_coding_slicing($$cd07, $$cs07, $$vs07)
 * insert valCC_coding_slicing($$cd08, $$cs08, $$vs08)
 * insert valCC_coding_slicing($$cd10, $$cs10, $$vs10)
-
+*/
 //-- ここまで

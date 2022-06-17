@@ -318,6 +318,7 @@
 //-- ここから
 // 骨粗鬆症検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_$$cd01 0..1
     and obs_$$cd02 0..1
@@ -353,4 +354,5 @@
 * insert valCC_coding_slicing($$cd40, $$cs40, $$vs40)
 * insert valCC_coding_slicing($$cd42, $$cs42, $$vs42)
 * insert valCC_coding_slicing($$cd43, $$cs43, $$vs43)
+*/
 //-- ここまで

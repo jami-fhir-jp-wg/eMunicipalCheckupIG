@@ -159,6 +159,7 @@
 //-- ここから
 // 肝炎ウイルス検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_$$cd01 0..1
     and obs_$$cd03 0..1
@@ -183,4 +184,5 @@
 * insert valCC_coding_slicing($$cd16, $$cs16, $$vs16)
 * insert valCC_coding_slicing($$cd17, $$cs17, $$vs17)
 * insert valCC_coding_slicing($$cd18, $$cs18, $$vs18)
+*/
 //-- ここまで

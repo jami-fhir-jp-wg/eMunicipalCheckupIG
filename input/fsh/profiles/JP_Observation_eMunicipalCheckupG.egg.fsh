@@ -10,6 +10,12 @@ RuleSet: valCC_coding_slicing(laboItemCode, code_system, valueset)
   * system = "{code_system}"  (exactly)
   * code from {valueset} (required)
 
+RuleSet: valCC_valuset_slicing(valuesetNumber)
+* value[x][valueCodeableConcept].coding contains
+    valueSet{valuesetNumber} 0..1
+* value[x][valueCodeableConcept].coding[valueSet{valuesetNumber}]
+  * system = "urn:oid:1.2.392.100495.100.{valuesetNumber}"   (exactly)
+  * code from http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-{valuesetNumber}  (required)
 
 Profile:        JP_Observation_eMunicipalCheckup
 Parent:         JP_Observation_CUPIX
@@ -61,7 +67,50 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
   * ^slicing.discriminator.type = #value
   * ^slicing.discriminator.path = "system"
   * ^slicing.rules = #open
+* insert valCC_valuset_slicing(2000)
+* insert valCC_valuset_slicing(2010)
+* insert valCC_valuset_slicing(2011)
+* insert valCC_valuset_slicing(2050)
+* insert valCC_valuset_slicing(2051)
+* insert valCC_valuset_slicing(2052)
+* insert valCC_valuset_slicing(2053)
+* insert valCC_valuset_slicing(2054)
+* insert valCC_valuset_slicing(2100)
+* insert valCC_valuset_slicing(2101)
+* insert valCC_valuset_slicing(2140)
+* insert valCC_valuset_slicing(2150)
+* insert valCC_valuset_slicing(2200)
+* insert valCC_valuset_slicing(2240)
+* insert valCC_valuset_slicing(2250)
+* insert valCC_valuset_slicing(2340)
+* insert valCC_valuset_slicing(2350)
+* insert valCC_valuset_slicing(2400)
+* insert valCC_valuset_slicing(2440)
+* insert valCC_valuset_slicing(2450)
+* insert valCC_valuset_slicing(2500)
+* insert valCC_valuset_slicing(2540)
+* insert valCC_valuset_slicing(2550)
+* insert valCC_valuset_slicing(2640)
+* insert valCC_valuset_slicing(2641)
+* insert valCC_valuset_slicing(2650)
+* insert valCC_valuset_slicing(2700)
+* insert valCC_valuset_slicing(2701)
+* insert valCC_valuset_slicing(2702)
+* insert valCC_valuset_slicing(2703)
+* insert valCC_valuset_slicing(2704)
+* insert valCC_valuset_slicing(2705)
+* insert valCC_valuset_slicing(2706)
+* insert valCC_valuset_slicing(2740)
+* insert valCC_valuset_slicing(2750)
+* insert valCC_valuset_slicing(2800)
+* insert valCC_valuset_slicing(2801)
+* insert valCC_valuset_slicing(2802)
+* insert valCC_valuset_slicing(2803)
+* insert valCC_valuset_slicing(2804)
+* insert valCC_valuset_slicing(2805)
+* insert valCC_valuset_slicing(2806)
 //--ここまで
+
 
 //----------
 //-- ここから
@@ -101,6 +150,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 肺がん検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P500000000000011 0..1 //過去の受診歴
     and obs_9P501000000000011 0..1 //がんに係る症状の有無
@@ -118,6 +168,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P506000000000011, urn:oid:1.2.392.100495.100.2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P507000000000011, urn:oid:1.2.392.100495.100.2150, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2150)
 * insert valCC_coding_slicing(9P509000000000011, urn:oid:1.2.392.100495.100.2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
+*/
 //-- ここまで
 //----------
 //---- ここから
@@ -149,6 +200,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 // 検診種別ごとに検診 の結果のvalueSetを検診項目ごとに異なる制約を定義する
 //-- ここから
 // 乳がん検診
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P520000000000011 0..1
     and obs_9P521000000000011 0..1
@@ -164,6 +216,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P524000000000011, urn:oid:1.2.392.100495.100..2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P525000000000011, urn:oid:1.2.392.100495.100..2250, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2250)
 * insert valCC_coding_slicing(9P527000000000011, urn:oid:1.2.392.100495.100..2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
+*/
 //-- ここまで
 //----------
 //---- ここから
@@ -201,6 +254,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 胃がん検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P540000000000011 0..1
     and obs_9P541000000000011 0..1
@@ -218,6 +272,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P548000000000011, urn:oid:1.2.392.100495.100.2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P549000000000011, urn:oid:1.2.392.100495.100.2350, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2350)
 * insert valCC_coding_slicing(9P551000000000011, urn:oid:1.2.392.100495.100.2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
+*/
 //-- ここまで
 //--------
 // 子宮頸がん検診
@@ -258,6 +313,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 子宮頸がん検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P560000000000011 0..1
     and obs_9P561000000000011 0..1
@@ -277,6 +333,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P564000000000011, urn:oid:1.2.392.100495.100.2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P565000000000011, urn:oid:1.2.392.100495.100.2450, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2450)
 * insert valCC_coding_slicing(9P567000000000011, urn:oid:1.2.392.100495.100.2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
+*/
 //-- ここまで
 //-----
 //-- ここから
@@ -308,6 +365,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 大腸がん検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P580000000000011 0..1
     and obs_9P581000000000011 0..1
@@ -323,6 +381,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P584000000000011, urn:oid:1.2.392.100495.100.2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P585000000000011, urn:oid:1.2.392.100495.100.2550, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2550)
 * insert valCC_coding_slicing(9P587000000000011, urn:oid:1.2.392.100495.100.2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
+*/
 //-- ここまで
 //-----------
 //-- ここから
@@ -372,6 +431,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 肝炎ウイルス検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P600000000000011 0..1
     and obs_9P602000000000011 0..1
@@ -395,6 +455,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P615000000000011, urn:oid:1.2.392.100495.100.2640, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2640)
 * insert valCC_coding_slicing(9N401000000000011, urn:oid:1.2.392.100495.100.2641, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2641)
 * insert valCC_coding_slicing(9P616000000000011, urn:oid:1.2.392.100495.100.2650, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2650)
+*/
 //-- ここまで
 //----
 //-- ここから
@@ -494,6 +555,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 骨粗鬆症検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P620000000000011 0..1
     and obs_9P621000000000011 0..1
@@ -527,6 +589,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9Z541000000000011, urn:oid:1.2.392.100495.100.2706, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2706)
 * insert valCC_coding_slicing(9P637000000000011, urn:oid:1.2.392.100495.100.2740, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2740)
 * insert valCC_coding_slicing(9P638000000000011, urn:oid:1.2.392.100495.100.2750, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2750)
+*/
 //-- ここまで
 //----歯周疾患検診
 //-- ここから
@@ -624,6 +687,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 //  歯周疾患検診
 // 検診種別ごとに検診 の結果のvalueSet へのbindingを検診項目ごとに異なる制約として定義する
+/*
 * value[x][valueCodeableConcept].coding contains
         obs_9P650000000000011 0..1
     and obs_9P651000000000011 0..1
@@ -679,6 +743,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P686000000000011, urn:oid:1.2.392.100495.100.2050,  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2050)
 * insert valCC_coding_slicing(9P687000000000011, urn:oid:1.2.392.100495.100.2050,  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2050)
 * insert valCC_coding_slicing(9P688000000000011, urn:oid:1.2.392.100495.100.2050,  http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2050)  
+*/
 //-- ここまで
 
 // 検体材料
