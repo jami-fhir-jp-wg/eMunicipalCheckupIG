@@ -65,7 +65,7 @@ jobs:
 
     - name: Run filepp by file pre proccessor converting egg to egg.fsh
       run: | 
-        while read -r f; do echo "converting $f to $f.fsh"; filepp $f >$f.fsh; done < <(find ./ -name *.egg -mindepth 1)
+        while read -r f; do echo "converting $f to $f.fsh"; filepp  -m for.pm -m  bigdef.pm $f >$f.fsh; done < <(find ./ -name *.egg -mindepth 1)
     - name: Run IG Publisher
       env:
         PACKAGE: jp-core.draft1#1.1.0-beta
