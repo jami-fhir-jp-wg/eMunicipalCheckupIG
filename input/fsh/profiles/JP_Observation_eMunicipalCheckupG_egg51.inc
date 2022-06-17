@@ -2,22 +2,14 @@
 //-- ここから
 // 肺がん検診
 // JP_Observation_eMunicipalCheckupG_egg51.incから展開 
-#bigdef $$codeValueStstemInvariant(labocode,valsetnumber) 
-Invariant: code-labocode-valueCodingSystem-valsetnumber
 
 * obeys code-$$cd01-valueCodingSystem-$$oidnum01
     and code-$$cd02-valueCodingSystem-$$oidnum02
-    and code-$$cd03-valueCodingSystem-$$oidnum03
     and code-$$cd04-valueCodingSystem-$$oidnum04
-    and code-$$cd05-valueCodingSystem-$$oidnum05
-    and code-$$cd06-valueCodingSystem-$$oidnum06
     and code-$$cd07-valueCodingSystem-$$oidnum07
-    and code-$$cd08-valueCodingSystem-$$oidnum08
     and code-$$cd09-valueCodingSystem-$$oidnum09
-    and code-$$cd10-valueCodingSystem-$$oidnum10
     and code-$$cd11-valueCodingSystem-$$oidnum11
     and code-$$cd12-valueCodingSystem-$$oidnum12
-    and code-$$cd13-valueCodingSystem-$$oidnum13
     and code-$$cd14-valueCodingSystem-$$oidnum14
 
 * code.coding contains
@@ -75,4 +67,5 @@ Invariant: code-labocode-valueCodingSystem-valsetnumber
 * insert valCC_coding_slicing($$cd11, $$cs11, $$vs11)
 * insert valCC_coding_slicing($$cd12, $$cs12, $$vs12)
 * insert valCC_coding_slicing($$cd14, $$cs14, $$vs14)
+*/
 //-- ここまで

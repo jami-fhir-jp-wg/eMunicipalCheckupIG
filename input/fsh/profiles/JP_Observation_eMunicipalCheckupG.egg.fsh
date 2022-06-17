@@ -117,6 +117,14 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 //-- ここから
 // 肺がん検診
 // JP_Observation_eMunicipalCheckupG_egg51.incから展開 
+* obeys code-9P500000000000011-valueCodingSystem-2000
+    and code-9P501000000000011-valueCodingSystem-2052
+    and code-9P502000000000011-valueCodingSystem-2100
+    and code-7A030000006144311-valueCodingSystem-2101
+    and code-9P504000000000011-valueCodingSystem-2140
+    and code-9P506000000000011-valueCodingSystem-2010
+    and code-9P507000000000011-valueCodingSystem-2150
+    and code-9P509000000000011-valueCodingSystem-2011
 * code.coding contains
         obs_9P500000000000011 0..1 //過去の受診歴
     and obs_9P501000000000011 0..1 //がんに係る症状の有無
@@ -125,7 +133,7 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
     and obs_9P503160800000049 0..1 //胸部エックス線検査判定
     and obs_7A030161506144349 0..1 //喀痰検査受診日
     and obs_7A030000006144311 0..1 //喀痰検査判定
-    and obs_7A030160806144349 0..1 //喀痰検査所見8
+    and obs_7A030160806144349 0..1 //喀痰検査所見
     and obs_9P504000000000011 0..1 //精密検査対象有無
     and obs_9P505160800000049 0..1 //その他所見
     and obs_9P506000000000011 0..1 //偶発症の有無
@@ -164,16 +172,24 @@ Description:    "自治体検診結果報告書　Observationリソース　検�
 * insert valCC_coding_slicing(9P500000000000011, urn:oid:1.2.392.100495.100.2000, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2000)
 * insert valCC_coding_slicing(9P501000000000011, urn:oid:1.2.392.100495.100.2052, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2052)
 * insert valCC_coding_slicing(9P502000000000011, urn:oid:1.2.392.100495.100.2100, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2100)
-* insert valCC_coding_slicing(7A030000006144311, urn:oid:1.2.392.100495.100.2101, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2101)
-* insert valCC_coding_slicing(9P504000000000011, urn:oid:1.2.392.100495.100.2140, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2140)
+* insert valCC_coding_slicing(7A030000006144311, urn:oid:1.2.392.100495.100.2140, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2140)
+* insert valCC_coding_slicing(9P504000000000011, urn:oid:1.2.392.100495.100.$$oidnum10, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-$$oidnum10)
 * insert valCC_coding_slicing(9P506000000000011, urn:oid:1.2.392.100495.100.2010, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2010)
 * insert valCC_coding_slicing(9P507000000000011, urn:oid:1.2.392.100495.100.2150, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2150)
 * insert valCC_coding_slicing(9P509000000000011, urn:oid:1.2.392.100495.100.2011, http://jpfhir/eMunicipalCheckup/ValueSet/valueSet-2011)
+*/
 //-- ここまで
 //----------
-//---- ここから
-// 乳がん検診
+//-- ここから
+// 肺がん検診
 // JP_Observation_eMunicipalCheckupG_egg52.incから展開 
+* obeys code-9P520000000000011-valueCodingSystem-2000
+    and code-9P521000000000011-valueCodingSystem-2052
+    and code-9N281000000000011-valueCodingSystem-2200
+    and code-9P522000000000011-valueCodingSystem-2240
+    and code-9P524000000000011-valueCodingSystem-2010
+    and code-9P525000000000011-valueCodingSystem-2250
+    and code-9P527000000000011-valueCodingSystem-2011
 * code.coding contains
         obs_9P520000000000011 0..1
     and obs_9P521000000000011 0..1
@@ -842,19 +858,6 @@ Expression:
     )
 "
  
-Invariant: code-9N737000000000012-valueCodingSystem-2053
-Severity: #error
-Description: "9N737000000000012 2053"
-Expression: 
-  "  (
-    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9N737000000000012')
-      )
-    implies (
-        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2053'
-    )
-"
- 
 Invariant: code-9P502000000000011-valueCodingSystem-2100
 Severity: #error
 Description: "9P502000000000011 2100"
@@ -868,78 +871,26 @@ Expression:
     )
 "
  
-Invariant: code-9P503160800000049-valueCodingSystem-2051
+Invariant: code-7A030000006144311-valueCodingSystem-2101
 Severity: #error
-Description: "9P503160800000049 2051"
-Expression: 
-  "  (
-    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P503160800000049')
-      )
-    implies (
-        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2051'
-    )
-"
- 
-Invariant: code-7A030161506144349-valueCodingSystem-$$oidnum06
-Severity: #error
-Description: "7A030161506144349 $$oidnum06"
-Expression: 
-  "  (
-    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='7A030161506144349')
-      )
-    implies (
-        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.$$oidnum06'
-    )
-"
- 
-Invariant: code-7A030000006144311-valueCodingSystem-2052
-Severity: #error
-Description: "7A030000006144311 2052"
+Description: "7A030000006144311 2101"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
         and code='7A030000006144311')
       )
     implies (
-        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2052'
-    )
-"
- 
-Invariant: code-7A030160806144349-valueCodingSystem-2051
-Severity: #error
-Description: "7A030160806144349 2051"
-Expression: 
-  "  (
-    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='7A030160806144349')
-      )
-    implies (
-        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2051'
-    )
-"
- 
-Invariant: code-9P504000000000011-valueCodingSystem-2101
-Severity: #error
-Description: "9P504000000000011 2101"
-Expression: 
-  "  (
-    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P504000000000011')
-      )
-    implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2101'
     )
 "
  
-Invariant: code-9P505160800000049-valueCodingSystem-2140
+Invariant: code-9P504000000000011-valueCodingSystem-2140
 Severity: #error
-Description: "9P505160800000049 2140"
+Description: "9P504000000000011 2140"
 Expression: 
   "  (
     code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P505160800000049')
+        and code='9P504000000000011')
       )
     implies (
         valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2140'
@@ -972,19 +923,6 @@ Expression:
     )
 "
  
-Invariant: code-9P508160800000049-valueCodingSystem-2703
-Severity: #error
-Description: "9P508160800000049 2703"
-Expression: 
-  "  (
-    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
-        and code='9P508160800000049')
-      )
-    implies (
-        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2703'
-    )
-"
- 
 Invariant: code-9P509000000000011-valueCodingSystem-2011
 Severity: #error
 Description: "9P509000000000011 2011"
@@ -998,5 +936,97 @@ Expression:
     )
 "
 
+
+//----------
+Invariant: code-9P520000000000011-valueCodingSystem-2000
+Severity: #error
+Description: "9P520000000000011 2000"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P520000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2000'
+    )
+"
+ 
+Invariant: code-9P521000000000011-valueCodingSystem-2052
+Severity: #error
+Description: "9P521000000000011 2052"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P521000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2052'
+    )
+"
+ 
+Invariant: code-9N281000000000011-valueCodingSystem-2200
+Severity: #error
+Description: "9N281000000000011 2200"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9N281000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2200'
+    )
+"
+ 
+Invariant: code-9P522000000000011-valueCodingSystem-2240
+Severity: #error
+Description: "9P522000000000011 2240"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P522000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2240'
+    )
+"
+ 
+Invariant: code-9P524000000000011-valueCodingSystem-2010
+Severity: #error
+Description: "9P524000000000011 2010"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P524000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2010'
+    )
+"
+ 
+Invariant: code-9P525000000000011-valueCodingSystem-2250
+Severity: #error
+Description: "9P525000000000011 2250"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P525000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2250'
+    )
+"
+ 
+Invariant: code-9P527000000000011-valueCodingSystem-2011
+Severity: #error
+Description: "9P527000000000011 2011"
+Expression: 
+  "  (
+    code.coding.where(system='http://jpfhir.jp/fhir/eCheckup/CodeSystem/jlac10'
+        and code='9P527000000000011')
+      )
+    implies (
+        valueCodeableConcept.coding[0].system = 'urn:oid:1.2.392.100495.100.2011'
+    )
+"
  
 

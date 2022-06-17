@@ -37,18 +37,18 @@
 
 
 #define	$$item07	喀痰検査判定
-#define	$$oidnum09	2101
+#define	$$oidnum07	2101
 #define $$cd07	7A030000006144311
 #define	$$cs07	$$urn.$$oidnum09
 #define	$$vs07	$$url-$$oidnum09
 
 
-#define	$$item0	喀痰検査所見
+#define	$$item08	喀痰検査所見
 #define $$cd08 7A030160806144349
 
 
 #define	$$item09	精密検査対象有無
-#define	$$oidnum10	2140
+#define	$$oidnum09	2140
 #define $$cd09	9P504000000000011
 #define	$$cs09	$$urn.$$oidnum10
 #define	$$vs09	$$url-$$oidnum10
