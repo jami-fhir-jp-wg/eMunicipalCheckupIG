@@ -13,7 +13,7 @@ Description: "健診・検診結果報告書　Patientリソース共通定義"
 * extension ^min = 0
 * extension[religion] 0..0
 * extension[birthPlace] 0..0
-* extension[Race] 0..0
+* extension[race] 0..0
 
 * identifier 1..1 MS
   * ^short = "社員番号や健診実施機関受診者整理番号"

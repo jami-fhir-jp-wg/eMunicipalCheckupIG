@@ -14,7 +14,8 @@ Usage: #inline
 * status = #final
 * type = $doctype_codes_cs#xx "自治体検診結果報告書"
 * category = $report_category_cs#51 "肺がん検診"
-* subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+//* subject = Reference(urn:uuid:4bc68294-1895-d159-655b-1bc7e83f52f3)
+* subject = Reference(Inline-Instance-for-GOFSH-GENERATED-ID-21-2)
 * encounter = Reference(urn:uuid:3af3232e-1579-d4f6-3578-aa1e799fdcad)
 * date = "2021-10-21T12:12:21+09:00"
 * author[0] = Reference(urn:uuid:e5ea153d-fd94-adcc-fb27-df24f394d3fa)
